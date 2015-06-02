@@ -13,12 +13,19 @@
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
 
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+    
   <!--Bootstrap-->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+ 
 
   <!-- Main styles-->
   <link rel="stylesheet" type="text/css" href="css/main.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
  <link rel="icon" type="image/png" href="images/favicon-2.png">
   <!--[if lt IE 9]>
     <script src="assets/html5shiv/html5shiv.min.js"></script>
@@ -276,39 +283,199 @@
     <div class="row">
     
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      
           <section class="bluk-option"> 
           
-            <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle yay-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">spam</a></li>
-        <li><a href="#">explore map</a></li>
-        <li><a href="#">sign in</a></li>
-        <li><a href="#">sign up</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+            <ul class="nav navbar-nav">
+        
+        <li class="dropdown-messages-select">
+            
+            
+    <!--   <span class="checkbox">
+                        <input id="checkbox1" type="checkbox">
+                        <label for="checkbox1"> </label>
+                    </span> --> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-caret-up"></i></a>
+         
+                    
+                    <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="important-messages"><a href="#"><i class="fa fa-star-o"></i></a></li>
+        <li class="trash-messages"><a href="#"><i class="fa fa-trash-o"></i></a></li>
+        <li><a href="#">Spam</a></li>
+        <li><a href="#">Mark as New</a></li>
+        <li><a href="#">mark as read</a></li>
+        <li><a href="#">mark as important</a></li>
+        <li><a href="#">unmark as important</a></li>
+        <li class="create-newmessage"><a href="#"> new message </a></li>
+        
+      </ul>  
               
               
           </section>   
+          <section class="bluk-messages unread-messages">
+              <div class="row">
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info">
+                  
+                <span class="checkbox">
+                        <input id="checkbox1" type="checkbox">
+                        <label for="checkbox1"> </label>
+                    </span>  
+                  <span class="marked-important"><a href="#">   <i class="fa fa-star"></i></a></span>
+                  <span class="inbox-trash-icon"> <a href="#">  <i class="fa fa-trash-o"></i></a></span>
+              </div>
+              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
+                  
+                  <img src="images/messages_person.jpg"/>
+                  
+              </div>
+              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name">
+                  <p>
+                      <span> John Swift </span><br/>
+                      online <br/>
+                      today at 22:30
+                  </p>
+                  
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
+                  <h6> 
+                  Awesome hub  <span class="custom-badge"> new </span>
+                  </h6>
+                  
+                  <p>
+                      
+                      Hi, dude! How are you? I’ve just found out new interesting hub check the...
+                  </p>
+              </div>
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages">
+                  
+                   <span class="custom-badge"> +4 </span>
+              </div>
+      </div>
+          </section>
           
+             <section class="bluk-messages">
+              <div class="row">
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info">
+                  
+                <span class="checkbox">
+                        <input id="checkbox1" type="checkbox">
+                        <label for="checkbox1"> </label>
+                    </span>  
+                  <span class="marked-important"><a href="#">   <i class="fa fa-star"></i></a></span>
+                  <span class="inbox-trash-icon"> <a href="#">  <i class="fa fa-trash-o"></i></a></span>
+              </div>
+              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
+                  
+                  <img src="images/messages_person.jpg"/>
+                  
+              </div>
+              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name">
+                  <p>
+                      <span> John Swift </span><br/>
+                      online <br/>
+                      today at 22:30
+                  </p>
+                  
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages read-messages">
+                 
+                  
+                  <p>
+                      
+                      Hi, dude! How are you? I’ve just found out new interesting hub check the...
+                  </p>
+              </div>
+              
+      </div>
+          </section>
+          
+          <section class="bluk-messages unread-messages">
+              <div class="row">
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info">
+                  
+                <span class="checkbox">
+                        <input id="checkbox1" type="checkbox">
+                        <label for="checkbox1"> </label>
+                    </span>  
+                  <span class="marked-important"><a href="#">   <i class="fa fa-star"></i></a></span>
+                  <span class="inbox-trash-icon"> <a href="#">  <i class="fa fa-trash-o"></i></a></span>
+              </div>
+              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
+                  
+                  <img src="images/messages_person.jpg"/>
+                  
+              </div>
+              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name">
+                  <p>
+                      <span> John Swift </span><br/>
+                      online <br/>
+                      today at 22:30
+                  </p>
+                  
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
+                  <h6> 
+                  Awesome hub  <span class="custom-badge"> new </span> <span class="spam-badge"> spam </span>
+                  </h6>
+                  
+                  <p>
+                      
+                      Hi, dude! How are you? I’ve just found out new interesting hub check the...
+                  </p>
+              </div>
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages">
+                  
+                   <span class="custom-badge"> +4 </span>
+              </div>
+      </div>
+          </section>
+        <section class="bluk-messages">
+              <div class="row">
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info">
+                  
+                <span class="checkbox">
+                        <input id="checkbox1" type="checkbox">
+                        <label for="checkbox1"> </label>
+                    </span>  
+                  <span class="marked-important"><a href="#">   <i class="fa fa-star"></i></a></span>
+                  <span class="inbox-trash-icon"> <a href="#">  <i class="fa fa-trash-o"></i></a></span>
+              </div>
+              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
+                  
+                  <img src="images/messages_person.jpg"/>
+                  
+              </div>
+              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name">
+                  <p>
+                      <span> John Swift </span><br/>
+                      online <br/>
+                      today at 22:30
+                  </p>
+                  
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
+                  <h6> 
+                  Awesome hub  <span class="custom-badge"> new </span> <span class="spam-badge"> spam </span>
+                  </h6>
+                  
+                  <p>
+                      
+                      Hi, dude! How are you? I’ve just found out new interesting hub check the...
+                  </p>
+              </div>
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages">
+                  
+                   <span class="custom-badge"> +4 </span>
+              </div>
+      </div>
+          </section>
           
           
       </div>

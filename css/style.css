@@ -446,7 +446,7 @@ background-position: 0 8px;
 .wrapper-People-talk h1 {
   
     color: #4a575b;
-    font-size: 23px
+    font-size: 23px;
     font-weight: 700;
       text-align: center;
      margin:  0;
@@ -654,8 +654,8 @@ background-position: 0 8px;
 }
 .wrapper-landing-footer .wrapper-footer-items .landing-footer-social-icons a img{
 
-  margin-top: -6.7%;
-  width: 62%;
+ height: 25px;
+    width: 26px;
 }
 
 .wrapper-landing-footer .wrapper-footer-items .landing-footer-social-icons .landing-facebook{
@@ -687,10 +687,10 @@ background-position: 0 8px;
   border: 3px solid #d0ced2;
 }
 .wrapper-landing-footer .wrapper-footer-items .landing-footer-social-icons a{
-   padding: 3px 0 3px;
+
  outline: none;
  text-decoration: none;
-margin-right: 3px;
+margin-right: 8px;
   
 }
 
@@ -705,7 +705,276 @@ margin-right: 3px;
 /* landing footer end */
 
 /* Messages content */
+.bluk-option {
+  min-height: 34px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px 2px #c3c7ca;
+}
+.bluk-option .checkbox {
+  padding-left: 20px !important;
+}
+.bluk-option .checkbox label {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  position: relative !important;
+  padding-left: 5px !important;
+  margin-right: 0px !important;
+}
+.bluk-option .checkbox input[type="checkbox"] {
+  opacity: 0 !important;
+  z-index: 1 !important;
+}
+.bluk-option .checkbox label::before {
+      top: 0px !important;
+  content: "" !important;
+   display: inline-block !important; 
+  position: absolute !important;
+   width: 17px  !important;
+  height: 17px !important;
+  left: 0 !important;
+  margin-left: -20px !important;
+   border: 1px solid #cccccc !important; 
+   border-radius: 3px !important; 
+   background-color: #fff !important; 
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out !important; 
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out !important;
+   transition: border 0.15s ease-in-out, color 0.15s ease-in-out  !important;
+    transform: rotate(0deg) !important;
+}
 
+.bluk-option .checkbox label::after {
+  display: inline-block !important;
+  position: absolute !important;
+  width: 16px !important;
+  height: 16px !important;
+  left: 0 !important;
+  top: -3px !important;
+  margin-left: -20px !important;
+  padding-left: 3px !important;
+  padding-top: 1px !important;
+  font-size: 11px !important;
+  color: #1d7ad0 !important;
+}
+
+
+ .bluk-option .checkbox input[type="checkbox"]:focus + label::before {
+      outline: thin dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px; }
+ .bluk-option .checkbox input[type="checkbox"]:checked + label::after {
+      font-family: 'FontAwesome';
+      content: "\f00c"; }
+  .bluk-option .checkbox input[type="checkbox"]:disabled + label {
+      opacity: 0.65; }
+ .bluk-option .checkbox input[type="checkbox"]:disabled + label::before {
+        background-color: #eeeeee;
+        cursor: not-allowed; }
+  
+
+ .dropdown-messages-select{
+     
+  width: 45px;
+  background-color: #1d7ad0;
+ }
+
+.bluk-option .navbar-nav>li>a {
+padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #919c9f;
+  font-weight: 400;
+   font-size: 0.7em;
+}
+.bluk-option .create-newmessage{
+      position: absolute;
+  right: 15px;
+  background-color: #1d7ad0;
+}
+.bluk-option .create-newmessage a{
+      color: #fff !important;
+}
+
+
+.bluk-messages{
+    background-color: #f6f7f9;
+    min-height: 72px;
+      margin-top: 10px;
+      box-shadow: 0px 2px 4px 2px #c3c7ca;
+}
+.bluk-option .dropdown-messages-select a:hover{
+    background: none;
+    
+}
+.bluk-option .important-messages a:hover{
+    background: none;
+   
+}
+.bluk-option .trash-messages a:hover{
+    background: none;
+  
+}
+.bluk-option .important-messages a{
+  
+    font-size: 1em  !important;
+}
+.bluk-option .trash-messages a{
+    
+    font-size: 1em !important;
+}
+.bluk-messages .checked-info{
+      width: 35px;
+  padding: 0 9px;
+  font-size: 1.1em;
+
+}
+.bluk-messages .message-person-name{
+    width: 104px;
+    border-right: 1px solid #eef0f4;
+    min-height: 72px;
+    text-align: center;
+}
+.bluk-messages .message-person-name p span{
+      color: #4a575b;
+  font-size: 1.1em;
+}
+
+.bluk-messages .message-person-name p{
+     color: #919c9f;
+  font-size: 0.8em;
+  padding-top: 11px;
+    
+}
+.bluk-messages .checkbox {
+  padding-left: 20px !important;
+    margin-bottom: -7px;
+  margin-top: 7px;
+}
+.bluk-messages .checkbox label {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  position: relative !important;
+  padding-left: 5px !important;
+  margin-right: 0px !important;
+}
+.bluk-messages .checkbox input[type="checkbox"] {
+  opacity: 0 !important;
+  z-index: 1 !important;
+}
+.bluk-messages .checkbox label::before {
+      top: 0px !important;
+  content: "" !important;
+   display: inline-block !important; 
+  position: absolute !important;
+   width: 13px  !important;
+  height: 13px !important;
+  left: 0 !important;
+  margin-left: -20px !important;
+   border: 1px solid #919c9f !important; 
+   border-radius: 0px !important; 
+   background-color: #fff !important; 
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out !important; 
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out !important;
+   transition: border 0.15s ease-in-out, color 0.15s ease-in-out  !important;
+    transform: rotate(0deg) !important;
+}
+
+.bluk-messages .checkbox label::after {
+  display: inline-block !important;
+  position: absolute !important;
+  
+  left: -2px !important;
+  top: -4px !important;
+  margin-left: -20px !important;
+  padding-left: 3px !important;
+  padding-top: 1px !important;
+  font-size: 11px !important;
+  color: #1d7ad0 !important;
+}
+
+
+ .bluk-messages .checkbox input[type="checkbox"]:focus + label::before {
+      outline: thin dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px; }
+ .bluk-messages .checkbox input[type="checkbox"]:checked + label::after {
+      font-family: 'FontAwesome';
+      content: "\f00c"; }
+  .bluk-messages .checkbox input[type="checkbox"]:disabled + label {
+      opacity: 0.65; }
+ .bluk-messages .checkbox input[type="checkbox"]:disabled + label::before {
+        background-color: #eeeeee;
+        cursor: not-allowed; }
+ 
+  .bluk-messages .marked-important i{
+     
+     color: #ee9f1d;
+ }
+  .bluk-messages .inbox-trash-icon i{
+       color: #919c9f;
+ }
+ 
+ 
+ .unread-messages{
+     background-color: #fff !important;
+ }
+ .bluk-messages .row{
+     margin: 0;
+ }
+  .bluk-messages .messages-person{
+     width: 80px;
+     padding: 0;
+ }
+  .bluk-messages .received-messages{
+      width: 74%; 
+      padding-top: 14px;
+      
+ }
+ .bluk-messages .read-messages p{
+     padding-top: 8px !important;
+ }
+ .bluk-messages .received-messages h6{
+    color: #4a575b;
+    font-weight: bold;
+}
+ .bluk-messages .received-messages h6 .custom-badge{
+     background-color: #ee9f1d;
+  color: #fff;
+  padding: 6px 7px;
+  font-size: 0.85em;
+  border-radius: 30px;
+  margin-left: 5px;
+}
+ .bluk-messages .received-messages p{
+      color: #919c9f;
+  font-size: 1.2em;
+
+ }
+ .bluk-messages .total-messages{
+    text-align: center;
+     padding-top: 24px;
+        width: 48px;
+          border-left: 1px solid #eef0f4;
+            padding-bottom: 28px;
+}
+.bluk-messages .total-messages .custom-badge{
+  
+  background-color: #bbbbbb;
+  color: #fff;
+  padding: 5px 5px;
+  font-size: 0.8em;
+  border-radius: 30px;
+  
+}
+
+ .bluk-messages .received-messages h6 .spam-badge{
+     background-color: #bbbbbb;
+  color: #fff;
+  padding: 6px 7px;
+  font-size: 0.85em;
+  border-radius: 30px;
+  margin-left: 5px;
+}
 /* Messages content ends here  */
 
 @media (max-width: 480px) {
