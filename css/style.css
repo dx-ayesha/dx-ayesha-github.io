@@ -1070,37 +1070,39 @@ margin-right: 8px;
      text-align: center;
     width: 55%;
 }
-.messages-left-side .spam-messages-count{
+.messages-left-side-show-me .spam-messages-count{
      background-color: #bbbbbb;
     border-radius: 30px;
     color: #fff;
     padding: 3px 7px;
+    margin-top: 7px;
 }
 
 
 
-.messages-left-side{
+.messages-left-side-show-me{
     position: relative;
     min-height: 94px;
 }
-.messages-left-side .checkbox {
+.messages-left-side-show-me .checkbox {
  margin-bottom: -7px;
     margin-top: 6px;
     padding-left: 20px !important;
     padding-right: 18px;
 }
-.messages-left-side .checkbox label {
+.messages-left-side-show-me .checkbox label {
   display: inline-block !important;
   vertical-align: middle !important;
   position: relative !important;
-  padding-left: 5px !important;
+  padding-left: 10px !important;
   margin-right: 0px !important;
+  font-size: 1.2em;
 }
-.messages-left-side .checkbox input[type="checkbox"] {
+.messages-left-side-show-me .checkbox input[type="checkbox"] {
   opacity: 0 !important;
   z-index: 1 !important;
 }
-.messages-left-side .checkbox label::before {
+.messages-left-side-show-me .checkbox label::before {
    background-color: #fff !important;
     border: 1px solid #919c9f !important;
     border-radius: 0 !important;
@@ -1116,7 +1118,7 @@ margin-right: 8px;
     width: 23px !important;
 }
 
-.messages-left-side .checkbox label::after {
+.messages-left-side-show-me .checkbox label::after {
   background-color: #1d7ad0 !important;
     color: #fff !important;
     display: inline-block !important;
@@ -1135,16 +1137,16 @@ margin-right: 8px;
 }
 
 
-.messages-left-side .checkbox input[type="checkbox"]:focus + label::before {
+.messages-left-side-show-me .checkbox input[type="checkbox"]:focus + label::before {
       outline: thin dotted;
       outline: 5px auto -webkit-focus-ring-color;
       outline-offset: -2px; }
-.messages-left-side .checkbox input[type="checkbox"]:checked + label::after {
+.messages-left-side-show-me .checkbox input[type="checkbox"]:checked + label::after {
       font-family: 'FontAwesome';
       content: "\f00c"; }
-.messages-left-side .checkbox input[type="checkbox"]:disabled + label {
+.messages-left-side-show-me .checkbox input[type="checkbox"]:disabled + label {
       opacity: 0.65; }
-.messages-left-side .checkbox input[type="checkbox"]:disabled + label::before {
+.messages-left-side-show-me .checkbox input[type="checkbox"]:disabled + label::before {
         background-color: #eeeeee;
         cursor: not-allowed; }
 
