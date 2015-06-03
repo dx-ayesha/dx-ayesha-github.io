@@ -704,7 +704,7 @@ margin-right: 8px;
 
 /* landing footer end */
 
-/* Messages content */
+/* Messages Page Starts here */
 .bluk-option {
   min-height: 34px;
   background-color: #fff;
@@ -778,13 +778,13 @@ margin-right: 8px;
  }
 
 .bluk-option .navbar-nav>li>a {
-padding-top: 10px;
-  padding-bottom: 10px;
+ padding: 10px 8px;
   line-height: 14px;
   text-transform: uppercase;
   color: #919c9f;
   font-weight: 400;
    font-size: 0.7em;
+   
 }
 .bluk-option .create-newmessage{
       position: absolute;
@@ -927,11 +927,11 @@ padding-top: 10px;
  }
   .bluk-messages .received-messages{
       width: 74%; 
-      padding-top: 14px;
+      padding-top: 5px;
       
  }
  .bluk-messages .read-messages p{
-     padding-top: 8px !important;
+     padding-top: 17px !important;
  }
  .bluk-messages .received-messages h6{
     color: #4a575b;
@@ -947,7 +947,82 @@ padding-top: 10px;
 }
  .bluk-messages .received-messages p{
       color: #919c9f;
-  font-size: 1.2em;
+   font-size: 1.1em;
+    margin-bottom: 0;
+
+ }
+ .bluk-messages{
+     position: relative;
+ }
+ .delete-conversation{
+ 
+    background: url(../images/less-opacity-background.png);
+    
+    padding-top: 8px;
+    position: absolute;
+    top: 0;
+   height: 72px;
+    width: 100%;
+ }
+ .delete-conversation > div{
+     position: absolute;
+     left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+        top: 50%; 
+ }
+ 
+ .less-opacity-background{
+
+ }
+ .delete-conversation span.confirm-delete-conversation a{
+   background-color: #1d7ad0;
+    color: #fff;
+    font-size: 0.85em;
+    font-weight: 800;
+    line-height: 14px;
+    padding: 10px 31px;
+    text-transform: uppercase;
+ }
+  .delete-conversation span.undo-delete a{
+
+     color: #4a575b;
+    font-size: 0.85em;
+    font-weight: 800;
+    line-height: 14px;
+    padding-left: 25px;
+    text-transform: uppercase;
+ }
+ .bluk-messages .received-messages p.replay-mesage{
+       padding-top: 10px;
+ }
+ .bluk-messages .received-messages .reply-person{
+       height: 39px;
+    margin-right: 11px;
+    margin-top: 11px;
+    width: 39px;
+
+ }
+ .bluk-messages .received-messages .wrapper-replay-mesage{
+     width: 88%;
+
+ }
+  .bluk-messages .received-messages p.set-attachments{
+   
+    font-size: 0.8em;
+    margin-bottom: 0;
+    margin-top: -2px;
+
+ }
+  .bluk-messages .received-messages p.set-attachments img{
+   
+         margin-left: 2px;
+    margin-right: 2px;
+
+ }
+  .bluk-messages .received-messages p.set-attachments a{
+   color: #919c9f;
+   
 
  }
  .bluk-messages .total-messages{
@@ -956,6 +1031,8 @@ padding-top: 10px;
         width: 48px;
           border-left: 1px solid #eef0f4;
             padding-bottom: 28px;
+            position: absolute;
+    right: 0;
 }
 .bluk-messages .total-messages .custom-badge{
   
@@ -975,10 +1052,110 @@ padding-top: 10px;
   border-radius: 30px;
   margin-left: 5px;
 }
-/* Messages content ends here  */
+
+.bluk-messages .received-messages .message-replay-title {
+    margin-bottom: -7px;
+}
+
+
+
+/* ----------- Messages left content ------------- */
+
+.messages-left-side .messages-inbox{
+        text-align: center;
+    width: 43%;
+}
+
+.messages-left-side .messages-converstiontab{
+     text-align: center;
+    width: 55%;
+}
+.messages-left-side .spam-messages-count{
+     background-color: #bbbbbb;
+    border-radius: 30px;
+    color: #fff;
+    padding: 3px 7px;
+}
+
+
+
+.messages-left-side{
+    position: relative;
+    min-height: 94px;
+}
+.messages-left-side .checkbox {
+ margin-bottom: -7px;
+    margin-top: 6px;
+    padding-left: 20px !important;
+    padding-right: 18px;
+}
+.messages-left-side .checkbox label {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  position: relative !important;
+  padding-left: 5px !important;
+  margin-right: 0px !important;
+}
+.messages-left-side .checkbox input[type="checkbox"] {
+  opacity: 0 !important;
+  z-index: 1 !important;
+}
+.messages-left-side .checkbox label::before {
+   background-color: #fff !important;
+    border: 1px solid #919c9f !important;
+    border-radius: 0 !important;
+    content: "" !important;
+    display: inline-block !important;
+    height: 23px !important;
+    left: 0 !important;
+    margin-left: -21px !important;
+    position: absolute !important;
+    top: -2px !important;
+    transform: rotate(0deg) !important;
+    transition: border 0.15s ease-in-out 0s, color 0.15s ease-in-out 0s !important;
+    width: 23px !important;
+}
+
+.messages-left-side .checkbox label::after {
+  background-color: #1d7ad0 !important;
+    color: #fff !important;
+    display: inline-block !important;
+    font-size: 11px !important;
+    height: 23px;
+    left: -1px !important;
+    margin-left: -20px !important;
+    padding-left: 6px !important;
+    padding-top: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 23px;
+  
+  
+
+}
+
+
+.messages-left-side .checkbox input[type="checkbox"]:focus + label::before {
+      outline: thin dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px; }
+.messages-left-side .checkbox input[type="checkbox"]:checked + label::after {
+      font-family: 'FontAwesome';
+      content: "\f00c"; }
+.messages-left-side .checkbox input[type="checkbox"]:disabled + label {
+      opacity: 0.65; }
+.messages-left-side .checkbox input[type="checkbox"]:disabled + label::before {
+        background-color: #eeeeee;
+        cursor: not-allowed; }
+
+
+
+
+
+/* Messages Page ends  here  */
 
 @media (max-width: 480px) {
-
+/* Landing Page starts  here  */
 .wrapper-landing-header {
     
     min-height: 300px;
@@ -992,8 +1169,15 @@ padding-top: 10px;
 .wrapper-landing-header .free-signup {
     font-size: 0.4em;
 }
+/* Landing Page ends  here  */
+/* Messages Page Starts here */
+.bluk-messages .received-messages {
+    width: 61% !important;
+}
+/* Messages Page ends  here  */
 }
 @media (max-width: 767px) {
+    /* Landing Page starts  here  */
     .remove-padding-right{
         padding-right: 15px;
     }
@@ -1042,13 +1226,102 @@ padding-top: 10px;
     box-shadow: none;
     border: none;
 }
+/* Landing Page ends  here  */
+/* Messages Page Starts here */
 
+.bluk-messages .received-messages {
+   width: 68%;
+}
+.bluk-messages .received-messages p {
+   color: #4a575b;
+    font-size: 1em;
+    line-height: 1.2;
+ 
+}
+.bluk-messages .received-messages .wrapper-replay-mesage {
+    width: 77%;
+}
+.wrapper-messages-moible-view{
+    padding-top: calc(48px + 1rem) !important;
+    padding-left: 0  !important;
+    padding-right: 0   !important;
+}
+.wrapper-messages-moible-view .margin-adjustment-mobile-view{
+    margin: 0;
+}
+.wrapper-messages-moible-view .padding-adjustment-mobile-view{
+    padding: 0;
+}
+.bluk-messages{
+ box-shadow: none;
+    min-height: 85px;
+    padding: 7px 0;
+    margin-top: 0;
+    border-bottom: 1px solid #c4c8cb;
+}
+.delete-conversation {
+ 
+    height: 86px;
+    
+}
+.bluk-messages .messages-person{
+    margin-left: 9px;
 }
 
 
+.bluk-messages .received-messages h6 .custom-badge {
+    border-radius: 9px;
+    font-size: 1em;
+    padding: 4px 9px;
+}
+.bluk-messages .received-messages h6 .spam-badge {
+   border-radius: 9px;
+    font-size: 1em;
+    padding: 4px 9px;
+}
+.bluk-messages .received-messages h6 {
+    margin-bottom: 12px;
+    font-size: 1.15em;
+  
+}
+.bluk-messages .set-mobile-date{
+    padding-right: 9px; 
+}
+.messages-mobile-edit{
+     margin-right: 15px;
+}
+.messages-mobile-logo{
+       left: 72px !important;
+    position: absolute  !important;
+}
+.mobile-hub-diamond-mobile{
+    display: inline;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+}
+/* Messages Page ends  here  */
+}
+
+@media (min-width: 768px)and (max-width: 892px) {
+    
+
+/* Messages Page Starts here */
+    .bluk-messages .received-messages {
+    
+    width: 63%;
+}
+    .bluk-messages .received-messages p {
+   
+    font-size: 0.9em;
+   
+}
+/* Messages Page ends  here  */
+}
 
  @media (min-width: 768px)and (max-width: 979px) {
-
+/* Landing Page starts  here  */
    .wrapper-landing-header {
   
     min-height: 470px;
@@ -1058,13 +1331,14 @@ padding-top: 10px;
     
     padding-top: 95px;
     }
+/* Landing Page ends  here  */
 
  }
 
  @media (min-width: 481px)and (max-width: 767px) {
 
      
-
+/* Landing Page starts  here  */
      .wrapper-landing-header {
   
     min-height: 400px;
@@ -1073,28 +1347,59 @@ padding-top: 10px;
     font-size: 3em;
     padding-top: 51px;
      }
+/* Landing Page ends  here  */
+/* Messages Page Starts here */
 
+/* Messages Page ends  here  */
  }
 
  
 
   @media (min-width: 980px)and (max-width: 991px) {
-
+/* Landing Page starts  here  */
       
 .wrapper-landing-header {
     min-height: 553px;
 }
       
+/* Landing Page ends  here  */
 
   }
 
   
+@media (min-width: 1015px)and (max-width: 1999px) {
+/* Messages Page Starts here */
+.bluk-messages .received-messages {
+   
+    width: 58%;
+}
+.bluk-messages .received-messages p {
+    font-size: 0.85em;
+}
+.bluk-messages .received-messages .wrapper-replay-mesage {
+    width: 84%;
+}
+/* Messages Page ends  here  */
+    
+}
 
-   @media (min-width: 1200px) {
+
+
+    @media (min-width: 1200px) {
 
        
 
-       
+       /* Messages Page Starts here */
+.bluk-messages .received-messages p {
+   
+    font-size: 1.1em;
+    
+}
+.bluk-messages .received-messages {
+    padding-top: 5px;
+    width: 70%;
+}
+/* Messages Page ends  here  */
 
        
 
