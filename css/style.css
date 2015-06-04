@@ -710,9 +710,7 @@ margin-right: 8px;
   background-color: #fff;
   box-shadow: 0px 2px 4px 2px #c3c7ca;
 }
-.bluk-option .checkbox {
-  padding-left: 20px !important;
-}
+
 .bluk-option .checkbox label {
   display: inline-block !important;
   vertical-align: middle !important;
@@ -732,7 +730,7 @@ margin-right: 8px;
     display: inline-block !important;
     height: 13px !important;
     left: 0 !important;
-    margin-left: -18px !important;
+    
     position: absolute !important;
     top: 2px !important;
     transform: rotate(0deg) !important;
@@ -743,12 +741,11 @@ margin-right: 8px;
 .bluk-option .checkbox label::after {
   display: inline-block !important;
   position: absolute !important;
-  width: 16px !important;
-  height: 16px !important;
+ 
   left: 0 !important;
-  top: -3px !important;
-  margin-left: -20px !important;
-  padding-left: 3px !important;
+  top: -2px !important;
+
+  padding-left: 1px !important;
   padding-top: 1px !important;
   font-size: 11px !important;
   color: #1d7ad0 !important;
