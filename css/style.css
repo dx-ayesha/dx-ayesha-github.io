@@ -1420,7 +1420,7 @@ margin-left: 5px;
     width: 92%;
 }
 .modal-invite-to-hub .modal-content .modal-body .modal-alert-notify{
-    
+     position: relative;
     background-color: #bbbbbb;
     border-radius: 20px;
     color: #fff;
@@ -1626,6 +1626,116 @@ color: #919c9f !important;
      margin-left: 9px;
     margin-top: 6px;
 }
+ a.messages-important-tooltip {outline:none; }
+
+a.messages-important-tooltip:hover {text-decoration:none;} 
+a.messages-important-tooltip span {
+    background-color: #fff;
+    border-right: 1px solid #113556;
+    color: #4a575b;
+    display: none;
+    font-size: 0.85em;
+    font-weight: 600;
+    left: -119px;
+    padding: 7px 20px;
+    position: absolute;
+    top: 20px;
+    z-index: 1000;
+     box-shadow: 0 2px 4px 2px #c3c7ca;
+     text-transform: capitalize;
+}
+a.messages-important-tooltip:hover span{
+    display:inline;
+   }
+
+img.tool-tip-right {
+   position: absolute;
+    right: -8px;
+    top: 12px;
+}
+    
+.bluk-messages .inbox-trash-icon i:hover 
+{
+    color: #113556;
+}
+
+
+span.messages-delete-tooltip {outline:none;cursor: pointer; }
+
+span.messages-delete-tooltip:hover {text-decoration:none;} 
+span.messages-delete-tooltip span {
+    background-color: #fff;
+    border-top: 1px solid #113556;
+    box-shadow: 0 2px 4px 2px #c3c7ca;
+    color: #919c9f;
+    display: none;
+    font-size: 0.75em;
+    font-weight: 800;
+    left: -52px;
+    line-height: 2.5;
+    min-width: 130px;
+    padding: 7px 16px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 74px;
+    z-index: 1000;
+}
+
+span.messages-delete-tooltip span a {
+   
+    color: #919c9f;
+   
+}
+span.messages-delete-tooltip span a:hover, span.messages-delete-tooltip span a:focus, span.messages-delete-tooltip span a:active  {
+    
+    color: #1d7ad0;
+   
+}
+span.messages-delete-tooltip:hover span{
+    display:inline;
+   }
+
+img.tool-tip-top {
+   position: absolute;
+    right: 58px;
+    top: -6px;
+}
+
+
+
+
+span.messages-info-tooltip {outline:none;cursor: pointer; }
+
+span.messages-info-tooltip:hover {text-decoration:none;} 
+span.messages-info-tooltip span {
+  background-color: #fff;
+    border-left: 1px solid #113556;
+    box-shadow: 0 2px 4px 2px #c3c7ca;
+    color: #4a575b !important;
+    display: none;
+    font-size: 0.9em !important;
+    font-weight: 600 !important;
+    left: 33px;
+    padding: 10px 20px;
+    position: absolute;
+    text-transform: capitalize;
+    top: -9px;
+    width: 295px !important;
+    z-index: 1000;
+}
+
+
+span.messages-info-tooltip:hover span{
+    display:inline;
+   }
+
+img.tool-tip-left {
+  left: -6px;
+    position: absolute;
+    top: 12px;
+}
+
+
 
 /* Messages Page ends  here  */
 
