@@ -725,21 +725,19 @@ margin-right: 8px;
   z-index: 1 !important;
 }
 .bluk-option .checkbox label::before {
-      top: 0px !important;
-  content: "" !important;
-   display: inline-block !important; 
-  position: absolute !important;
-   width: 17px  !important;
-  height: 17px !important;
-  left: 0 !important;
-  margin-left: -20px !important;
-   border: 1px solid #cccccc !important; 
-   border-radius: 3px !important; 
-   background-color: #fff !important; 
-  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out !important; 
-  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out !important;
-   transition: border 0.15s ease-in-out, color 0.15s ease-in-out  !important;
+   background-color: #fff !important;
+    border: medium none;
+    border-radius: 0 !important;
+    content: "" !important;
+    display: inline-block !important;
+    height: 13px !important;
+    left: 0 !important;
+    margin-left: -18px !important;
+    position: absolute !important;
+    top: 2px !important;
     transform: rotate(0deg) !important;
+    transition: border 0.15s ease-in-out 0s, color 0.15s ease-in-out 0s !important;
+    width: 13px !important;
 }
 
 .bluk-option .checkbox label::after {
@@ -793,6 +791,8 @@ margin-right: 8px;
 }
 .bluk-option .create-newmessage a{
       color: #fff !important;
+       font-weight: 800  !important;
+       padding: 10px 22px !important;
 }
 
 
@@ -1032,13 +1032,13 @@ margin-right: 8px;
           border-left: 1px solid #eef0f4;
             padding-bottom: 28px;
             position: absolute;
-    right: 0;
+    right: 3px;
 }
 .bluk-messages .total-messages .custom-badge{
   
   background-color: #bbbbbb;
   color: #fff;
-  padding: 5px 5px;
+   padding: 3px 5px;
   font-size: 0.8em;
   border-radius: 30px;
   
@@ -1078,8 +1078,19 @@ margin-right: 8px;
     margin-top: 7px;
 }
 
-
-
+.messages-switch label{
+     font-size: 1.2em !important;
+     padding-top: 7px;
+}
+.messages-left-side-show-me li.label{
+    font-size: 1.2em !important; 
+}
+.meesages-sound-notify li.label{
+    font-size: 1.2em !important; 
+}
+.meesages-sound-notify label{
+    font-size: 1.2em !important; 
+}
 .messages-left-side-show-me{
     position: relative;
     min-height: 94px;
@@ -1151,8 +1162,473 @@ margin-right: 8px;
         cursor: not-allowed; }
 
 
+.messages-friends-section{
+  color: #4e5a5d;
+    font-size: 1.2em;
+    font-weight: 600;
+   
+    line-height: 40px;
+     padding-top: 19px;
+  min-height: 65px;  
+}
+.messages-friends-section i{
+      font-size: 1.65em;
+    margin-bottom: 4px;
+}
+.messages-friends-section img{
+
+    margin-left: 4px;
+}
+.naming-blue{
+    color: #1d7ad0 !important;
+}
+.friends-send-messages{
+    min-height: 118px;
+    
+    padding-top: 19px;
+}
+.friends-send-messages .friends-message-name{
+    margin-top: -4px;
+   color: #4a575b;
+    font-size: 1.15em;
+    font-weight: 600;
+    
+}
+.friends-send-messages .friends-location{
+ margin-top: -6px;
+     color: #717c80;
+    font-size: 0.8em;
+     margin-bottom: 16px;
+    
+}
+.friends-send-messages img{
+    width: 80px;
+    height: 80px;
+}
+.friends-send-messages .send-message-link{
+background-color: #858e93;
+    color: #fff;
+    font-size: 0.85em;
+    font-weight: 600;
+    padding: 6px;
+    text-transform: uppercase;
+}
+.friends-send-messages div.see-profile{
+   background-color: #858e93; 
+  height: 28px;
+    margin-left: 11px;
+    margin-top: 0;
+    width: 26px;
+    position: relative;
+}
+
+.friends-send-messages div.open{
+   background-color: #1d7ad0; 
+ 
+    
+}
+.messages-ul-left-side{
+    margin-bottom: 100px !important;
+}
+.friends-send-messages div.see-profile .dropdown-toggle{
+     padding: 0 5px 11px;
+}
+
+.friends-send-messages div.see-profile img.dropdown-top{
+  height: 8px;
+    margin: -46px auto 0;
+    width: 11px;
+}
+.friends-send-messages div.see-profile .dropdown-menu{
+-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #113556;
+    border-image: none;
+    border-radius: 0;
+    border-style: solid none none;
+    border-width: 1px medium medium;
+    left: -86px;
+    padding: 8px 0;
+    top: 40px;
+     text-align: center;
+}
 
 
+.friends-send-messages div.see-profile .dropdown-menu li a{
+  color: #919c9f;
+    font-size: 0.85em;
+    font-weight: 800;
+    padding: 4px 22px;
+    text-transform: uppercase;
+    text-align: left !important;
+}
+
+.friends-send-messages div.see-profile .dropdown-menu li.divider{
+   background-color: #919c9f;
+    
+}
+.friends-send-messages div.see-profile .dropdown-menu li:last-child a{
+   text-align: center !important;
+    
+}
+.friends-send-messages div.see-profile .dropdown-menu li.first-li{
+   margin-top: -20px
+    
+}
+.friends-send-messages div.see-profile .dropdown-menu li a:hover{
+ color: #1d7ad0;
+}
+
+.friends-send-messages div.see-profile i.fa-caret-up{
+  color: #fff;
+    font-size: 0.6em;
+     padding-left: 6px;
+     padding-top: 10px;
+}
+.friends-send-messages div.see-profile i.fa-caret-down{
+  color: #fff;
+    font-size: 0.6em;
+     padding-left: 6px;
+     padding-top: 10px;
+}
+.messages-friends-section i.fa-diamond{
+ font-size: 1.2em;
+    font-weight: 600;   
+}
+.friends-send-messages .send-message-corner{
+    padding-left: 15px;
+}
+.modal-delete-all-messages .modal{
+  background-color: transparent;
+    box-shadow: none !important;
+    overflow: hidden  !important;
+    padding-right: 0;
+    
+}
+.modal-delete-all-messages .modal-dialog{
+  height: 203px;
+    width: 416px;
+}
+.modal-delete-all-messages .modal-content{
+  -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #c8cdcf -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-radius: 0;
+    border-style: solid none none;
+    border-width: 5px medium medium;
+   min-height: 203px;
+    width: 416px;
+    padding: 0;
+}
+.modal-delete-all-messages .modal-content .modal-body{
+ text-align: center;
+ padding-top: 40px;
+}
+.modal-delete-all-messages .modal-content .modal-body p{
+color: #4a575b;
+font-weight: 600;
+}
+.modal-delete-all-messages .modal-content .modal-body p.recovery-message{
+color: #919c9f;
+    font-size: 0.85em;
+    line-height: 0.6;
+        margin-bottom: 15px;
+}
+.modal-delete-all-messages .modal-content .modal-body span.delete-all-messages a{
+background-color: #1d7ad0;
+    color: #fff;
+    font-size: 0.85em !important;
+    font-weight: 600;
+    line-height: 14px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+.modal-delete-all-messages .modal-content .modal-body span.allmessages-undo a{
+color: #4a575b;
+    font-size: 0.85em !important;
+    font-weight: 600;
+    line-height: 14px;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+.modal-invite-to-hub .modal{
+  background-color: transparent;
+    box-shadow: none !important;
+    overflow: hidden  !important;
+    padding-right: 0;
+    max-height: 100%  !important;
+}
+.modal-invite-to-hub .modal-dialog{
+
+    width: 567px;
+}
+.modal-invite-to-hub .modal-content{
+  
+    border: none;
+    
+    border-radius: 0;
+    
+   min-height: 320px;
+    width: 567px;
+    padding: 0;
+}
+.modal-invite-to-hub .modal-content .modal-body{
+    padding-top: 0px;
+}
+
+.modal-invite-to-hub .modal-content .modal-body .row .modal-padding{
+   padding: 0; 
+}
+.modal-invite-to-hub .modal-content .modal-body .row{
+  margin: 0 -15px;
+}
+.modal-invite-to-hub .modal-content .modal-body .invite-header{
+  background-color: #1d7ad0;
+    color: #fff;
+    font-weight: 800;
+    height: 60px;
+    padding-top: 19px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.modal-invite-to-hub .modal-content .modal-body .search-item{
+    display: inline-block;
+    left: 0;
+    margin: 0;
+    opacity: 0.7;
+    padding-left: 35px;
+    padding-right: 31px;
+    position: relative;
+    width: 100%;
+    top: 18px;
+}
+.modal-invite-to-hub .modal-content .modal-body .search-item i{
+margin-left: 5px;
+    margin-top: 11px;
+    position: absolute;
+    width: 40px;
+     color: #bdc4c5;
+}
+
+.modal-invite-to-hub .modal-content .modal-body .search-item input {
+   border-bottom: 1px solid #bbbbbb;
+    color: #4a575b !important;
+    font-style: normal;
+    padding-left: 36px;
+    width: 92%;
+}
+.modal-invite-to-hub .modal-content .modal-body .modal-alert-notify{
+    
+    background-color: #bbbbbb;
+    border-radius: 20px;
+    color: #fff;
+    margin-left: 8px;
+    margin-top: 14px;
+    padding: 1px 8px;
+}
+.modal-invite-to-hub .modal-content .modal-body .modal-alert-notify:hover{
+    
+    background-color: #113556;
+   
+}
+.modal-invite-to-hub .modal-content .modal-body .modal-alert-plus{
+   background-color: #bbbbbb;
+    border-radius: 20px;
+    color: #fff;
+    margin-right: 5px;
+    margin-top: 14px;
+    padding: 1px 6px;
+}
+.modal-invite-to-hub .modal-content .modal-body .modal-alert-cross{
+     background-color: #bbbbbb;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 0.6em;
+    margin-right: 5px;
+    margin-top: 14px;
+    padding: 2px 8px 6px;
+}
+.modal-invite-to-hub .modal-content .modal-body .wrapper-hub-selecttion {
+  height: 325px;
+    overflow: auto;
+    padding: 13px 35px;
+}
+.modal-invite-to-hub .modal-content .modal-body .invite-design-structure {
+  border-right: 1px solid #f0f2f5;
+  min-height: 325px;
+}
+.modal-invite-to-hub .modal-content .modal-body .select-messageshubs {
+   border-bottom: 1px solid #f0f2f5;
+   
+    
+    padding-bottom: 7px;
+  
+}
+.modal-invite-to-hub .modal-content .modal-body p {
+    padding-left: 9px;
+    padding-top: 5px;
+    color: #4a575b;
+    font-weight: 600;
+}
+.modal-invite-to-hub .modal-content .modal-body span {
+    color: #bdc4c5;
+    font-size: 0.85em;
+     font-weight: 600;
+}
+.modal-invite-to-hub .modal-content .modal-body textarea {
+  border: 1px solid #bbbbbb;
+    font-size: 0.85em;
+    font-weight: 600;
+    height: 77px;
+    padding: 10px 20px;
+    width: 100%;
+    color: #4a575b !important;
+}
+.modal-invite-to-hub .modal-content .modal-body .wrapper-textarea-adjustment{
+      margin: 28px 34px 15px;
+    text-align: center;
+}
+.modal-invite-to-hub .modal-content .modal-body  .invite-submit-buttons{
+    
+    margin-top: 35px;
+}
+.modal-invite-to-hub .modal-content .modal-body .invite-submit-buttons span.modal-invite-undo a {
+ color: #4a575b;
+    font-size: 1em !important;
+    font-weight: 800;
+    line-height: 14px;
+    padding-right: 20px;
+    text-transform: uppercase;
+}
+.modal-invite-to-hub .modal-content .modal-body .invite-submit-buttons span.modal-invite-submit-button a {
+background-color: #1d7ad0;
+    color: #fff;
+    font-size: 1em !important;
+    font-weight: 800;
+    line-height: 14px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+.modal-invite-to-hub .modal-content .modal-body  .invite-submit-buttons span.modal-invite-submit-button a:hover {
+background-color: #113556;
+  
+}
+.modal-invite-to-hub .modal-content .modal-body .invite-results-hubs{
+    border-bottom: 1px solid #e7eaf0;
+    min-height: 80px;
+    padding: 14px 9px;
+}
+.modal-invite-to-hub .modal-content .modal-body .invite-results-hubs:hover .modal-alert-plus{
+    background-color: #113556;
+}
+.modal-invite-to-hub .modal-content .modal-body .invite-results-hubs:hover .modal-alert-cross{
+    background-color: #113556;
+}
+.modal-invite-to-hub .modal-content .modal-body .invite-results-hubs:hover{
+  background-color: #f0f3f5;
+}
+.modal-invite-to-hub .modal-content .modal-body .invite-results-hubs img{
+    margin-right: 15px;
+    width: 52px;
+    height: 52px;
+}
+.modal-invite-to-hub .modal-content .modal-body .invite-results-hubs div p{
+     font-size: 0.9em !important;
+    margin-bottom: 1px !important; 
+    padding-left: 0 !important; 
+}
+
+.modal-invite-to-hub .modal-content .modal-body .invite-results-hubs div span{
+    font-size: 0.75em !important; 
+    color: #717c80 !important; 
+}
+.modal-split-padding-right{
+    padding-right: 0;
+}
+.modal-split-padding-left{
+    padding-left: 0;
+}
+ .modal-invite-to-hub .modal-content .modal-body .search-item input::-webkit-input-placeholder {
+opacity: 1 !important;
+color: #c1c7c9 !important;
+
+}
+ .modal-invite-to-hub .modal-content .modal-body .search-item input::-moz-placeholder {
+opacity: 1 !important;
+color: #c1c7c9 !important;
+}
+ .modal-invite-to-hub .modal-content .modal-body .search-item input::-ms-input-placeholder {
+opacity: 1 !important;
+color: #c1c7c9 !important;
+}
+ .modal-invite-to-hub .modal-content .modal-body textarea::-webkit-input-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+
+}
+ .modal-invite-to-hub .modal-content .modal-body textarea::-moz-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+}
+ .modal-invite-to-hub .modal-content .modal-body textarea::-ms-input-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+}
+.bluk-option .dropdown-messages-select .dropdown-menu{
+     -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #113556;
+    border-image: none;
+    border-radius: 0;
+    border-style: solid none none;
+    border-width: 1px medium medium;
+    left: -65px;
+    padding: 8px 0;
+    text-align: center;
+    top: 44px;
+    
+}
+.bluk-option .dropdown-messages-select .dropdown-menu li.first-li {
+    margin-top: -20px;
+}
+
+.bluk-option .dropdown-messages-select .dropdown-menu li a {
+    color: #919c9f;
+    font-size: 0.85em;
+    font-weight: 800;
+    padding: 5px 15px;
+    text-align: left !important;
+    text-transform: uppercase;
+}
+.bluk-option .dropdown-messages-select .dropdown-menu img.dropdown-top {
+    height: 8px;
+    margin: -44px auto 0;
+    width: 11px;
+}
+.bluk-option li.dropdown-messages-select a.dropdown-toggle{
+   height: 34px;
+   background-color: #1d7ad0;
+    
+}
+.bluk-option li.dropdown-messages-select a i{
+    color: #fff !important;
+}
+.bluk-option li.dropdown-messages-select{
+    position: relative;
+}
+.bluk-option li.dropdown-messages-select .checkbox{
+     position: absolute;
+    z-index: 100;
+     margin-left: 6px;
+    margin-top: 6px;
+}
 
 /* Messages Page ends  here  */
 
