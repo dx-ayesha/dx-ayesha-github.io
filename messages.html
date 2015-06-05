@@ -7,7 +7,16 @@
 
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  
+  <!-- jQuery RAF (improved animation performance) -->
+  <script type="text/javascript" src="js/jquery.requestAnimationFrame.min.js"></script>
 
+  <!--Bootstrap-->
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- nanoScroller -->
+  <script type="text/javascript" src="js/jquery.nanoscroller.min.js"></script>
   <!-- nanoScroller -->
   <link rel="stylesheet" type="text/css" href="./Hubify - Listings_files/nanoscroller.css">
 
@@ -551,7 +560,7 @@
               </div>
               <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
                   
-                  <img src="images/messages_person.jpg"/>
+                  <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
                   
               </div>
               <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
@@ -1060,7 +1069,7 @@ There is a limit of 6 invitations for one friend.
                                    <img class="pull-left" src="images/modal- sports.png"/>
                                <div class="pull-left">
                                
-                               <p> Extreme sports eve</p>
+                                   <p> Extreme sports<span class="hidden-xs"> eve</span></p>
                                <span> Public hub</span>
                                </div>
                                    <span class="pull-right modal-alert-plus">+</span>
@@ -1079,7 +1088,7 @@ There is a limit of 6 invitations for one friend.
                                   <img class="pull-left" src="images/modal-hub.jpg"/>
                                <div class="pull-left">
                             
-                               <p> Photographers hub</p>
+                                   <p> Photographers<span class="hidden-xs"> hub</span></p>
                                <span> Public hub</span>
                                 
                               </div>
@@ -1145,19 +1154,42 @@ There is a limit of 6 invitations for one friend.
   </div>
 </div>
           </div>
-  <!-- jQuery -->
+          
+          
+          
+          
+          
+                <!-- Modal Profile for mobile -->
+                
+          <div class="modal-profile-for-mobile">
+<div class="modal fade" id="profilemobilemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     
+      <div class="modal-body">
+        
+          <p>John's Profile</p>
+          <p>Open conversation</p>
+          <p>Delete John's messages</p>
+          <p>Invite John to hubs</p>
+          <p>Brows John's hubs</p>
+          <p>Brows John's friends</p>
+           <p>Remove from friends</p>
+           
+          
+       
+      </div>
+      
+    </div>
+  </div>
+</div>
+          </div>
+          
+          
 
 
-  <script type="text/javascript" src="js/jquery.js"></script>
-  
-  <!-- jQuery RAF (improved animation performance) -->
-  <script type="text/javascript" src="js/jquery.requestAnimationFrame.min.js"></script>
 
-  <!--Bootstrap-->
-  <script src="js/bootstrap.min.js"></script>
 
-  <!-- nanoScroller -->
-  <script type="text/javascript" src="js/jquery.nanoscroller.min.js"></script>
 
   <!-- Materialize -->
   <script type="text/javascript" src="js/materialize.min.js"></script>
