@@ -826,7 +826,7 @@ margin-right: 8px;
 
 }
 .bluk-messages .message-person-name{
-    width: 104px;
+    width: 106px;
     border-right: 1px solid #eef0f4;
     min-height: 72px;
     text-align: center;
@@ -1510,6 +1510,7 @@ background-color: #1d7ad0;
     line-height: 14px;
     padding: 10px 20px;
     text-transform: uppercase;
+    position: relative;
 }
 .modal-invite-to-hub .modal-content .modal-body  .invite-submit-buttons span.modal-invite-submit-button a:hover {
 background-color: #113556;
@@ -1660,10 +1661,10 @@ img.tool-tip-right {
 }
 
 
-span.messages-delete-tooltip {outline:none;cursor: pointer; }
+.messages-delete-tooltip {outline:none;cursor: pointer; }
 
-span.messages-delete-tooltip:hover {text-decoration:none;} 
-span.messages-delete-tooltip span {
+.messages-delete-tooltip:hover {text-decoration:none;} 
+.messages-delete-tooltip span {
     background-color: #fff;
     border-top: 1px solid #113556;
     box-shadow: 0 2px 4px 2px #c3c7ca;
@@ -1681,17 +1682,17 @@ span.messages-delete-tooltip span {
     z-index: 1000;
 }
 
-span.messages-delete-tooltip span a {
+.messages-delete-tooltip span a {
    
     color: #919c9f;
    
 }
-span.messages-delete-tooltip span a:hover, span.messages-delete-tooltip span a:focus, span.messages-delete-tooltip span a:active  {
+.messages-delete-tooltip span a:hover, .messages-delete-tooltip span a:focus, .messages-delete-tooltip span a:active  {
     
     color: #1d7ad0;
    
 }
-span.messages-delete-tooltip:hover span{
+.messages-delete-tooltip:hover span{
     display:inline;
    }
 
@@ -1704,10 +1705,10 @@ img.tool-tip-top {
 
 
 
-span.messages-info-tooltip {outline:none;cursor: pointer; }
+.messages-info-tooltip {outline:none;cursor: pointer; }
 
-span.messages-info-tooltip:hover {text-decoration:none;} 
-span.messages-info-tooltip span {
+.messages-info-tooltip:hover {text-decoration:none;} 
+.messages-info-tooltip span {
   background-color: #fff;
     border-left: 1px solid #113556;
     box-shadow: 0 2px 4px 2px #c3c7ca;
@@ -1725,7 +1726,7 @@ span.messages-info-tooltip span {
 }
 
 
-span.messages-info-tooltip:hover span{
+.messages-info-tooltip:hover span{
     display:inline;
    }
 
@@ -1736,7 +1737,31 @@ img.tool-tip-left {
 }
 
 
+.messages-invite-tooltip {outline:none;cursor: pointer; }
 
+.messages-invite-tooltip:hover {text-decoration:none;} 
+.messages-invite-tooltip span {
+       background-color: #fff;
+    border-right: 1px solid #113556;
+    box-shadow: 0 2px 4px 2px #c3c7ca;
+    color: #4a575b !important;
+    display: none;
+    font-size: 0.85em !important;
+    font-weight: 600 !important;
+    left: -231px !important;
+    padding: 7px 20px;
+    position: absolute;
+    text-transform: capitalize;
+    top: 4px;
+    z-index: 1000;
+}
+
+
+.messages-invite-tooltip:hover span{
+    display:inline;
+   }
+  
+   
 /* Messages Page ends  here  */
 
 @media (max-width: 480px) {
