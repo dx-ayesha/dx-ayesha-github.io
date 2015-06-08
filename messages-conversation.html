@@ -3,7 +3,7 @@
 <html><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Hubify - Messages</title>
+  <title>Hubify - Conversation </title>
 
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,7 +63,7 @@
         <img src="images/sidebar-logo.png" alt="Hubify">
       </a>
 
-      <a href="#" class="brand-logo logo-small messages-mobile-logo">
+      <a href="#" class="brand-logo logo-small hidden-xs">
         <img src="images/logo2.png" alt="Hubify">
       </a>
 
@@ -74,7 +74,7 @@
 
       <div class="navbar-top-menu">
         <ul class="navbar-top-tabs">
-            <li class="visible-xs messages-mobile-edit"> <a href="#"> <img src="images/messages-edit.png"> </a> </li>
+            <li class="visible-xs messages-mobile-edit hidden-xs"> <a href="#"> <img src="images/messages-edit.png"> </a> </li>
           <li class="top-tab-item hidden-xs">
             <img src="images/messages_diamond.png">
             HUBS
@@ -146,6 +146,19 @@
         </ul>
       </div>
 
+      
+      <div class="conversation-arranged-center visible-xs">
+          <div class="conversation-set-display">
+              <a href="">
+              <div class="converation-set-margin">
+                 <i class="mdi-hardware-keyboard-arrow-left pull-left" style=""></i><span class="pull-left">Conversation with Jane Clarkson</span> 
+              </div>
+              </a>
+          </div>
+          
+          
+      </div>
+  
     </div>
   </nav>
   <!-- /Navigation top -->
@@ -247,10 +260,10 @@
     <div class="nano has-scrollbar">
       <div class="nano-content" tabindex="0" style="right: -17px;">
         <ul class="aside-menu messages-left-side">
-          <li class="aside-menu-item active messages-inbox">
+          <li class="aside-menu-item messages-inbox">
          Inbox
           </li>
-          <li class="aside-menu-item messages-converstiontab">
+          <li class="aside-menu-item active messages-converstiontab">
             Last Conversation
           </li>
           
@@ -258,35 +271,23 @@
         <ul class="aside-items messages-ul-left-side">
 
           <div class="aside-item">
-            <li class="aside-hubs-switch">
-              <p class="switch messages-switch">
-                <label>
-                  All messages
-                  <input type="checkbox" checked="">
-                  <span class="lever"></span>
-                  Important
-                </label>
-              </p>
-            </li>
+            
+              <div class="tab-last-conversation">
+                  
+                  <a href="#"><i class="fa fa-user-plus"></i>Add friend to conversation </a><br/>
+                  <a href="#"><i class="fa fa-diamond"></i>Show attached hubs</a><br/>
+                  <a href="#"><i class="fa fa-paperclip"></i>Show attachments</a><br/>
+                  <a href="#"><i class="fa fa-trash-o"></i>Delete all messages</a><br/>
+                  
+                  
+                  
+              </div>  
+              
+              
+              
           </div>
 
-          <div class="aside-item messages-left-side-show-me">
-            <li class="label">Show me</li>
-            <li class="aside-show-options">
-            
-                <span class="checkbox pull-left">
-<input id="checkbox13" type="checkbox">
-<label for="checkbox13"> My messages </label>
-</span>
-              
-                <span class="checkbox  pull-left">
-<input id="checkbox23" type="checkbox">
-<label for="checkbox23">Spam </label>
-                </span> 
-     <span class="spam-messages-count  pull-left"> 135</span>
-            
-             </li>
-          </div>
+       
     <div class="aside-item meesages-sound-notify">
             <li class="label">Sound notification</li>
             <li class="aside-show-options">
@@ -490,511 +491,193 @@
     <div class="row margin-adjustment-mobile-view">
     
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-adjustment-mobile-view">
-          <section class="bluk-option hidden-xs"> 
-          
-            <ul class="nav navbar-nav">
-        
-        <li class="dropdown-messages-select">
-            
-            
-      <span class="checkbox">
-                        <input id="checkbox1" type="checkbox">
-                        <label for="checkbox1"> </label>
-                    </span><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="pull-right fa fa-caret-up"></i></a>
          
+        
+        
+              <div class="wrapper-blocking-system clearfix hidden-xs">
+              
+                  <div class="row">
+                      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pull-left">
+                          <div class="conversation-title">   Amazing hub </div>
+                          
+                      </div>
+                      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pull-right">
+                          <div class="inner-blockings">
+                              <span><a href="#"><i class="fa fa-trash-o"></i></a></span> <span><a href="#">Block John Swift</a></span> <span><a href="#">spam</a></span> 
+                          </div> 
+                          
+                          
+                          
+                      </div>
+                      
+                  </div>     
+                  
+              </div>   
+                <div class="wrapper-messages-conversation">
+              
+              <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        
+                        <div class="individual-messages-conversation">
+                        <section  class="clearfix">
+                            <div class="pull-left conversated-pic">
+                                <img src="images/conversation-pic-2.jpg" alt="dp"/>
+                            </div> 
+                            <div class="pull-left conversated-text">
+                                <h5>Me</h5> 
+                                <p>
+                                 Yeah, and you can build your own & download image with no watermark! Use the editor to the left to get started, it will automatically remove these messages.    
+                                    
+                                </p>
+                                
+                                <p>
+                                   Yeah, and you can build your own & download image with no watermark! Use the editor! 
+                                </p>
+                                
+                            </div> 
+                            <div class="pull-right conversated-date">
+                                <span>18.05.2015</span>  
+                            </div> 
+                            
+                        </section>
+                           <section class="clearfix">
+                            <div class="pull-left conversated-pic">
+                                <img src="images/conversation-pic-1.jpg" alt="dp"/><br/>
+                                <span>online</span>
+                            </div> 
+                            <div class="pull-left conversated-text">
+                                <h5> John swift</h5> 
+                                <p>
+                             Amazing!       
+                                </p>
+                                
+                              
+                                
+                            </div> 
+                            <div class="pull-right conversated-date">
+                                      <span>18.05.2015</span> 
+                            </div> 
+                            
+                        </section>
+                         <section class="clearfix">
+                            <div class="pull-left conversated-pic">
+                                <img src="images/conversation-pic-2.jpg" alt="dp"/><br/>
+                               
+                            </div> 
+                            <div class="pull-left conversated-text">
+                                <h5>Me</h5> 
+                                <p>
+                             Yeah, forget about it! Look at these amazing hubs and files!     
+                                </p>
+                                
+                              
+                                
+                            </div> 
+                            <div class="pull-right conversated-date">
+                                      <span>18.05.2015</span> 
+                            </div> 
+                            
+                        </section> 
+                            
+                             <section class="clearfix">
+                            <div class="pull-left conversated-pic">
+                                <img src="images/conversation-pic-3.jpg" alt="dp"/><br/>
+                                <span>online</span>
+                            </div> 
+                            <div class="pull-left conversated-text">
+                                <h5>Jane Clarkson</h5> 
+                                <p>
+                              Hello! i want to buy a ring! 
+                                </p>
+                                <div class="delivery-notification">
+                                    <img src="images/messages-ring.jpg" class="pull-left"/>
+                                    
+                                    <div class="delivered-pending pull-left">
+                                        <p>Pending confirmation on awesome golden ring with diamonds </p>    
+                                        <a href="#">move to dashboard <img src="images/right-arrow-messages.png"></a>
+                                    </div>
+                                    
+                                    
+                                </div>
+                              
+                                
+                            </div> 
+                            <div class="pull-right conversated-date">
+                                      <span>18.05.2015</span> 
+                            </div> 
+                            
+                        </section>  
+                            
+                            
+                          <section class="clearfix">
+                            <div class="pull-left conversated-pic">
+                                <img alt="dp" src="images/conversation-pic-2.jpg"><br>
+                               
+                            </div> 
+                            <div class="pull-left conversated-text">
+                                <h5>Me</h5> 
+                                <p>
+                            Hello. How much carats do you want?     
+                                </p>
+                                
+                              
+                                
+                            </div> 
+                            <div class="pull-right conversated-date">
+                                      <span>18.05.2015</span> 
+                            </div> 
+                            
+                        </section>  
+                            
+                            
+                            
+                            
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                    </div>
+              
+              </div>
+              
+                    <section class="enter-messages-area clearfix hidden-xs">
+                        <textarea class="pull-left" placeholder="Start type you comment here" cols="" rows=""></textarea>
+                        <div class="pull-right current-conversation-person">
+                        <img src="images/current-conversation-person.jpg"/>
+                        </div>
+                        
+                    </section>     
                     
-                    <ul class="dropdown-menu" role="menu">
-                        <img class="dropdown-top" src="images/dropdown-top.png">
-                        <li class="first-li"><a href="#">select all </a></li>
-            <li><a href="#">unselect all</a></li>
-            <li><a href="#"> marked as important</a></li>
-            <li><a href="#"> unmarked as important</a></li>
-            <li><a href="#">read</a></li>
-            <li><a href="#">unread</a></li>
-          </ul>
-        </li>
-        <li class="important-messages"><a href="#"><i class="fa fa-star-o"></i></a></li>
-        <li class="trash-messages"><a href="#" data-toggle="modal" data-target="#deletallmessages"><i class="fa fa-trash-o"></i></a>
+                    <section class="submit-messages-conversation hidden-xs">
+                        <span><a href="#">send </a></span>
+                        
+                        <span class="add-an-attachment"><span class="circle-icons-fill">+</span> Add an attachement <input  type="file"/>
+                        
+                        <span>
 
-   
-        
-        </li>
-        <li><a href="#">Spam</a></li>
-        <li><a href="#">Mark as New</a></li>
-        <li><a href="#">mark as read</a></li>
-        <li><a href="#">mark as important</a></li>
-        <li><a href="#">unmark as important</a></li>
-        <li class="create-newmessage"><a href="#"> new message </a></li>
-        
-      </ul>  
-              
-              
-          </section> 
-          
-          
-          <section class="bluk-messages unread-messages">
-              <div class="row">
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
-                  
-                <span class="checkbox">
-                        <input id="checkbox1" type="checkbox">
-                        <label for="checkbox1"> </label>
-                    </span>  
-                              <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star"> </i>
-                                  
-                                      <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
-                                  </a></span>
-                  <span class="inbox-trash-icon"> 
-                      
-                      
-                      <span class="messages-delete-tooltip" href="#">  <i class="fa fa-trash-o"></i>
-                      
-                      
-                       <span>  <img class="tool-tip-top" src="images/tool-tip-top.png" /> 
-                           
-                           <a href="#">    delete </a> <br/> <a href="#"> mark as spam</a>  </span>
-                      
-                      </span>
-                  
-                  </span>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
-                  
-                  <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
-                  
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
-                  <p>
-                      <span> John Swift </span><br/>
-                      online <br/>
-                      today at 22:30
-                  </p>
-                  
-              </div>
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
-                  <h6> 
-                  <span class="visible-xs pull-left">  John Swift </span>    <span class="hidden-xs">  Awesome hub </span>  <span class="custom-badge"> new </span>
-                  </h6>
-                  
-                  <p>
-                      
-                      Hi, dude! How are you? I’ve just found out new int<span class="hidden-xs">eresting hub check the</span>...
-                  </p>
-              </div>
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
-                  
-                   <span class="custom-badge"> +4 </span>
-              </div>
-                  <span class="pull-right set-mobile-date visible-xs"> 18.05.01 </span>
-                  
-      </div>
-          </section>
-          
-             <section class="bluk-messages">
-              <div class="row">
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
-                  
-                <span class="checkbox">
-                        <input id="checkbox2" type="checkbox">
-                        <label for="checkbox2"> </label>
-                    </span>  
-                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star"> </i>
-                                  
-                                      <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
-                                  </a></span>
-                 <span class="inbox-trash-icon"> 
-                      
-                      
-                      <span class="messages-delete-tooltip" href="#">  <i class="fa fa-trash-o"></i>
-                      
-                      
-                       <span>  <img class="tool-tip-top" src="images/tool-tip-top.png" /> 
-                           
-                           <a href="#">    delete </a> <br/> <a href="#"> mark as spam</a>  </span>
-                      
-                      </span>
-                  
-                  </span>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
-                  
-                  <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
-                  
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
-                  <p>
-                      <span> John Swift </span><br/>
-                      online <br/>
-                      today at 22:30
-                  </p>
-                  
-              </div>
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages read-messages">
-                 
-                  
-                  <p>
-                      
-                      Hi, dude! How are you? I’ve just found out new int<span class="hidden-xs">eresting hub check the</span>...
-                  </p>
-              </div>
-              <span class="pull-right set-mobile-date visible-xs"> 18.05.01 </span>
-      </div>
-          </section>
-          
-          <section class="bluk-messages unread-messages">
-              <div class="row">
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
-                  
-                <span class="checkbox">
-                        <input id="checkbox3" type="checkbox">
-                        <label for="checkbox3"> </label>
-                    </span>  
-                 <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star"> </i>
-                                  
-                                      <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
-                                  </a></span>
-                   <span class="inbox-trash-icon"> 
-                      
-                      
-                      <span class="messages-delete-tooltip" href="#">  <i class="fa fa-trash-o"></i>
-                      
-                      
-                       <span>  <img class="tool-tip-top" src="images/tool-tip-top.png" /> 
-                           
-                           <a href="#">    delete </a> <br/> <a href="#"> mark as spam</a>  </span>
-                      
-                      </span>
-                  
-                  </span>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
-                  
-                <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
-                  
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
-                  <p>
-                      <span class="naming-blue"> John Swift </span><br/>
-                      online <br/>
-                      today at 22:30
-                  </p>
-                  
-              </div>
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
-                  <h6> 
-                  <span class="visible-xs pull-left">  John Swift </span>    <span class="hidden-xs">  Awesome hub </span>  <span class="custom-badge"> new </span> <span class="spam-badge"> spam </span>
-                  </h6>
-                  
-                  <p>
-                      
-                      Hi, dude! How are you? I’ve just found out new int<span class="hidden-xs">eresting hub check the</span>...
-                  </p>
-              </div>
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
-                  
-                   <span class="custom-badge"> +4 </span>
-              </div><span class="pull-right set-mobile-date visible-xs"> 18.05.01 </span>
-      </div>
-          </section>
-        <section class="bluk-messages less-opacity-background">
-              <div class="row">
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
-                  
-                <span class="checkbox">
-                        <input id="checkbox4" type="checkbox">
-                        <label for="checkbox4"> </label>
-                    </span>  
-                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star"> </i>
-                                  
-                                      <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
-                                  </a></span>
-                   <span class="inbox-trash-icon"> 
-                      
-                      
-                      <span class="messages-delete-tooltip" href="#">  <i class="fa fa-trash-o"></i>
-                      
-                      
-                       <span>  <img class="tool-tip-top" src="images/tool-tip-top.png" /> 
-                           
-                           <a href="#">    delete </a> <br/> <a href="#"> mark as spam</a>  </span>
-                      
-                      </span>
-                  
-                  </span>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
-                  
-                 <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
-                  
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
-                  <p>
-                      <span> John Swift </span><br/>
-                      online <br/>
-                      today at 22:30
-                  </p>
-                  
-              </div>
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
-                  <h6> 
-                  <span class="visible-xs pull-left">  John Swift </span>    <span class="hidden-xs">  Awesome hub </span>  <span class="custom-badge"> new </span> <span class="spam-badge"> spam </span>
-                  </h6>
-                  
-                  <p>
-                      
-                      Hi, dude! How are you? I’ve just found out new int<span class="hidden-xs">eresting hub check the</span>...
-                  </p>
-              </div>
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
-                  
-                   <span class="custom-badge"> +4 </span>
-              </div>
-                  
-      </div>
-            <div class="delete-conversation">
-                <div>    
-                <span class="confirm-delete-conversation"> <a href="#"> delete conversation</a> </span><span class="undo-delete"><a href="#"> Undo </a> </span>
-                </div>
-                <span class="pull-right set-mobile-date visible-xs"> 18.05.01 </span>
-            </div>
-          </section>
-           <section class="bluk-messages">
-              <div class="row">
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
-                  
-                <span class="checkbox">
-                        <input id="checkbox5" type="checkbox">
-                        <label for="checkbox5"> </label>
-                    </span>  
-                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star"> </i>
-                                  
-                                      <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
-                                  </a></span>
-                  <span class="inbox-trash-icon"> 
-                      
-                      
-                      <span class="messages-delete-tooltip" href="#">  <i class="fa fa-trash-o"></i>
-                      
-                      
-                       <span>  <img class="tool-tip-top" src="images/tool-tip-top.png" /> 
-                           
-                           <a href="#">    delete </a> <br/> <a href="#"> mark as spam</a>  </span>
-                      
-                      </span>
-                  
-                  </span>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
-                  
-                 <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
-                  
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
-                  <p>
-                      <span> John Swift </span><br/>
-                      online <br/>
-                      today at 22:30
-                  </p>
-                  
-              </div>
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
-                  <h6> 
-                  <span class="visible-xs">  John Swift </span>    <span class="hidden-xs">  Awesome hub </span>
-                  </h6>
-                  
-                  <p>
-                      
-                      Hi, dude! How are you? I’ve just found out new int<span class="hidden-xs">eresting hub check the</span>...
-                  </p>
-                  <p class="set-attachments"><a href="#">+</a><a href="#"><img src="images/hub-notification.png" /></a><a href="#"> 2 hubs</a></p>
-              </div>
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
-                  
-                   <span class="custom-badge"> +4 </span>
-              </div> <span class="pull-right set-mobile-date visible-xs"> 18.05.01 </span>
-      </div>
-          </section>
-          
-          
-          
-          
-         <section class="bluk-messages">
-              <div class="row">
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
-                  
-                <span class="checkbox">
-                        <input id="checkbox6" type="checkbox">
-                        <label for="checkbox6"> </label>
-                    </span>  
-                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star"> </i>
-                                  
-                                      <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
-                                  </a></span>
-                  <span class="inbox-trash-icon"> 
-                      
-                      
-                      <span class="messages-delete-tooltip" href="#">  <i class="fa fa-trash-o"></i>
-                      
-                      
-                       <span>  <img class="tool-tip-top" src="images/tool-tip-top.png" /> 
-                           
-                           <a href="#">    delete </a> <br/> <a href="#"> mark as spam</a>  </span>
-                      
-                      </span>
-                  
-                  </span>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
-                  
-               <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
-                  
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
-                  <p>
-                      <span> John Swift </span><br/>
-                      online <br/>
-                      today at 22:30
-                  </p>
-                  
-              </div>
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
-                  <img class="pull-left reply-person" src="images/reply-notification.jpg">
-                 <div class="pull-left wrapper-replay-mesage">
-                     <h6 class="message-replay-title"> 
-                  re:Awesome hub
-                  </h6>
-                  
-                 <p class="replay-mesage">
-                      
-                      hello. ok thanx i’m glad to make a deal with you<span class="hidden-xs">.That Hub is ama</span>...
-                  </p>
-                 
-                 </div></div>
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
-                  
-                   <span class="custom-badge"> +4 </span>
-              </div> <span class="pull-right set-mobile-date visible-xs"> 18.05.01 </span>
-      </div>
-          </section>
+                        </span>
+                    </section>
+                    <section class="conversation-mobile-pad visible-xs clearfix">
+                        
+                        <div class="conversation-arranged-center">
+<div class="conversation-set-display">
+<div class="converation-set-margin">
+                        <a class="mobile-attach-files pull-left" href="#">+</a>
+                        <textarea class="pull-left" placeholder="" cols="" rows=""></textarea>
+                        <a class="mobile-send-message pull-left" href="#">Send</a>
+                        
+</div></div></div> 
+                    </section>
+                    
+          </div>
           
           
           
           
           
-           <section class="bluk-messages">
-              <div class="row">
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
-                  
-                <span class="checkbox">
-                        <input id="checkbox7" type="checkbox">
-                        <label for="checkbox7"> </label>
-                    </span>  
-                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star"> </i>
-                                  
-                                      <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
-                                  </a></span>
-                  <span class="inbox-trash-icon"> 
-                      
-                      
-                      <span class="messages-delete-tooltip" href="#">  <i class="fa fa-trash-o"></i>
-                      
-                      
-                       <span>  <img class="tool-tip-top" src="images/tool-tip-top.png" /> 
-                           
-                           <a href="#">    delete </a> <br/> <a href="#"> mark as spam</a>  </span>
-                      
-                      </span>
-                  
-                  </span>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
-                  
-             <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
-                  
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
-                  <p>
-                      <span> John Swift </span><br/>
-                      online <br/>
-                      today at 22:30
-                  </p>
-                  
-              </div>
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
-                  <img class="pull-left reply-person" src="images/reply-notification.jpg">
-                 <div class="pull-left wrapper-replay-mesage">
-                     <h6 class="message-replay-title"> 
-                  re:Awesome hub
-                  </h6>
-                  
-                 <p class="replay-mesage">
-                      
-                      hello. ok thanx i’m glad to make a deal with you<span class="hidden-xs">.That Hub is ama</span>...
-                  </p>
-                  <p class="set-attachments"><a href="#">+</a><a href="#"><img src="images/hub-notification.png" /></a><a href="#">hubs</a></p>
-                 </div></div>
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
-                  
-                   <span class="custom-badge"> +4 </span>
-              </div> <span class="pull-right set-mobile-date visible-xs"> 18.05.01 </span>
-      </div>
-          </section>
           
-          
-           <section class="bluk-messages">
-              <div class="row">
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
-                  
-                <span class="checkbox">
-                        <input id="checkbox8" type="checkbox">
-                        <label for="checkbox8"> </label>
-                    </span>  
-                 <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star"> </i>
-                                  
-                                      <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
-                                  </a></span>
-                   <span class="inbox-trash-icon"> 
-                      
-                      
-                      <span class="messages-delete-tooltip" href="#">  <i class="fa fa-trash-o"></i>
-                      
-                      
-                       <span>  <img class="tool-tip-top" src="images/tool-tip-top.png" /> 
-                           
-                           <a href="#">    delete </a> <br/> <a href="#"> mark as spam</a>  </span>
-                      
-                      </span>
-                  
-                  </span>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
-                  
-                 <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
-                  
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
-                  <p>
-                      <span> John Swift </span><br/>
-                      online <br/>
-                      today at 22:30
-                  </p>
-                  
-              </div>
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
-                 <img class="pull-left reply-person" src="images/reply-notification.jpg">
-                 <div class="pull-left wrapper-replay-mesage">
-                 <p class="replay-mesage">
-                      
-                      hello. ok thanx i’m glad to make a deal with you<span class="hidden-xs">.That Hub is ama</span>...
-                  </p>
-                  <p class="set-attachments"><a href="#">+</a><a href="#"><img src="images/hub-notification.png" /></a><a href="#"> 2 hubs</a> &nbsp;<a href="#">+</a><a href="#"><img src="images/attach-notification.png" /></a><a href="#"> 2 files</a></p>
-              </div></div>
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
-                  
-                   <span class="custom-badge"> +4 </span>
-              </div> <span class="pull-right set-mobile-date visible-xs "> 18.05.01 </span>
-      </div>
-          </section>
       </div>
 
     </div>
