@@ -40,6 +40,15 @@
     <script src="assets/html5shiv/html5shiv.min.js"></script>
   <![endif]-->
   
+  
+    
+    <script>
+        
+           function showDiv(){
+   document.getElementById('hidden_div').style.display = "block";
+}
+     
+    </script>
 </head>
 
 
@@ -274,9 +283,9 @@
             
               <div class="tab-last-conversation">
                   
-                  <a href="#"><i class="fa fa-user-plus"></i>Add friend to conversation </a><br/>
+                  <a href="#"><i class="mdi-social-person-add"></i>Add friend to conversation </a><br/>
                   <a href="#"><i class="fa fa-diamond"></i>Show attached hubs</a><br/>
-                  <a href="#"><i class="fa fa-paperclip"></i>Show attachments</a><br/>
+                  <a href="#"><i class="mdi-editor-attach-file"></i>Show attachments</a><br/>
                   <a href="#"><i class="fa fa-trash-o"></i>Delete all messages</a><br/>
                   
                   
@@ -324,7 +333,7 @@
                         <img src="images/dropdown-top.png" class="dropdown-top" />
                         <li class="first-li"><a class="naming-blue" href="#">john's Profile</a></li>
             <li><a href="#">open conversation</a></li>
-            <li><a href="#">delete john's messages</a></li>
+            <li><a  data-toggle="modal" data-target="#deletallmessages" href="#">delete john's messages</a></li>
             <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite john to hubs</a>
 
    
@@ -340,7 +349,7 @@
             <li><a href="#">brows john's hubs</a></li>
             <li><a href="#">brows john's friends</a></li>
             <li class="divider"></li>
-            <li><a href="#">remove from friends</a></li>
+            <li><a  data-toggle="modal" data-target="#deletallmessages"    href="#">remove from friends</a></li>
           </ul>
         </div>
                 
@@ -362,12 +371,12 @@
             <img src="images/dropdown-top.png" class="dropdown-top" />
                         <li class="first-li"><a class="naming-blue" href="#">Jane's Profile</a></li>
             <li><a href="#">open conversation</a></li>
-            <li><a href="#">delete john's messages</a></li>
+            <li><a  data-toggle="modal" data-target="#deletallmessages"    href="#">delete john's messages</a></li>
             <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite john to hubs</a></li>
             <li><a href="#">brows john's hubs</a></li>
             <li><a href="#">brows john's friends</a></li>
             <li class="divider"></li>
-            <li><a href="#">remove from friends</a></li>
+            <li><a  data-toggle="modal" data-target="#deletallmessages"    href="#">remove from friends</a></li>
           </ul>
         </div>
                 
@@ -389,12 +398,12 @@
             <img src="images/dropdown-top.png" class="dropdown-top" />
                         <li class="first-li"><a class="naming-blue" href="#">Nicolas's Profile</a></li>
             <li><a href="#">open conversation</a></li>
-            <li><a href="#">delete john's messages</a></li>
+            <li><a  data-toggle="modal" data-target="#deletallmessages"   href="#">delete john's messages</a></li>
             <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite john to hubs</a></li>
             <li><a href="#">brows john's hubs</a></li>
             <li><a href="#">brows john's friends</a></li>
             <li class="divider"></li>
-            <li><a href="#">remove from friends</a></li>
+            <li><a  data-toggle="modal" data-target="#deletallmessages" href="#">remove from friends</a></li>
           </ul>
         </div>
                 
@@ -519,7 +528,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         
                         <div class="individual-messages-conversation">
-                        <section  class="clearfix">
+                            <section  class="clearfix" onClick"showDiv()">
                             <div class="pull-left conversated-pic">
                                 <img src="images/conversation-pic-2.jpg" alt="dp"/>
                             </div> 
@@ -539,7 +548,7 @@
                                 <span>18.05.2015</span>  
                             </div> 
                             
-                        </section>
+                                </section>
                            <section class="clearfix">
                             <div class="pull-left conversated-pic">
                                 <img src="images/conversation-pic-1.jpg" alt="dp"/><br/>
@@ -662,13 +671,15 @@
                     <section class="conversation-mobile-pad visible-xs clearfix">
                         
                         <div class="conversation-arranged-center">
+                           <div class="row">
+<div class="col-xs-12"> 
 <div class="conversation-set-display">
 <div class="converation-set-margin">
                         <a class="mobile-attach-files pull-left" href="#">+</a>
                         <textarea class="pull-left" placeholder="" cols="" rows=""></textarea>
                         <a class="mobile-send-message pull-left" href="#">Send</a>
                         
-</div></div></div> 
+</div></div></div></div></div>  
                     </section>
                     
           </div>

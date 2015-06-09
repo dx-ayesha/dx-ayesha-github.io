@@ -39,6 +39,42 @@
   <!--[if lt IE 9]>
     <script src="assets/html5shiv/html5shiv.min.js"></script>
   <![endif]-->
+ 
+  
+  <script type="text/javascript">
+    $( document ).ready(function() {
+
+
+
+ $(".marked-important a i").click(function(){
+     if($(this).hasClass('fa-star-o')){
+         $(this).removeClass('fa-star-o');
+         $(this).addClass('fa-star');
+     }else
+         $(this).addClass('fa-star-o');
+});
+
+ $(".important-messages a i").click(function(){
+     if($(this).hasClass('fa-star-o')){
+         $(this).removeClass('fa-star-o');
+         $(this).addClass('fa-star');
+     }else
+         $(this).addClass('fa-star-o');
+});
+ 
+
+ $(".messages-delete-tooltip i").click(function(){
+     $(this).toggleClass('click-color');
+});
+
+ $(".trash-messages a i").click(function(){
+     $(this).toggleClass('click-color');
+});
+
+});  
+     
+      </script>
+  
   
 </head>
 
@@ -311,7 +347,7 @@
         <div class="aside-item friends-send-messages">
             <img src="images/John-Swift.png" class="pull-left" />
             <div class="send-message-corner pull-left">
-                <p class="friends-message-name naming-blue"> John Swift</p>
+                <p class="friends-message-name"><a href="#">John Swift</a></p>
                 <p class="friends-location">LA, California, USA  </p>
                 <a href="#" class="send-message-link pull-left"> Send a message </a> 
                 <div class="dropdown-messages-select see-profile pull-left">
@@ -320,10 +356,10 @@
          
                     
                     <ul role="menu" class="dropdown-menu">
-                        <img src="images/dropdown-top.png" class="dropdown-top" />
-                        <li class="first-li"><a class="naming-blue" href="#">john's Profile</a></li>
+                        
+                        <li class=""><a class="" href="#">john's Profile</a></li>
             <li><a href="#">open conversation</a></li>
-            <li><a href="#">delete john's messages</a></li>
+            <li><a data-target="#deletallmessages" data-toggle="modal" href="#">delete john's messages</a></li>
             <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite john to hubs</a>
 
    
@@ -339,7 +375,7 @@
             <li><a href="#">brows john's hubs</a></li>
             <li><a href="#">brows john's friends</a></li>
             <li class="divider"></li>
-            <li><a href="#">remove from friends</a></li>
+            <li><a data-target="#deletallmessages" data-toggle="modal" href="#">remove from friends</a></li>
           </ul>
         </div>
                 
@@ -349,7 +385,7 @@
          <div class="aside-item friends-send-messages">
             <img src="images/Petterson-Green.png" class="pull-left" />
             <div class="send-message-corner pull-left">
-                <p class="friends-message-name"> Jane Petterson-Green</p>
+                <p class="friends-message-name"><a href="#"> Jane Petterson-Green</a></p>
                 <p class="friends-location">Velington, New Zeland </p>
                 <a href="#" class="send-message-link pull-left"> Send a message </a> 
                 <div class="dropdown-messages-select see-profile pull-left">
@@ -358,10 +394,10 @@
          
                     
                     <ul role="menu" class="dropdown-menu">
-            <img src="images/dropdown-top.png" class="dropdown-top" />
-                        <li class="first-li"><a class="naming-blue" href="#">Jane's Profile</a></li>
+            
+                        <li class=""><a class="" href="#">Jane's Profile</a></li>
             <li><a href="#">open conversation</a></li>
-            <li><a href="#">delete john's messages</a></li>
+            <li><a  href="#">delete john's messages</a></li>
             <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite john to hubs</a></li>
             <li><a href="#">brows john's hubs</a></li>
             <li><a href="#">brows john's friends</a></li>
@@ -376,7 +412,7 @@
             <div class="aside-item friends-send-messages">
             <img src="images/Nicolas-Zucklinsky.jpg" class="pull-left" />
             <div class="send-message-corner pull-left">
-                <p class="friends-message-name"> Nicolas Zucklinsky</p>
+                <p class="friends-message-name"><a href="#"> Nicolas Zucklinsky</a></p>
                 <p class="friends-location">Warsaw, Poland  </p>
                 <a href="#" class="send-message-link pull-left"> Send a message </a> 
                 <div class="dropdown-messages-select see-profile pull-left">
@@ -385,15 +421,15 @@
          
                     
                     <ul role="menu" class="dropdown-menu">
-            <img src="images/dropdown-top.png" class="dropdown-top" />
-                        <li class="first-li"><a class="naming-blue" href="#">Nicolas's Profile</a></li>
+           
+                        <li class=""><a class="" href="#">Nicolas's Profile</a></li>
             <li><a href="#">open conversation</a></li>
-            <li><a href="#">delete john's messages</a></li>
+            <li><a data-target="#deletallmessages" data-toggle="modal" href="#">delete john's messages</a></li>
             <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite john to hubs</a></li>
             <li><a href="#">brows john's hubs</a></li>
             <li><a href="#">brows john's friends</a></li>
             <li class="divider"></li>
-            <li><a href="#">remove from friends</a></li>
+            <li><a data-target="#deletallmessages" data-toggle="modal" href="#">remove from friends</a></li>
           </ul>
         </div>
                 
@@ -420,8 +456,8 @@
          
                     
                     <ul role="menu" class="dropdown-menu">
-            <img src="images/dropdown-top.png" class="dropdown-top" />
-            <li class="first-li"><a href="#">suggest hub to   </a></li>
+      
+            <li class=""><a href="#">suggest hub to   </a></li>
             <li><a href="#">brows hub's followers</a></li>
             <li class="divider"></li>
             <li><a href="#">unfollow</a></li>
@@ -443,8 +479,8 @@
          
                     
                     <ul role="menu" class="dropdown-menu">
-            <img src="images/dropdown-top.png" class="dropdown-top" />
-            <li class="first-li"><a href="#">suggest hub to   </a></li>
+            
+            <li class=""><a href="#">suggest hub to   </a></li>
             <li><a href="#">brows hub's followers</a></li>
             <li class="divider"></li>
             <li><a href="#">unfollow</a></li>
@@ -466,8 +502,8 @@
          
                     
                     <ul role="menu" class="dropdown-menu">
-           <img src="images/dropdown-top.png" class="dropdown-top" />
-            <li class="first-li"><a href="#">suggest hub to   </a></li>
+           
+            <li class=""><a href="#">suggest hub to   </a></li>
             <li><a href="#">brows hub's followers</a></li>
             <li class="divider"></li>
             <li><a href="#">unfollow</a></li>
@@ -504,8 +540,8 @@
          
                     
                     <ul class="dropdown-menu" role="menu">
-                        <img class="dropdown-top" src="images/dropdown-top.png">
-                        <li class="first-li"><a href="#">select all </a></li>
+                       
+                        <li class=""><a href="#">select all </a></li>
             <li><a href="#">unselect all</a></li>
             <li><a href="#"> marked as important</a></li>
             <li><a href="#"> unmarked as important</a></li>
@@ -540,7 +576,7 @@
                         <input id="checkbox1" type="checkbox">
                         <label for="checkbox1"> </label>
                     </span>  
-                              <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star"> </i>
+                              <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
                                   
                                       <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
                                   </a></span>
@@ -565,13 +601,13 @@
               </div>
               <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
                   <p>
-                      <span> John Swift </span><br/>
+                      <span> <a href="#"> John Swift</a> </span><br/>
                       online <br/>
                       today at 22:30
                   </p>
                   
               </div>
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
+                  <a href="#"> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
                   <h6> 
                   <span class="visible-xs pull-left">  John Swift </span>    <span class="hidden-xs">  Awesome hub </span>  <span class="custom-badge"> new </span>
                   </h6>
@@ -580,7 +616,7 @@
                       
                       Hi, dude! How are you? I’ve just found out new int<span class="hidden-xs">eresting hub check the</span>...
                   </p>
-              </div>
+                      </div></a>
               <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
                   
                    <span class="custom-badge"> +4 </span>
@@ -598,7 +634,7 @@
                         <input id="checkbox2" type="checkbox">
                         <label for="checkbox2"> </label>
                     </span>  
-                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star"> </i>
+                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
                                   
                                       <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
                                   </a></span>
@@ -623,20 +659,20 @@
               </div>
               <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
                   <p>
-                      <span> John Swift </span><br/>
+                      <span> <a href="#"> John Swift</a> </span><br/>
                       online <br/>
                       today at 22:30
                   </p>
                   
               </div>
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages read-messages">
+           <a href="#">   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages read-messages">
                  
                   
                   <p>
                       
                       Hi, dude! How are you? I’ve just found out new int<span class="hidden-xs">eresting hub check the</span>...
                   </p>
-              </div>
+               </div> </a>
               <span class="pull-right set-mobile-date visible-xs"> 18.05.01 </span>
       </div>
           </section>
@@ -649,7 +685,7 @@
                         <input id="checkbox3" type="checkbox">
                         <label for="checkbox3"> </label>
                     </span>  
-                 <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star"> </i>
+                 <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
                                   
                                       <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
                                   </a></span>
@@ -674,13 +710,13 @@
               </div>
               <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
                   <p>
-                      <span class="naming-blue"> John Swift </span><br/>
+                      <span class=""><a href="#"> John Swift</a> </span><br/>
                       online <br/>
                       today at 22:30
                   </p>
                   
               </div>
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
+          <a href="#">    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
                   <h6> 
                   <span class="visible-xs pull-left">  John Swift </span>    <span class="hidden-xs">  Awesome hub </span>  <span class="custom-badge"> new </span> <span class="spam-badge"> spam </span>
                   </h6>
@@ -689,7 +725,7 @@
                       
                       Hi, dude! How are you? I’ve just found out new int<span class="hidden-xs">eresting hub check the</span>...
                   </p>
-              </div>
+              </div> </a>
               <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
                   
                    <span class="custom-badge"> +4 </span>
@@ -704,7 +740,7 @@
                         <input id="checkbox4" type="checkbox">
                         <label for="checkbox4"> </label>
                     </span>  
-                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star"> </i>
+                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
                                   
                                       <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
                                   </a></span>
@@ -729,13 +765,13 @@
               </div>
               <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
                   <p>
-                      <span> John Swift </span><br/>
+                      <span> <a href="#"> John Swift</a> </span><br/>
                       online <br/>
                       today at 22:30
                   </p>
                   
               </div>
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
+           <a href="#">   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
                   <h6> 
                   <span class="visible-xs pull-left">  John Swift </span>    <span class="hidden-xs">  Awesome hub </span>  <span class="custom-badge"> new </span> <span class="spam-badge"> spam </span>
                   </h6>
@@ -744,7 +780,7 @@
                       
                       Hi, dude! How are you? I’ve just found out new int<span class="hidden-xs">eresting hub check the</span>...
                   </p>
-              </div>
+               </div> </a>
               <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
                   
                    <span class="custom-badge"> +4 </span>
@@ -766,7 +802,7 @@
                         <input id="checkbox5" type="checkbox">
                         <label for="checkbox5"> </label>
                     </span>  
-                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star"> </i>
+                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
                                   
                                       <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
                                   </a></span>
@@ -791,13 +827,13 @@
               </div>
               <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
                   <p>
-                      <span> John Swift </span><br/>
+                      <span> <a href="#"> John Swift</a> </span><br/>
                       online <br/>
                       today at 22:30
                   </p>
                   
               </div>
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
+           <a href="#">   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
                   <h6> 
                   <span class="visible-xs">  John Swift </span>    <span class="hidden-xs">  Awesome hub </span>
                   </h6>
@@ -807,7 +843,7 @@
                       Hi, dude! How are you? I’ve just found out new int<span class="hidden-xs">eresting hub check the</span>...
                   </p>
                   <p class="set-attachments"><a href="#">+</a><a href="#"><img src="images/hub-notification.png" /></a><a href="#"> 2 hubs</a></p>
-              </div>
+               </div> </a>
               <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
                   
                    <span class="custom-badge"> +4 </span>
@@ -826,7 +862,7 @@
                         <input id="checkbox6" type="checkbox">
                         <label for="checkbox6"> </label>
                     </span>  
-                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star"> </i>
+                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
                                   
                                       <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
                                   </a></span>
@@ -851,13 +887,13 @@
               </div>
               <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
                   <p>
-                      <span> John Swift </span><br/>
+                      <span> <a href="#"> John Swift</a> </span><br/>
                       online <br/>
                       today at 22:30
                   </p>
                   
               </div>
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
+       <a href="#">  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
                   <img class="pull-left reply-person" src="images/reply-notification.jpg">
                  <div class="pull-left wrapper-replay-mesage">
                      <h6 class="message-replay-title"> 
@@ -869,7 +905,7 @@
                       hello. ok thanx i’m glad to make a deal with you<span class="hidden-xs">.That Hub is ama</span>...
                   </p>
                  
-                 </div></div>
+                 </div></div> </a>
               <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
                   
                    <span class="custom-badge"> +4 </span>
@@ -889,7 +925,7 @@
                         <input id="checkbox7" type="checkbox">
                         <label for="checkbox7"> </label>
                     </span>  
-                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star"> </i>
+                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
                                   
                                       <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
                                   </a></span>
@@ -914,13 +950,13 @@
               </div>
               <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
                   <p>
-                      <span> John Swift </span><br/>
+                      <span> <a href="#"> John Swift</a> </span><br/>
                       online <br/>
                       today at 22:30
                   </p>
                   
               </div>
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
+           <a href="#">   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
                   <img class="pull-left reply-person" src="images/reply-notification.jpg">
                  <div class="pull-left wrapper-replay-mesage">
                      <h6 class="message-replay-title"> 
@@ -932,7 +968,7 @@
                       hello. ok thanx i’m glad to make a deal with you<span class="hidden-xs">.That Hub is ama</span>...
                   </p>
                   <p class="set-attachments"><a href="#">+</a><a href="#"><img src="images/hub-notification.png" /></a><a href="#">hubs</a></p>
-                 </div></div>
+                 </div></div> </a>
               <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
                   
                    <span class="custom-badge"> +4 </span>
@@ -949,7 +985,7 @@
                         <input id="checkbox8" type="checkbox">
                         <label for="checkbox8"> </label>
                     </span>  
-                 <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star"> </i>
+                 <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
                                   
                                       <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
                                   </a></span>
@@ -974,13 +1010,13 @@
               </div>
               <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
                   <p>
-                      <span> John Swift </span><br/>
+                      <span> <a href="#"> John Swift</a> </span><br/>
                       online <br/>
                       today at 22:30
                   </p>
                   
               </div>
-              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
+         <a href="#">     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
                  <img class="pull-left reply-person" src="images/reply-notification.jpg">
                  <div class="pull-left wrapper-replay-mesage">
                  <p class="replay-mesage">
@@ -988,7 +1024,7 @@
                       hello. ok thanx i’m glad to make a deal with you<span class="hidden-xs">.That Hub is ama</span>...
                   </p>
                   <p class="set-attachments"><a href="#">+</a><a href="#"><img src="images/hub-notification.png" /></a><a href="#"> 2 hubs</a> &nbsp;<a href="#">+</a><a href="#"><img src="images/attach-notification.png" /></a><a href="#"> 2 files</a></p>
-              </div></div>
+                 </div></div> </a>
               <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
                   
                    <span class="custom-badge"> +4 </span>

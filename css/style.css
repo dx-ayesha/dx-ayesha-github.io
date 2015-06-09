@@ -781,17 +781,30 @@ margin-right: 8px;
    font-size: 0.7em;
    
 }
+.bluk-option .navbar-nav > li > a > i.fa-star {
+    
+       color: #ee9f1d;
+    
+}
+
 .bluk-option .create-newmessage{
       position: absolute;
   right: 15px;
-  background-color: #1d7ad0;
+ 
 }
 .bluk-option .create-newmessage a{
       color: #fff !important;
-       font-weight: 800  !important;
+     
        padding: 10px 22px !important;
+        background-color: #1e7ad1;
+        text-decoration: none;
 }
-
+.bluk-option .create-newmessage a:hover{
+        background-color: #0e579b;
+}
+.bluk-option .create-newmessage a:active, .bluk-option .create-newmessage a:focus{
+        background-color:#10263d;
+}
 
 .bluk-messages{
     background-color: #f6f7f9;
@@ -834,6 +847,15 @@ margin-right: 8px;
 .bluk-messages .message-person-name p span{
       color: #4a575b;
   font-size: 1.1em;
+}
+.bluk-messages .message-person-name p span a{
+       color: #4a575b;
+    text-decoration: none;
+}
+
+.bluk-messages .message-person-name p span a:hover{
+      color: #1d7ad0;
+ 
 }
 
 .bluk-messages .message-person-name p{
@@ -903,9 +925,13 @@ margin-right: 8px;
         background-color: #eeeeee;
         cursor: not-allowed; }
  
-  .bluk-messages .marked-important i{
+  .bluk-messages .marked-important i.fa-star{
      
      color: #ee9f1d;
+ }
+   .bluk-messages .marked-important i.fa-star-o{
+     
+     color: #919c9f;
  }
   .bluk-messages .inbox-trash-icon i{
        color: #919c9f;
@@ -926,7 +952,7 @@ margin-right: 8px;
   .bluk-messages .received-messages{
       width: 74%; 
       padding-top: 5px;
-      
+      min-height: 72px;
  }
  .bluk-messages .read-messages p{
      padding-top: 17px !important;
@@ -974,23 +1000,51 @@ margin-right: 8px;
 
  }
  .delete-conversation span.confirm-delete-conversation a{
-   background-color: #1d7ad0;
+   background-color: #1e7ad1;
     color: #fff;
     font-size: 0.85em;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 14px;
     padding: 10px 31px;
     text-transform: uppercase;
+    text-decoration: none;
  }
+ 
+ 
+ .delete-conversation span.confirm-delete-conversation a:hover{
+   background-color: #0e579b;
+
+ }
+ .delete-conversation span.confirm-delete-conversation a:focus, .delete-conversation span.confirm-delete-conversation a:active{
+   background-color: #10263d;
+
+ }
+ 
   .delete-conversation span.undo-delete a{
 
      color: #4a575b;
     font-size: 0.85em;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 14px;
     padding-left: 25px;
     text-transform: uppercase;
+    text-decoration: none;
  }
+ .delete-conversation span.undo-delete a:hover{
+
+     color: #0e579b;
+  
+ }
+ .delete-conversation span.undo-delete a:focus, .delete-conversation span.undo-delete a:active{
+
+     color: #10263d;
+  
+ }
+ 
+ 
+ 
+ 
+ 
  .bluk-messages .received-messages p.replay-mesage{
        padding-top: 10px;
  }
@@ -1192,6 +1246,20 @@ margin-right: 8px;
     font-weight: 600;
     
 }
+.friends-send-messages .friends-message-name a {
+    color: #4a575b;
+    text-decoration: none;
+   
+}
+.friends-send-messages .friends-message-name a:hover{
+    color: #1d7ad0; 
+   
+}
+.friends-send-messages .friends-message-name a:active, .friends-send-messages .friends-message-name a:focus{
+    color: #10263d;
+   
+}
+
 .friends-send-messages .friends-location{
  margin-top: -6px;
      color: #717c80;
@@ -1204,27 +1272,43 @@ margin-right: 8px;
     height: 80px;
 }
 .friends-send-messages .send-message-link{
-background-color: #858e93;
+background-color: #1e7ad1;
     color: #fff;
     font-size: 0.85em;
     font-weight: 600;
     padding: 6px;
     text-transform: uppercase;
+     text-decoration: none;
 }
+.friends-send-messages .send-message-link:hover{
+background-color: #0e579b;
+
+}
+.friends-send-messages .send-message-link:active, .friends-send-messages .send-message-link:focus{
+background-color: #10263d;
+
+}
+
 .friends-send-messages div.see-profile{
-   background-color: #858e93; 
+   background-color: #1e7ad1; 
   height: 28px;
     margin-left: 11px;
     margin-top: 0;
     width: 26px;
     position: relative;
+    text-decoration: none;
 }
 
-.friends-send-messages div.open{
-   background-color: #1d7ad0; 
- 
-    
+.friends-send-messages div.see-profile:hover{
+   background-color: #0e579b; 
 }
+.friends-send-messages div.open , .friends-send-messages div.open{
+   background-color: #10263d; 
+}
+.friends-send-messages div.see-profile:focus, .friends-send-messages div.see-profile:active{
+   background-color: #0e579b; 
+}
+
 .messages-ul-left-side{
     margin-bottom: 100px !important;
 }
@@ -1248,35 +1332,36 @@ background-color: #858e93;
     border-style: solid none none;
     border-width: 1px medium medium;
     left: -86px;
-    padding: 8px 0;
     top: 40px;
      text-align: center;
 }
 
 
 .friends-send-messages div.see-profile .dropdown-menu li a{
-  color: #919c9f;
-    font-size: 0.85em;
-    font-weight: 800;
-    padding: 4px 22px;
-    text-transform: uppercase;
+     color: #acb4b5;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
     text-align: left !important;
+    text-transform: uppercase;
 }
 
 .friends-send-messages div.see-profile .dropdown-menu li.divider{
-   background-color: #919c9f;
-    
+   background-color: #e0e0e0;
+    margin: 0;
 }
 .friends-send-messages div.see-profile .dropdown-menu li:last-child a{
    text-align: center !important;
     
 }
-.friends-send-messages div.see-profile .dropdown-menu li.first-li{
-   margin-top: -20px
-    
-}
+
 .friends-send-messages div.see-profile .dropdown-menu li a:hover{
+    background-color: #eeeeee;
  color: #1d7ad0;
+}
+.friends-send-messages div.see-profile .dropdown-menu li a:active, .friends-send-messages div.see-profile .dropdown-menu li a:focus{
+ color: #10263d;
+    background-color: #eeeeee;
 }
 
 .friends-send-messages div.see-profile i.fa-caret-up{
@@ -1388,7 +1473,7 @@ color: #4a575b;
 .modal-invite-to-hub .modal-content .modal-body .invite-header{
   background-color: #1d7ad0;
     color: #fff;
-    font-weight: 800;
+    font-weight: 600;
     height: 60px;
     padding-top: 19px;
     text-align: center;
@@ -1498,7 +1583,7 @@ margin-left: 5px;
 .modal-invite-to-hub .modal-content .modal-body .invite-submit-buttons span.modal-invite-undo a {
  color: #4a575b;
     font-size: 1em !important;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 14px;
     padding-right: 20px;
     text-transform: uppercase;
@@ -1507,7 +1592,7 @@ margin-left: 5px;
 background-color: #1d7ad0;
     color: #fff;
     font-size: 1em !important;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 14px;
     padding: 10px 20px;
     text-transform: uppercase;
@@ -1655,13 +1740,15 @@ img.tool-tip-right {
     right: -8px;
     top: 12px;
 }
-    
+
 .bluk-messages .inbox-trash-icon i:hover 
 {
-    color: #113556;
+    color: #0e579b;
 }
 
-
+.click-color{
+    color: #10263d !important;
+}
 .messages-delete-tooltip {outline:none;cursor: pointer; }
 
 .messages-delete-tooltip:hover {text-decoration:none;} 
@@ -1671,8 +1758,7 @@ img.tool-tip-right {
     box-shadow: 0 2px 4px 2px #c3c7ca;
     color: #919c9f;
     display: none;
-    font-size: 0.75em;
-    font-weight: 800;
+    font-size: 1rem;
     left: -52px;
     line-height: 2.5;
     min-width: 130px;
@@ -1681,16 +1767,18 @@ img.tool-tip-right {
     text-transform: uppercase;
     top: 74px;
     z-index: 1000;
+    cursor: default;
 }
 
 .messages-delete-tooltip span a {
-   
-    color: #919c9f;
+   text-decoration: none;
+     color: #919c9f;
    
 }
 .messages-delete-tooltip span a:hover, .messages-delete-tooltip span a:focus, .messages-delete-tooltip span a:active  {
     
     color: #1d7ad0;
+    
    
 }
 .messages-delete-tooltip:hover span{
@@ -1798,13 +1886,16 @@ img.tool-tip-left {
     font-weight: 600;
     line-height: 2.5;
 }
-   
+  
+/* --------------------- 9 june 2015 ----------------- */
+
+
 
 /* ---------------------------- Messages Conversation Page --------------- */
 
 
 .wrapper-messages-conversation{
-    height: 510px;
+   
     box-shadow: 0 2px 4px 2px #c3c7ca;
     background-color: #fff;
    
@@ -1836,12 +1927,22 @@ img.tool-tip-left {
 }
 
 .wrapper-blocking-system .inner-blockings span a{
-   background-color: #1d7ad0;
+   background-color: #1e7ad1;
     color: #fff;
     font-size: 0.7em;
     margin-left: 6px;
     padding: 5px 12px;
     text-transform: uppercase;
+    text-decoration: none;
+}
+
+.wrapper-blocking-system .inner-blockings span a:hover{
+   background-color: #0e579b;
+   
+}
+.wrapper-blocking-system .inner-blockings span a:active, .wrapper-blocking-system .inner-blockings span a:focus{
+   background-color: #10263d;
+   
 }
 .wrapper-blocking-system .inner-blockings span .fa-trash-o{
     font-size: 1.5em;
@@ -1903,6 +2004,7 @@ img.tool-tip-left {
 .wrapper-messages-conversation section{
     margin-top: 8px;
       padding: 10px 25px;
+      min-height: 95px;
 }
 .wrapper-messages-conversation .submit-messages-conversation span.add-an-attachment{
     color: #4a575b;
@@ -1923,12 +2025,13 @@ img.tool-tip-left {
     padding: 3px 9px;
 }
 .wrapper-messages-conversation .submit-messages-conversation span a{
-     background-color: #1d7ad0;
+     background-color: #1e7ad1;
     color: #fff;
     font-size: 0.95em;
     font-weight: 600;
     padding: 9px 23px;
     text-transform: uppercase;
+    text-decoration: none;
 }
 .wrapper-messages-conversation .submit-messages-conversation span.add-an-attachment input[type=file] {
     position: absolute;
@@ -1959,6 +2062,12 @@ img.tool-tip-left {
 .individual-messages-conversation section:hover{
 background-color: #f0f3f5;    
 }
+
+.individual-messages-conversation section:active, .individual-messages-conversation section:focus {
+background-color: #f0f3f5;    
+}
+
+
 .individual-messages-conversation section{
    padding: 10px 25px;
 }
@@ -1984,8 +2093,16 @@ color: #919c9f !important;
 
 .wrapper-messages-conversation .submit-messages-conversation span a:hover {
     
+    background-color: #0e579b;
+}
+
+
+.wrapper-messages-conversation .submit-messages-conversation span a:focus,.wrapper-messages-conversation .submit-messages-conversation span a:active {
+    
     background-color: #113556;
 }
+
+
 .tab-last-conversation{
     
   height: 185px;
@@ -1999,6 +2116,8 @@ color: #919c9f !important;
     font-weight: 600;
     line-height: 2.5;
 }
+
+
 .tab-last-conversation a:hover{
     
     color: #4a575b;
@@ -2250,16 +2369,25 @@ color: #919c9f !important;
     margin-left: 10px;
     padding: 19px 20px;
     width: 66%;
-}
+}   
 .conversation-mobile-pad .mobile-send-message{
-    background-color: #1d7ad0;
+    background-color: #1e7ad1;
     color: #fff;
-    font-weight: 800;
+    font-weight: 600;
     margin-left: 11px;
     margin-top: 11px;
     padding: 14px 19px;
     text-transform: uppercase;
+    text-decoration: none;
 }
+
+.conversation-mobile-pad .mobile-send-message:hover{
+ background-color: #0e579b;
+}
+.conversation-mobile-pad .mobile-send-message:focus, .conversation-mobile-pad .mobile-send-message:active {
+ background-color: #10263d;
+}
+
 .conversation-mobile-pad .conversation-arranged-center{
     margin: 0;
        font-size: 1em;
