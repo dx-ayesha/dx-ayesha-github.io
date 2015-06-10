@@ -71,6 +71,18 @@
      $(this).toggleClass('click-color');
 });
 
+
+ $(".bluk-messages .checkbox input").click(function(){
+         
+            $(".important-messages").toggleClass('operations-messages-show');
+             $(".trash-messages").toggleClass('operations-messages-show');
+                $(".operations-messages").toggleClass('operations-messages-show');
+       $(".messages-update").toggleClass('hide-messages-update');
+        $(".bluk-option li.dropdown-messages-select a.dropdown-toggle").toggleClass('blue-dropdown-toggle');
+       
+});
+
+
 });  
      
       </script>
@@ -340,7 +352,7 @@
         <div class="aside-item messages-friends-section">
            
             
-            <i class="mdi-social-group"></i> My friends <a href="#"> <img src="images/right-arrow-messages.png" /> </a>
+            <i class="mdi-social-group"></i> My friends <a href="#"> <i class="fa fa-arrow-circle-right"></i> </a>
             
           </div>
         
@@ -440,7 +452,7 @@
            <div class="aside-item messages-friends-section">
            
             
-            <i class="fa fa-diamond"></i> My hubs <a href="#"> <img src="images/right-arrow-messages.png" /> </a>
+            <i class="fa fa-diamond"></i> My hubs <a href="#"> <i class="fa fa-arrow-circle-right"></i> </a>
             
           </div>
         
@@ -534,8 +546,8 @@
             
             
       <span class="checkbox">
-                        <input id="checkbox1" type="checkbox">
-                        <label for="checkbox1"> </label>
+                        <input id="checkboxall" type="checkbox">
+                        <label for="checkboxall"> </label>
                     </span><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="pull-right fa fa-caret-up"></i></a>
          
                     
@@ -555,11 +567,12 @@
    
         
         </li>
-        <li><a href="#">Spam</a></li>
-        <li><a href="#">Mark as New</a></li>
-        <li><a href="#">mark as read</a></li>
-        <li><a href="#">mark as important</a></li>
-        <li><a href="#">unmark as important</a></li>
+        <li class="operations-messages"><a href="#">Spam</a></li>
+        <li class="operations-messages"><a href="#">Mark as New</a></li>
+        <li class="operations-messages"><a href="#">mark as read</a></li>
+        <li class="operations-messages"><a href="#">mark as important</a></li>
+        <li class="operations-messages"><a href="#">unmark as important</a></li>
+        <li class="messages-update" style="">You have 14 new of 212 massages </li>
         <li class="create-newmessage"><a href="#"> new message </a></li>
         
       </ul>  
@@ -573,13 +586,15 @@
               <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
                   
                 <span class="checkbox">
-                        <input id="checkbox1" type="checkbox">
+                    <input id="checkbox1" type="checkbox" class="checked-message">
                         <label for="checkbox1"> </label>
                     </span>  
                               <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
                                   
                                       <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
                                   </a></span>
+                  
+                  
                   <span class="inbox-trash-icon"> 
                       
                       
@@ -631,7 +646,7 @@
               <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
                   
                 <span class="checkbox">
-                        <input id="checkbox2" type="checkbox">
+                        <input id="checkbox2" type="checkbox" class="checked-message">
                         <label for="checkbox2"> </label>
                     </span>  
                   <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
@@ -1208,7 +1223,7 @@ There is a limit of 6 invitations for one friend.
           <a href="#">Open conversation</a><br/>
           <a href="#">Delete John's messages</a><br/>
           <a href="#">Invite John to hubs</a><br/>
-          <a href="#">Brows John's hubs</a><br/>
+          <a data-toggle="modal" data-target="#modalmobilehubs" href="#">Brows John's hubs</a><br/>
           <a href="#">Brows John's friends</a><br/>
           <a href="#">Remove from friends</a>
            
@@ -1220,9 +1235,117 @@ There is a limit of 6 invitations for one friend.
   </div>
 </div>
           </div>
+                       <!-- Modal mobile Hubs-->
+          
+<div class="modal-mobile-hubs">
+<div aria-hidden="false" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="modalmobilehubs" class="modal fade in">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 modal-padding"> 
+          <div class="invite-header">
+             John hubs  
+          </div>
+                  <div class="search-item">
+<i class="fa fa-search active"></i>
+<input type="search" placeholder="Type hub's or location here">
+</div>
+                  <div class="wrapper-hub-selecttion-mobile"> 
+                  
+                      
+                      
+                      
+                      <div class="friends-send-messages">
+            <img class="pull-left" src="images/Jewelry.jpg">
+            <div class="send-message-corner pull-left">
+                <p class="friends-message-name"> Jewelry</p>
+                <p class="friends-location">Public hub  </p>
+                <a class="send-message-link pull-left" href="#"> open </a> 
+                <div class="dropdown-messages-select see-profile pull-left">
+            
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-caret-down"></i></a>
+         
+                    
+                    <ul class="dropdown-menu" role="menu">
+      
+            <li class=""><a href="#">suggest hub to   </a></li>
+            <li><a href="#">brows hub's followers</a></li>
+            <li class="divider"></li>
+            <li><a href="#">unfollow</a></li>
+          </ul>
+        </div>
+                
+            </div>
+            
+          </div>
+                      
+              <div class="friends-send-messages">
+            <img class="pull-left" src="images/motorcycle.jpg">
+            <div class="send-message-corner pull-left">
+                <p class="friends-message-name"> Extreme sports</p>
+                <p class="friends-location">Private hub </p>
+                <a class="send-message-link pull-left" href="#"> open </a> 
+                <div class="dropdown-messages-select see-profile pull-left">
+            
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-caret-down"></i></a>
+         
+                    
+                    <ul class="dropdown-menu" role="menu">
+            
+            <li class=""><a href="#">suggest hub to   </a></li>
+            <li><a href="#">brows hub's followers</a></li>
+            <li class="divider"></li>
+            <li><a href="#">unfollow</a></li>
+          </ul>
+        </div>
+                
+            </div>
+            
+          </div>       
+                      
+               <div class="friends-send-messages">
+            <img class="pull-left" src="images/Sweets-Food-Donuts.jpg">
+            <div class="send-message-corner pull-left">
+                <p class="friends-message-name"> Sweets</p>
+                <p class="friends-location">Private hub </p>
+                <a class="send-message-link pull-left" href="#"> open </a> 
+                <div class="dropdown-messages-select see-profile pull-left">
+            
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-caret-down"></i></a>
+         
+                    
+                    <ul class="dropdown-menu" role="menu">
+            
+            <li class=""><a href="#">suggest hub to   </a></li>
+            <li><a href="#">brows hub's followers</a></li>
+            <li class="divider"></li>
+            <li><a href="#">unfollow</a></li>
+          </ul>
+        </div>
+                
+            </div>
+            
+          </div>       
+                  
+                  </div>
+                  
+                  
+                  
+                  
+              </div>
+          </div>
           
           
-
+          
+          
+      </div>
+     
+    </div>
+  </div>
+</div>
+          </div>
 
 
 

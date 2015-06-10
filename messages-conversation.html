@@ -40,15 +40,32 @@
     <script src="assets/html5shiv/html5shiv.min.js"></script>
   <![endif]-->
   
-  
-    
-    <script>
-        
-           function showDiv(){
-   document.getElementById('hidden_div').style.display = "block";
-}
+  <script type="text/javascript">
+    $( document ).ready(function() {
+
+
+
+
+ 
+
+ $(".individual-messages-conversation section").click(function(){
      
-    </script>
+        if($(this).hasClass('clearfix')){
+             $(this).toggleClass('conversation-clicked');
+            $(".inner-blockings").toggleClass('show-inner-blockings'); 
+           $(".unclicked-conversation").toggleClass('show-unclicked-conversation'); 
+        }
+     
+     
+      
+});
+
+
+
+});  
+     
+      </script>
+ 
 </head>
 
 
@@ -286,7 +303,7 @@
                   <a href="#"><i class="mdi-social-person-add"></i>Add friend to conversation </a><br/>
                   <a href="#"><i class="fa fa-diamond"></i>Show attached hubs</a><br/>
                   <a href="#"><i class="mdi-editor-attach-file"></i>Show attachments</a><br/>
-                  <a href="#"><i class="fa fa-trash-o"></i>Delete all messages</a><br/>
+                  <a data-target="#deletallmessages" data-toggle="modal" href="#"><i class="fa fa-trash-o"></i>Delete all messages</a><br/>
                   
                   
                   
@@ -314,7 +331,7 @@
         <div class="aside-item messages-friends-section">
            
             
-            <i class="mdi-social-group"></i> My friends <a href="#"> <img src="images/right-arrow-messages.png" /> </a>
+            <i class="mdi-social-group"></i> My friends <a href="#"> <i class="fa fa-arrow-circle-right"></i></a>
             
           </div>
         
@@ -330,8 +347,8 @@
          
                     
                     <ul role="menu" class="dropdown-menu">
-                        <img src="images/dropdown-top.png" class="dropdown-top" />
-                        <li class="first-li"><a class="naming-blue" href="#">john's Profile</a></li>
+                        
+                        <li class=""><a class="naming-blue" href="#">john's Profile</a></li>
             <li><a href="#">open conversation</a></li>
             <li><a  data-toggle="modal" data-target="#deletallmessages" href="#">delete john's messages</a></li>
             <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite john to hubs</a>
@@ -368,8 +385,8 @@
          
                     
                     <ul role="menu" class="dropdown-menu">
-            <img src="images/dropdown-top.png" class="dropdown-top" />
-                        <li class="first-li"><a class="naming-blue" href="#">Jane's Profile</a></li>
+            
+                        <li class=""><a class="naming-blue" href="#">Jane's Profile</a></li>
             <li><a href="#">open conversation</a></li>
             <li><a  data-toggle="modal" data-target="#deletallmessages"    href="#">delete john's messages</a></li>
             <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite john to hubs</a></li>
@@ -395,8 +412,8 @@
          
                     
                     <ul role="menu" class="dropdown-menu">
-            <img src="images/dropdown-top.png" class="dropdown-top" />
-                        <li class="first-li"><a class="naming-blue" href="#">Nicolas's Profile</a></li>
+            
+                        <li class=""><a class="naming-blue" href="#">Nicolas's Profile</a></li>
             <li><a href="#">open conversation</a></li>
             <li><a  data-toggle="modal" data-target="#deletallmessages"   href="#">delete john's messages</a></li>
             <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite john to hubs</a></li>
@@ -414,7 +431,7 @@
            <div class="aside-item messages-friends-section">
            
             
-            <i class="fa fa-diamond"></i> My hubs <a href="#"> <img src="images/right-arrow-messages.png" /> </a>
+            <i class="fa fa-diamond"></i> My hubs <a href="#"> <i class="fa fa-arrow-circle-right"></i></a>
             
           </div>
         
@@ -430,8 +447,8 @@
          
                     
                     <ul role="menu" class="dropdown-menu">
-            <img src="images/dropdown-top.png" class="dropdown-top" />
-            <li class="first-li"><a href="#">suggest hub to   </a></li>
+         
+            <li class=""><a href="#">suggest hub to   </a></li>
             <li><a href="#">brows hub's followers</a></li>
             <li class="divider"></li>
             <li><a href="#">unfollow</a></li>
@@ -453,8 +470,8 @@
          
                     
                     <ul role="menu" class="dropdown-menu">
-            <img src="images/dropdown-top.png" class="dropdown-top" />
-            <li class="first-li"><a href="#">suggest hub to   </a></li>
+            
+            <li class=""><a href="#">suggest hub to   </a></li>
             <li><a href="#">brows hub's followers</a></li>
             <li class="divider"></li>
             <li><a href="#">unfollow</a></li>
@@ -476,8 +493,8 @@
          
                     
                     <ul role="menu" class="dropdown-menu">
-           <img src="images/dropdown-top.png" class="dropdown-top" />
-            <li class="first-li"><a href="#">suggest hub to   </a></li>
+      
+            <li class=""><a href="#">suggest hub to   </a></li>
             <li><a href="#">brows hub's followers</a></li>
             <li class="divider"></li>
             <li><a href="#">unfollow</a></li>
@@ -514,7 +531,10 @@
                           <div class="inner-blockings">
                               <span><a href="#"><i class="fa fa-trash-o"></i></a></span> <span><a href="#">Block John Swift</a></span> <span><a href="#">spam</a></span> 
                           </div> 
-                          
+                          <div class="unclicked-conversation">
+                              
+                              Block John Swift
+                          </div>
                           
                           
                       </div>
@@ -528,7 +548,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         
                         <div class="individual-messages-conversation">
-                            <section  class="clearfix" onClick"showDiv()">
+                            <section  class="clearfix">
                             <div class="pull-left conversated-pic">
                                 <img src="images/conversation-pic-2.jpg" alt="dp"/>
                             </div> 
@@ -603,7 +623,12 @@
                                     
                                     <div class="delivered-pending pull-left">
                                         <p>Pending confirmation on awesome golden ring with diamonds </p>    
-                                        <a href="#">move to dashboard <img src="images/right-arrow-messages.png"></a>
+                                      <a href="#">
+<div class="pull-left">move to dashboard </div>
+<div class="pull=left">
+<i class="fa fa-arrow-circle-right" style=""></i>
+</div>
+</a>
                                     </div>
                                     
                                     
@@ -628,14 +653,76 @@
                                 <p>
                             Hello. How much carats do you want?     
                                 </p>
-                                
+                                 <div class="wrapper-conversation-attachment-div clearfix">
+                                  
+                               <div class="invite-results-hubs pull-left">
+                               <img src="images/modal-Jewelry.png" class="pull-left">
+                               <div class="pull-left">
+                               <p> Amazing <br/>jewels for ...</p>
+                               <span> Public hub</span>
+                               
+                               </div>
+                               
+                              </div>   
+                                <div class="invite-results-hubs pull-left">
+                               <img src="images/modal-Jewelry.png" class="pull-left">
+                               <div class="pull-left">
+                               <p> Jewelry</p>
+                               <span> Public hub</span>
+                               
+                               </div>
+                               
+                              </div>    
+                                 <div class="invite-results-hubs pull-left">
+                               <img src="images/modal-Jewelry.png" class="pull-left">
+                               <div class="pull-left">
+                               <p> Jewelry</p>
+                               <span> Public hub</span>
+                               
+                               </div>
+                               
+                              </div>   
+                                  
+                              </div>
+                                <div class="wrapper-conversation-attachment-div clearfix">
+                                  
+                               <div class="invite-results-hubs pull-left">
+                               <img src="images/document.png" class="pull-left">
+                               <div class="pull-left doc-attachment-width">
+                                   <p> Trade<br/>treaty 20.05.2015...</p>
+                               
+                               
+                               </div>
+                               
+                              </div>   
+                                <div class="invite-results-hubs pull-left img-top">
+                               <img src="images/image-type.png" class="pull-left">
+                               <div class="pull-left">
+                               <p> Image.png</p>
+                               
+                               
+                               </div>
+                               
+                              </div>    
                               
+                                  
+                              </div>
                                 
                             </div> 
                             <div class="pull-right conversated-date">
                                       <span>18.05.2015</span> 
                             </div> 
                             
+                             
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
                         </section>  
                             
                             
@@ -660,13 +747,39 @@
                     </section>     
                     
                     <section class="submit-messages-conversation hidden-xs">
-                        <span><a href="#">send </a></span>
+
+                        <span class="conversation-send"><a href="#">send </a></span>
                         
-                        <span class="add-an-attachment"><span class="circle-icons-fill">+</span> Add an attachement <input  type="file"/>
                         
-                        <span>
+                        
+                        <span class="dropdown add-an-attachment" aria-expanded="false" role="button" data-toggle="dropdown">
+                        
+                        
+             
+                         
+  <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+    <div class="circle-icons-fill">+</div> Add an attachement 
+  
+  </a>
+
+  <ul class="dropdown-menu" role="menu">
+                                <img class="tool-tip-top" src="images/tool-tip-top.png">
+<li class="">
+<a href="#"> <i class="fa fa-diamond"></i> add hubs </a>
+</li>
+<li class="">
+<a href="#"> <i class="mdi-editor-attach-file"></i> add files  </a>
+</li>
+  </ul>
+
+
 
                         </span>
+                        
+                        
+                        
+                        
+                        <!--<span class="add-an-attachment"><span class="circle-icons-fill">+</span> Add an attachement <input  type="file"/> </span> -->
                     </section>
                     <section class="conversation-mobile-pad visible-xs clearfix">
                         
