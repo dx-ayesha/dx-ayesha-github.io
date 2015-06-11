@@ -2513,6 +2513,14 @@ color: #919c9f !important;
 
   width: 70% !important;
 }
+
+.friends-send-messages div.see-profile .dropdown-menu {
+ 
+  left: auto !important;
+ 
+  
+  right: -26px !important;
+}
 .messages-switch label {
     font-size: 1em !important;
     
