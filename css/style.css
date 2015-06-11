@@ -2516,10 +2516,16 @@ color: #919c9f !important;
 
 .friends-send-messages div.see-profile .dropdown-menu {
  
-  left: auto !important;
+  left: auto;
  
   
-  right: -26px !important;
+  right: -26px;
+}
+
+
+.friends-send-messages div.see-profile .shorter-dropdown{
+      left: -91px !important;
+    right: auto !important; 
 }
 .messages-switch label {
     font-size: 1em !important;
