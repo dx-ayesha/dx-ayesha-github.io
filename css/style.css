@@ -2507,9 +2507,12 @@ color: #919c9f !important;
 
 .conversation-mobile-pad textarea {
 
-    width: 57% !important;
+      width: 45% !important;
 }
+.wrapper-messages-conversation .conversated-text .delivery-notification .delivered-pending {
 
+  width: 70% !important;
+}
 .messages-switch label {
     font-size: 1em !important;
     
