@@ -1441,6 +1441,7 @@ background-color: #10263d;
 .modal-delete-all-messages .modal-dialog{
   height: 203px;
     width: 416px;
+    margin: 0 auto;
 }
 .modal-delete-all-messages .modal-content{
   -moz-border-bottom-colors: none;
@@ -1453,7 +1454,7 @@ background-color: #10263d;
     border-style: solid none none;
     border-width: 5px medium medium;
    min-height: 203px;
-    width: 416px;
+    
     padding: 0;
 }
 .modal-delete-all-messages .modal-content .modal-body{
@@ -1624,10 +1625,10 @@ margin-left: 5px;
     text-align: center;
 }
 .modal-invite-to-hub .modal-content .modal-body  .invite-submit-buttons{
-    
+    text-align: right;
     margin-top: 35px;
 }
-.modal-invite-to-hub .modal-content .modal-body .invite-submit-buttons span.modal-invite-undo a {
+.modal-invite-to-hub .modal-content .modal-body .invite-submit-buttons .modal-invite-undo a {
  color: #4a575b;
     font-size: 1em !important;
     font-weight: 600;
@@ -1635,8 +1636,8 @@ margin-left: 5px;
     padding-right: 20px;
     text-transform: uppercase;
 }
-.modal-invite-to-hub .modal-content .modal-body .invite-submit-buttons span.modal-invite-submit-button a {
-background-color: #1d7ad0;
+.modal-invite-to-hub .modal-content .modal-body .invite-submit-buttons .modal-invite-submit-button a {
+background-color: #1e7ad1;
     color: #fff;
     font-size: 1em !important;
     font-weight: 600;
@@ -1644,9 +1645,18 @@ background-color: #1d7ad0;
     padding: 10px 20px;
     text-transform: uppercase;
     position: relative;
+     text-decoration: none;
 }
-.modal-invite-to-hub .modal-content .modal-body  .invite-submit-buttons span.modal-invite-submit-button a:hover {
-background-color: #113556;
+.modal-invite-to-hub .modal-content .modal-body .invite-submit-buttons .modal-invite-submit-button{
+width: 135px;
+}
+.modal-invite-to-hub .modal-content .modal-body  .invite-submit-buttons .modal-invite-submit-button a:hover {
+background-color: #0e579b;
+  
+}
+
+.modal-invite-to-hub .modal-content .modal-body  .invite-submit-buttons .modal-invite-submit-button a:active,  .modal-invite-to-hub .modal-content .modal-body  .invite-submit-buttons .modal-invite-submit-button a:focus{
+background-color: #10263d;
   
 }
 .modal-invite-to-hub .modal-content .modal-body .invite-results-hubs{
@@ -1687,15 +1697,17 @@ background-color: #113556;
  .modal-invite-to-hub .modal-content .modal-body .search-item input::-webkit-input-placeholder {
 opacity: 1 !important;
 color: #c1c7c9 !important;
-
+font-style: italic;
 }
  .modal-invite-to-hub .modal-content .modal-body .search-item input::-moz-placeholder {
 opacity: 1 !important;
 color: #c1c7c9 !important;
+font-style: italic;
 }
  .modal-invite-to-hub .modal-content .modal-body .search-item input::-ms-input-placeholder {
 opacity: 1 !important;
 color: #c1c7c9 !important;
+font-style: italic;
 }
  .modal-invite-to-hub .modal-content .modal-body textarea::-webkit-input-placeholder {
 opacity: 1 !important;
@@ -1900,7 +1912,7 @@ img.tool-tip-left {
     display: none;
     font-size: 0.85em !important;
     font-weight: 600 !important;
-    left: -231px !important;
+    left: -260px !important;
     padding: 7px 20px;
     position: absolute;
     text-transform: capitalize;
@@ -2008,14 +2020,15 @@ img.tool-tip-left {
     margin-left: 5px;
     margin-top: 11px;
     position: absolute;
-    width: 40px;
+    width: 30px;
 }
 .modal-mobile-hubs .modal-content .modal-body .search-item input {
     border-bottom: 1px solid #eef0f3;
     color: #4a575b !important;
     font-style: normal;
-    padding-left: 36px;
+    padding-left: 31px;
     width: 85%;
+    font-weight: 600;
 }
 .modal-mobile-hubs .modal-content .modal-body .wrapper-hub-selecttion {
     height: 325px;
@@ -2340,6 +2353,11 @@ color: #919c9f !important;
     margin-top: 13px;
     margin-bottom: 13px;
 }
+
+.wrapper-conversation-attachment-div .invite-results-hubs:hover p {
+  color: #1d7ad0;
+}
+
 .wrapper-conversation-attachment-div .invite-results-hubs img {
     height: 52px;
     margin-right: 15px;
@@ -2475,8 +2493,601 @@ color: #919c9f !important;
 }
 
 
+.modal-mobile-hubs .modal-content .modal-body .search-item input::-webkit-input-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+font-style: italic;
+
+}
+.modal-mobile-hubs .modal-content .modal-body .search-item input::-moz-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+font-style: italic;
+}
+.modal-mobile-hubs .modal-content .modal-body .search-item input::-ms-input-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+font-style: italic;
+}
+
+ /* Modal desktop Friends */
 
 
+
+ 
+ .modal-desktop-friends .modal {
+    background-color: transparent;
+    box-shadow: none !important;
+    max-height: 100% !important;
+    overflow: hidden !important;
+    padding-right: 0;
+    width: 100%;
+}
+ .modal-desktop-friends .modal-dialog {
+    margin: 30px auto;
+    width: 850px;
+}
+ .modal-desktop-friends .modal-content {
+    border: medium none;
+    border-radius: 0;
+    min-height: 320px;
+    padding: 0;
+}
+ .modal-desktop-friends .modal-content .modal-body {
+    padding: 0 17px 34px 15px;
+}
+ .modal-desktop-friends .modal-content .modal-body .row .modal-padding {
+    padding: 0;
+}
+ .modal-desktop-friends .modal-content .modal-body .invite-header {
+    background-color: #1d7ad0;
+    color: #fff;
+    font-weight: 600;
+    height: 60px;
+    padding-top: 19px;
+    text-align: center;
+    text-transform: uppercase;
+}
+ .modal-desktop-friends .modal-content .modal-body .search-item {
+    display: inline-block;
+    left: 0;
+    margin: 0;
+    opacity: 0.7;
+    padding-left: 35px;
+    padding-right: 31px;
+    position: relative;
+    top: 18px;
+    width: 100%;
+}
+ .modal-desktop-friends .modal-content .modal-body .search-item i {
+    color: #bdc4c5;
+    margin-left: 5px;
+    margin-top: 11px;
+    position: absolute;
+    width: 40px;
+}
+ .modal-desktop-friends .modal-content .modal-body .search-item input {
+    border-bottom: 1px solid #eef0f3;
+    color: #4a575b !important;
+    font-style: normal;
+    padding-left: 36px;
+    width: 94.5%;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+ 
+ 
+ 
+ .modal-desktop-friends .modal-content .modal-body .search-item input::-webkit-input-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+font-style: italic;
+
+}
+ .modal-desktop-friends .modal-content .modal-body .search-item input::-moz-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+font-style: italic;
+}
+ .modal-desktop-friends .modal-content .modal-body .search-item input::-ms-input-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+font-style: italic;
+}
+.modal-desktop-friends .wrapper-modal-desktop-friends {
+   height: 450px !important;
+    overflow: auto;
+    padding: 0 35px;  
+}
+
+.modal-desktop-friends .wrapper-modal-desktop-friends .inner-modal-desktop-friends {
+ border: 1px solid #f2f2f2;
+    box-shadow: 0 5px 9px -4px #c3c7ca;
+    margin-bottom: 12px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.modal-desktop-friends .wrapper-modal-desktop-friends .inner-modal-desktop-friends img.img-blue-border {
+width: 100%;
+border-bottom: 6px solid #dcecf9;
+}
+ 
+ .modal-desktop-friends .wrapper-modal-desktop-friends .inner-modal-desktop-friends img.img-pink-border {
+width: 100%;
+border-bottom: 6px solid #fee4e7;
+}
+.modal-desktop-friends .wrapper-modal-desktop-friends .inner-modal-desktop-friends h5{
+    color: #4a575b;
+    font-size: 1.11em;
+    font-weight: 600;
+    padding-top: 20px;
+     margin-bottom: 3px;
+}
+.modal-desktop-friends .wrapper-modal-desktop-friends .inner-modal-desktop-friends p{
+     color: #919c9f;
+    font-size: 0.85em;
+min-height: 34px;
+}
+ .modal-desktop-friends .wrapper-modal-desktop-friends .inner-modal-desktop-friends p span{
+      color: #7a8487;
+    font-size: 0.85em;
+
+}
+ .modal-desktop-friends .wrapper-modal-desktop-friends .inner-modal-desktop-friends a.add-to-friends{
+      background-color: #858e93;
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 7px 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+
+
+.modal-desktop-friends .wrapper-modal-desktop-friends .inner-modal-desktop-friends a.add-to-friends:hover{
+      background-color: #1d7ad0;
+
+}
+.modal-desktop-friends .wrapper-modal-desktop-friends .inner-modal-desktop-friends a.add-to-friends:active, .modal-desktop-friends .wrapper-modal-desktop-friends .inner-modal-desktop-friends a.add-to-friends:focus {
+      background-color: #10263d;
+
+}
+
+.wrapper-messages-conversation .submit-messages-conversation span.conversation-send a:hover{
+    background-color: #0e579b;
+    color: #fff !important;
+    
+}
+
+.wrapper-messages-conversation .submit-messages-conversation span.conversation-send a:active, .wrapper-messages-conversation .submit-messages-conversation span.conversation-send a:focus{
+    background-color: #10263d;
+    color: #fff !important;
+    
+}
+
+ /* Modal desktop add friend to conversation */
+
+
+
+ .modal-desktop-add-friend-to-conversation .modal {
+    background-color: transparent;
+    box-shadow: none !important;
+    max-height: 100% !important;
+    overflow: hidden !important;
+    padding-right: 0;
+    width: 100%;
+}
+ .modal-desktop-add-friend-to-conversation .modal-dialog {
+    margin: 30px auto;
+    width: 850px;
+}
+ .modal-desktop-add-friend-to-conversation .modal-content {
+    border: medium none;
+    border-radius: 0;
+    min-height: 320px;
+    padding: 0;
+}
+ .modal-desktop-add-friend-to-conversation .modal-content .modal-body {
+    padding: 0 17px 34px 15px;
+}
+ .modal-desktop-add-friend-to-conversation .modal-content .modal-body .row .modal-padding {
+    padding: 0;
+}
+ .modal-desktop-add-friend-to-conversation .modal-content .modal-body .invite-header {
+    background-color: #1d7ad0;
+    color: #fff;
+    font-weight: 600;
+    height: 60px;
+    padding-top: 19px;
+    text-align: center;
+    text-transform: uppercase;
+}
+ .modal-desktop-add-friend-to-conversation .modal-content .modal-body .search-item {
+    display: inline-block;
+    left: 0;
+    margin: 0;
+    opacity: 0.7;
+    padding-left: 35px;
+    padding-right: 31px;
+    position: relative;
+    top: 18px;
+    width: 100%;
+}
+ .modal-desktop-add-friend-to-conversation .modal-content .modal-body .search-item i {
+    color: #bdc4c5;
+    margin-left: 5px;
+    margin-top: 11px;
+    position: absolute;
+    width: 40px;
+}
+ .modal-desktop-add-friend-to-conversation .modal-content .modal-body .search-item input {
+    border-bottom: 1px solid #eef0f3;
+    color: #4a575b !important;
+    font-style: normal;
+    padding-left: 36px;
+    width: 94.5%;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+ 
+ 
+ 
+ .modal-desktop-add-friend-to-conversation .modal-content .modal-body .search-item input::-webkit-input-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+font-style: italic;
+
+}
+ .modal-desktop-add-friend-to-conversation .modal-content .modal-body .search-item input::-moz-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+font-style: italic;
+}
+ .modal-desktop-add-friend-to-conversation .modal-content .modal-body .search-item input::-ms-input-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+font-style: italic;
+}
+.modal-desktop-add-friend-to-conversation .wrapper-modal-desktop-friends {
+   height: 450px !important;
+    overflow: auto;
+    padding: 0 35px;  
+}
+
+.modal-desktop-add-friend-to-conversation .wrapper-modal-desktop-friends .inner-modal-desktop-friends {
+ border: 1px solid #f2f2f2;
+    box-shadow: 0 5px 9px -4px #c3c7ca;
+    margin-bottom: 12px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.modal-desktop-add-friend-to-conversation .wrapper-modal-desktop-friends .inner-modal-desktop-friends img.img-blue-border {
+width: 100%;
+border-bottom: 6px solid #dcecf9;
+}
+ 
+ .modal-desktop-add-friend-to-conversation .wrapper-modal-desktop-friends .inner-modal-desktop-friends img.img-pink-border {
+width: 100%;
+border-bottom: 6px solid #fee4e7;
+}
+.modal-desktop-add-friend-to-conversation .wrapper-modal-desktop-friends .inner-modal-desktop-friends h5{
+    color: #4a575b;
+    font-size: 1.11em;
+    font-weight: 600;
+    padding-top: 20px;
+     margin-bottom: 3px;
+}
+.modal-desktop-add-friend-to-conversation .wrapper-modal-desktop-friends .inner-modal-desktop-friends p{
+     color: #919c9f;
+    font-size: 0.85em;
+min-height: 34px;
+}
+ .modal-desktop-add-friend-to-conversation .wrapper-modal-desktop-friends .inner-modal-desktop-friends p span{
+      color: #7a8487;
+    font-size: 0.85em;
+
+}
+ .modal-desktop-add-friend-to-conversation .wrapper-modal-desktop-friends .inner-modal-desktop-friends a.add-to-friends{
+      background-color: #858e93;
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 7px 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+
+
+.modal-desktop-add-friend-to-conversation .wrapper-modal-desktop-friends .inner-modal-desktop-friends a.add-to-friends:hover{
+      background-color: #1d7ad0;
+
+}
+.modal-desktop-add-friend-to-conversation .wrapper-modal-desktop-friends .inner-modal-desktop-friends a.add-to-friends:active, .modal-desktop-add-friend-to-conversation  .wrapper-modal-desktop-friends .inner-modal-desktop-friends a.add-to-friends:focus {
+      background-color: #10263d;
+
+}
+
+
+/* Modal desktop hubs */
+
+
+
+ .modal-desktop-hubs .modal {
+    background-color: transparent;
+    box-shadow: none !important;
+    max-height: 100% !important;
+    overflow: hidden !important;
+    padding-right: 0;
+    width: 100%;
+}
+ .modal-desktop-hubs .modal-dialog {
+    margin: 30px auto;
+    width: 850px;
+}
+ .modal-desktop-hubs .modal-content {
+    border: medium none;
+    border-radius: 0;
+    min-height: 320px;
+    padding: 0;
+}
+ .modal-desktop-hubs .modal-content .modal-body {
+    padding: 0 17px 34px 15px;
+}
+ .modal-desktop-hubs .modal-content .modal-body .row .modal-padding {
+    padding: 0;
+}
+ .modal-desktop-hubs .modal-content .modal-body .invite-header {
+    background-color: #1d7ad0;
+    color: #fff;
+    font-weight: 600;
+    height: 60px;
+    padding-top: 19px;
+    text-align: center;
+    text-transform: uppercase;
+}
+ .modal-desktop-hubs .modal-content .modal-body .search-item {
+    display: inline-block;
+    left: 0;
+    margin: 0;
+    opacity: 0.7;
+    padding-left: 35px;
+    padding-right: 31px;
+    position: relative;
+    top: 18px;
+    width: 100%;
+}
+ .modal-desktop-hubs .modal-content .modal-body .search-item i {
+    color: #bdc4c5;
+    margin-left: 5px;
+    margin-top: 11px;
+    position: absolute;
+    width: 40px;
+}
+ .modal-desktop-hubs .modal-content .modal-body .search-item input {
+    border-bottom: 1px solid #eef0f3;
+    color: #4a575b !important;
+    font-style: normal;
+    padding-left: 36px;
+    width: 94.5%;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+ 
+ 
+ 
+ .modal-desktop-hubs .modal-content .modal-body .search-item input::-webkit-input-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+font-style: italic;
+
+}
+ .modal-desktop-hubs .modal-content .modal-body .search-item input::-moz-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+font-style: italic;
+}
+ .modal-desktop-hubs .modal-content .modal-body .search-item input::-ms-input-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+font-style: italic;
+}
+.modal-desktop-hubs .wrapper-modal-desktop-hubs {
+   height: 450px !important;
+    overflow: auto;
+    padding: 0 35px;  
+}
+
+.modal-desktop-hubs .wrapper-modal-desktop-hubs .inner-modal-desktop-hubs {
+ border: 1px solid #f2f2f2;
+    box-shadow: 0 5px 9px -4px #c3c7ca;
+    margin-bottom: 12px;
+
+   
+}
+.modal-desktop-hubs .wrapper-modal-desktop-hubs .inner-modal-desktop-hubs img.Modal-desktop-hubs-image {
+width: 100%;
+  margin-bottom: 15px;
+}
+
+.modal-desktop-hubs .wrapper-modal-desktop-hubs .inner-modal-desktop-hubs span {
+font-size: 0.85em;
+color: #717c80;
+ padding-left: 13px;
+}
+.modal-desktop-hubs .wrapper-modal-desktop-hubs .inner-modal-desktop-hubs h4 {
+color: #4a575b;
+font-weight: 600;
+ padding-left: 13px;
+}
+.modal-desktop-hubs .wrapper-modal-desktop-hubs .inner-modal-desktop-hubs .listen-notify {
+ padding-left: 13px;
+}
+
+.modal-desktop-hubs .wrapper-modal-desktop-hubs .inner-modal-desktop-hubs .listen-notify a {
+color: #4a575b;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.modal-desktop-hubs .wrapper-modal-desktop-hubs .inner-modal-desktop-hubs .listen-notify i {
+ margin-right: 2px;
+ margin-left: 2px;
+}
+
+.modal-desktop-hubs .wrapper-modal-desktop-hubs .inner-modal-desktop-hubs .join-invite a {
+color: #fff;
+
+}
+.modal-desktop-hubs .wrapper-modal-desktop-hubs .inner-modal-desktop-hubs .join-invite a div {
+ background-color: #858e93;
+    font-size: 0.95em;
+    font-weight: 600;
+    margin-top: 23px;
+    min-height: 45px;
+    padding-top: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 50%;
+}
+.modal-desktop-hubs .wrapper-modal-desktop-hubs .inner-modal-desktop-hubs .join-invite a i{
+ margin-right: 6px;
+}
+.modal-desktop-hubs .wrapper-modal-desktop-hubs .inner-modal-desktop-hubs .join-invite a div.pull-left {
+border-right: 1px solid #bbbbbb;
+}
+
+/* Modal desktop attached files  */
+
+
+
+
+
+ .modal-desktop-attached-files .modal {
+    background-color: transparent;
+    box-shadow: none !important;
+    max-height: 100% !important;
+    overflow: hidden !important;
+    padding-right: 0;
+    width: 100%;
+}
+ .modal-desktop-attached-files .modal-dialog {
+    margin: 30px auto;
+    width: 465px;
+}
+ .modal-desktop-attached-files .modal-content {
+    border: medium none;
+    border-radius: 0;
+    min-height: 320px;
+    padding: 0;
+}
+ .modal-desktop-attached-files .modal-content .modal-body {
+    padding: 0 17px 34px 15px;
+}
+ .modal-desktop-attached-files .modal-content .modal-body .row .modal-padding {
+    padding: 0;
+}
+ .modal-desktop-attached-files .modal-content .modal-body .invite-header {
+    background-color: #1d7ad0;
+    color: #fff;
+    font-weight: 600;
+    height: 60px;
+    padding-top: 19px;
+    text-align: center;
+    text-transform: uppercase;
+}
+ .modal-desktop-attached-files .modal-content .modal-body .search-item {
+    display: inline-block;
+    left: 0;
+    margin: 0;
+    opacity: 0.7;
+    padding-left: 35px;
+    padding-right: 31px;
+    position: relative;
+    top: 18px;
+    width: 96%;
+}
+ .modal-desktop-attached-files .modal-content .modal-body .search-item i {
+    color: #bdc4c5;
+    margin-left: 5px;
+    margin-top: 11px;
+    position: absolute;
+    width: 40px;
+}
+ .modal-desktop-attached-files .modal-content .modal-body .search-item input {
+    border-bottom: 1px solid #eef0f3;
+    color: #4a575b !important;
+    font-style: normal;
+    padding-left: 36px;
+    width: 94.5%;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+ 
+ 
+ 
+ .modal-desktop-attached-files .modal-content .modal-body .search-item input::-webkit-input-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+font-style: italic;
+
+}
+ .modal-desktop-attached-files .modal-content .modal-body .search-item input::-moz-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+font-style: italic;
+}
+ .modal-desktop-attached-files .modal-content .modal-body .search-item input::-ms-input-placeholder {
+opacity: 1 !important;
+color: #919c9f !important;
+font-style: italic;
+}
+.modal-desktop-attached-files .wrapper-desktop-attached-files {
+   height: 235px !important;
+    overflow: auto;
+    padding: 0 35px;  
+}
+
+.modal-desktop-attached-files .wrapper-desktop-attached-files .invite-results-hubs {
+    background-color: #f6f8f9;
+    margin-bottom: 13px;
+    margin-right: 25px;
+    margin-top: 13px;
+    min-height: 83px;
+    padding: 14px 9px;
+    width: 162px;
+}
+
+.modal-desktop-attached-files .wrapper-desktop-attached-files .invite-results-hubs:hover {
+    background-color: #e3e9f3;
+   color: #1d7ad0;
+}
+.modal-desktop-attached-files .wrapper-desktop-attached-files .invite-results-hubs:hover p {
+  
+   color: #1d7ad0;
+}
+.modal-desktop-attached-files .wrapper-desktop-attached-files .invite-results-hubs img {
+    height: 52px;
+    margin-right: 15px;
+    width: 52px;
+}
+.modal-desktop-attached-files .wrapper-desktop-attached-files .invite-results-hubs div.doc-attachment-width {
+    width: 53%;
+}
+
+.modal-desktop-attached-files .wrapper-desktop-attached-files .invite-results-hubs div p {
+    font-size: 0.9em !important;
+    margin-bottom: 1px !important;
+    padding-left: 0 !important;
+     color: #4a575b;
+}
 
 /* Messages Page ends  here  */
 
@@ -2571,13 +3182,97 @@ color: #919c9f !important;
     line-height: 25px !important;
 }
 
+
+
+ /* Modal desktop Friends */
+.modal-desktop-friends .modal-dialog {
+    
+    width: 320px;
+}
+
+.modal-desktop-friends .wrapper-modal-desktop-friends .row .col-xs-6 {
+    
+     width: 100%;
+}
+
+.modal-desktop-friends .modal-content .modal-body .search-item input {
+    font-size: 0.8em;
+    width: 84.9%;
+}
+.modal-desktop-friends .wrapper-modal-desktop-friends {
+  height: 305px !important;
+ 
+}
+
+ /* Modal desktop add friend to conversation */
+.modal-desktop-add-friend-to-conversation .modal-dialog {
+    
+    width: 320px;
+}
+
+.modal-desktop-add-friend-to-conversation .wrapper-modal-desktop-friends .row .col-xs-6 {
+    
+     width: 100%;
+}
+
+.modal-desktop-add-friend-to-conversation .modal-content .modal-body .search-item input {
+    font-size: 0.8em;
+    width: 84.9%;
+}
+.modal-desktop-add-friend-to-conversation .wrapper-modal-desktop-friends {
+  height: 356px !important;
+  
+}
+/* Modal desktop hubs */
+
+.modal-desktop-hubs .modal-dialog {
+    
+    width: 320px;
+}
+
+.modal-desktop-hubs .wrapper-modal-desktop-hubs .row .col-xs-6 {
+    
+     width: 100%;
+}
+
+.modal-desktop-hubs .modal-content .modal-body .search-item input {
+    font-size: 0.8em;
+    width: 84.9%;
+}
+.modal-desktop-hubs .wrapper-modal-desktop-hubs {
+  height: 300px !important;
+  
+}
+
+/* Modal desktop attached files  */
+
+
+.modal-desktop-attached-files .modal-dialog {
+    
+    width: 320px;
+}
+
+
+
+.modal-desktop-attached-files .modal-content .modal-body .search-item input {
+    font-size: 0.8em;
+    width: 84.9%;
+}
+
+
+.modal-delete-all-messages .modal-dialog{
+
+    width:327px;
+}
+
+
 }
 
 @media(max-width: 570px){
    /* --------------Messages page Popups----------------- */
    
    .modal-invite-to-hub .modal-dialog {
-    width: 345px;
+ width: 310px;
 }
   .modal-invite-to-hub .modal-content .modal-body .search-item {
     padding-left: 10px;
@@ -2585,7 +3280,13 @@ color: #919c9f !important;
   }
   .modal-invite-to-hub .modal-content .modal-body .wrapper-hub-selecttion {
     padding: 13px 0;
+      height: 245px;
 }
+
+  .modal-invite-to-hub .modal-content .modal-body .wrapper-hub-selecttion .row {
+    margin: 0;
+}
+
 .modal-invite-to-hub .modal-content .modal-body p {
    
     font-size: 0.95em;
@@ -2598,17 +3299,34 @@ color: #919c9f !important;
 }
 
 .modal-invite-to-hub .modal-content .modal-body .invite-results-hubs div p {
-     font-size: 0.75em !important;
+     font-size: 0.6em !important;
      padding-top: 3px;
 }
 .modal-invite-to-hub .modal-content .modal-body .wrapper-textarea-adjustment {
-    margin: 28px 9px 15px;
+  margin: 3px 9px 15px;
     
 }
 
 .wrapper-conversation-attachment-div .invite-results-hubs {
   background-color: #fff;
 
+}
+
+.modal-invite-to-hub .modal-content .modal-body p {
+    padding-left:  5px;
+    font-size: 0.75em;
+}
+.modal-invite-to-hub .modal-content .modal-body .invite-results-hubs {
+    padding: 14px 0;
+}
+.modal-invite-to-hub .modal-content .modal-body .invite-results-hubs img.right-img {
+    
+    margin-left: 5px;
+ 
+}
+.modal-invite-to-hub .modal-content .modal-body .invite-submit-buttons {
+
+  margin-top: 15px;
 }
 }
 
@@ -2842,6 +3560,17 @@ color: #919c9f !important;
    
 }
 
+
+ /* Modal desktop Friends */
+.modal-desktop-friends .modal-dialog {
+    
+    width: 715px;
+}
+ /* Modal desktop add friend to conversation */
+.modal-desktop-add-friend-to-conversation .modal-dialog {
+    
+    width: 715px;
+}
 /* Messages Page ends  here  */
 }
 
@@ -2858,6 +3587,11 @@ color: #919c9f !important;
     }
 /* Landing Page ends  here  */
 
+/* Modal desktop hubs */
+.modal-desktop-hubs .modal-dialog {
+   
+    width: 730px;
+}
  }
 
  @media (min-width: 481px)and (max-width: 767px) {
@@ -2873,12 +3607,55 @@ color: #919c9f !important;
     padding-top: 51px;
      }
 /* Landing Page ends  here  */
-/* Messages Page Starts here */
+ /* Modal desktop Friends */
+.modal-desktop-friends .modal-dialog {
+    
+    width: 445px;
+}
+.modal-desktop-friends .modal-content .modal-body .search-item input {
+    width: 90%;
+}
 
-/* Messages Page ends  here  */
+ /* Modal desktop add friend to conversation */
+
+
+.modal-desktop-add-friend-to-conversation .modal-dialog {
+    
+    width: 445px;
+}
+.modal-desktop-add-friend-to-conversation .modal-body .search-item input {
+    width: 90%;
+}
+
+
+/* Modal desktop hubs */
+
+
+.modal-desktop-hubs .modal-dialog {
+    
+    width: 445px;
+}
+.modal-desktop-hubs .modal-body .search-item input {
+    width: 90%;
+}
+/* Modal desktop attached files  */
+
+
+.modal-desktop-attached-files .modal-dialog {
+    
+   width: 445px;
+}
+
+
+
+.modal-desktop-attached-files .modal-content .modal-body .search-item input {
+   width: 90%;
+}
+
+
  }
 
- 
+
 
   @media (min-width: 980px)and (max-width: 991px) {
 /* Landing Page starts  here  */
