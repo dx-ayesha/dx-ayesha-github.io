@@ -33,7 +33,7 @@ window.conApp = {};
   };
 
   YAY.prototype.init = function() {
-    var _this = this;
+    var _this = window.yay = this;
 
     // no transition enable
     _this.$body.addClass('yay-notransition');
@@ -42,7 +42,7 @@ window.conApp = {};
     _this.$nano.nanoScroller({ preventPageScrolling: true });
 
     // sidebar toggle
-    $('.yay-toggle').on( 'click', function(e) {
+    $('.yay-toggle').unbind().on( 'click', function(e) {
       e.preventDefault();
       _this.toggleYay();
     });
@@ -141,7 +141,7 @@ window.conApp = {};
       _this.$nano.nanoScroller();
 
       // resize for charts reinit
-      _this.$window.resize();
+      // _this.$window.resize();
     }, _this.options.duration);
   }
 
@@ -306,7 +306,7 @@ window.conApp = {};
 
 !function($) {
   "use strict";
-  
+
   var Layer = function(element, options) {
     this.options     = options;
     this.$body       = $('body');
@@ -620,17 +620,17 @@ window.conApp = {};
 
   /* Mouse Position - global */
   window.mousePos = {x: 0, y: 0};
-  $(document).on('mousemove', function(e){ 
-    window.mousePos.x = e.clientX || e.pageX; 
+  $(document).on('mousemove', function(e){
+    window.mousePos.x = e.clientX || e.pageX;
     window.mousePos.y = e.clientY || e.pageY;
   });
 
 }(jQuery);
 
-/* 
-* 
+/*
+*
 * conSparkline extend sparkline (responsive fix)
-* 
+*
 */
 !function($) {
   "use strict";
@@ -644,7 +644,7 @@ window.conApp = {};
       if(!$.fn.sparkline) {
         return;
       }
-      
+
       // change width
       var newOpts = {};
       if(options.type == 'bar' && /%/g.test(options.width)) {

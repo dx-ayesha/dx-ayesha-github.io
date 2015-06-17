@@ -3157,6 +3157,47 @@ padding: 0 35px;
 
 
 
+
+/* hubs Page starts  here  */
+
+.wrapper-hubs-profile-page-banner{
+     background-image: url('../images/hubs-profile-page-banner.jpg');
+    background-repeat: no-repeat;
+   -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 100%;
+    min-height: 400px;
+   
+    
+}
+
+
+
+
+
+/* hubs Page ends  here  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 480px) {
 /* Landing Page starts  here  */
 .wrapper-landing-header {
