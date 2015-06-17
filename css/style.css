@@ -1581,11 +1581,7 @@ margin-left: 5px;
     margin-top: 14px;
     padding: 2px 8px 6px;
 }
-.modal-invite-to-hub .modal-content .modal-body .wrapper-hub-selecttion {
-  height: 325px;
-    overflow: auto;
-    padding: 13px 35px;
-}
+
 .modal-invite-to-hub .modal-content .modal-body .invite-design-structure {
   border-right: 1px solid #f0f2f5;
   min-height: 325px;
@@ -2596,11 +2592,7 @@ opacity: 1 !important;
 color: #919c9f !important;
 font-style: italic;
 }
-.modal-desktop-friends .wrapper-modal-desktop-friends {
-   height: 450px !important;
-    overflow: auto;
-    padding: 0 35px;  
-}
+
 
 .modal-desktop-friends .wrapper-modal-desktop-friends .inner-modal-desktop-friends {
  border: 1px solid #f2f2f2;
@@ -3150,8 +3142,31 @@ padding: 0 35px;
 .wrapper-modal-desktop-hubs .yaybar .nano-content{
 padding: 0 35px;
 }
+.modal-invite-to-hub .modal-content .modal-body .wrapper-hub-selecttion .yaybar{
+    display: block;
+    height: 300px;
+    left: auto;
+    padding-bottom: 0;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+}
+.modal-invite-to-hub .modal-content .modal-body .wrapper-hub-selecttion .yaybar .nano-content{
+padding: 0 50px 0 33px;
+}
 
-
+.modal-desktop-friends .wrapper-modal-desktop-friends .yaybar {
+    display: block;
+    height: 450px;
+    left: auto;
+    padding-bottom: 0;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+}
+.modal-desktop-friends .wrapper-modal-desktop-friends .yaybar .nano-content {
+    padding: 0 35px;
+}
 /* Messages Page ends  here  */
 
 
@@ -3305,7 +3320,7 @@ padding: 0 35px;
     font-size: 0.8em;
     width: 84.9%;
 }
-.modal-desktop-friends .wrapper-modal-desktop-friends {
+.modal-desktop-friends .wrapper-modal-desktop-friends .yaybar{
   height: 305px !important;
  
 }
@@ -3384,7 +3399,7 @@ padding: 0 35px;
     padding-left: 10px;
     padding-right: 23px;
   }
-  .modal-invite-to-hub .modal-content .modal-body .wrapper-hub-selecttion {
+  .modal-invite-to-hub .modal-content .modal-body .wrapper-hub-selecttion .yaybar{
     padding: 13px 0;
       height: 245px;
 }
@@ -3645,9 +3660,13 @@ padding: 0 35px;
 
 
 
+.modal-invite-to-hub .modal-content .modal-body .wrapper-hub-selecttion .yaybar .nano-content {
+    padding: 0 10px 0 0;
+}
 
-
-
+.modal-desktop-friends .wrapper-modal-desktop-friends .yaybar .nano-content {
+    padding: 0 35px 0 16px;
+}
 
 /* Messages Page ends  here  */
 }
