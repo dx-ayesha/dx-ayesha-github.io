@@ -3,7 +3,7 @@
 <html><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Hubify - Messages</title>
+  <title>Hubify - Conversation </title>
 
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,71 +39,38 @@
   <!--[if lt IE 9]>
     <script src="assets/html5shiv/html5shiv.min.js"></script>
   <![endif]-->
- 
   
   <script type="text/javascript">
     $( document ).ready(function() {
 
 
 
- $(".marked-important a i").click(function(){
-     if($(this).hasClass('fa-star-o')){
-         $(this).removeClass('fa-star-o');
-         $(this).addClass('fa-star');
-     }else
-         $(this).addClass('fa-star-o');
-});
 
- $(".important-messages a i").click(function(){
-     if($(this).hasClass('fa-star-o')){
-         $(this).removeClass('fa-star-o');
-         $(this).addClass('fa-star');
-     }else
-         $(this).addClass('fa-star-o');
-});
  
 
- $(".messages-delete-tooltip i").click(function(){
-     $(this).toggleClass('click-color');
+ $(".individual-messages-conversation section").click(function(){
+     
+        if($(this).hasClass('clearfix')){
+             $(this).toggleClass('conversation-clicked');
+            $(".inner-blockings").toggleClass('show-inner-blockings'); 
+           $(".unclicked-conversation").toggleClass('show-unclicked-conversation'); 
+        }
+     
+     
+      
 });
 
- $(".trash-messages a i").click(function(){
-     $(this).toggleClass('click-color');
-});
-
-
- $(".bluk-messages .checkbox input").click(function(){
-         
-            $(".important-messages").toggleClass('operations-messages-show');
-             $(".trash-messages").toggleClass('operations-messages-show');
-                $(".operations-messages").toggleClass('operations-messages-show');
-       $(".messages-update").toggleClass('hide-messages-update');
-        $(".bluk-option li.dropdown-messages-select a.dropdown-toggle").toggleClass('blue-dropdown-toggle');
-       
-});
 $(".friends-send-messages div.see-profile i").click(function(){
          
             $(this).toggleClass('fa-caret-up');
           
        
 });
- $(".dropdown-messages-select input").click(function(){
-     
 
-         $(".bluk-option .dropdown-messages-select .dropdown-menu").toggleClass('show-on-checkbox');
-         $(".bluk-option li.dropdown-messages-select a.dropdown-toggle i").toggleClass('fa-caret-up');
-       
-});
-
- $(".bluk-option li.dropdown-messages-select").click(function(){
-         $(".bluk-option li.dropdown-messages-select a.dropdown-toggle i").toggleClass('fa-caret-up');
-       
-});
 });  
      
       </script>
-  
-  
+ 
 </head>
 
 
@@ -127,7 +94,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
         <img src="images/sidebar-logo.png" alt="Hubify">
       </a>
 
-      <a href="#" class="brand-logo logo-small messages-mobile-logo">
+      <a href="#" class="brand-logo logo-small hidden-xs">
         <img src="images/logo2.png" alt="Hubify">
       </a>
 
@@ -138,7 +105,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
 
       <div class="navbar-top-menu">
         <ul class="navbar-top-tabs">
-            <li class="visible-xs messages-mobile-edit"> <a href="#"> <img src="images/messages-edit.png"> </a> </li>
+            <li class="visible-xs messages-mobile-edit hidden-xs"> <a href="#"> <img src="images/messages-edit.png"> </a> </li>
           <li class="top-tab-item hidden-xs">
             <img src="images/messages_diamond.png">
             HUBS
@@ -210,6 +177,19 @@ $(".friends-send-messages div.see-profile i").click(function(){
         </ul>
       </div>
 
+      
+      <div class="conversation-arranged-center visible-xs">
+          <div class="conversation-set-display">
+              <a href="">
+              <div class="converation-set-margin">
+                 <i class="mdi-hardware-keyboard-arrow-left pull-left" style=""></i><span class="pull-left">Conversation with Jane Clarkson</span> 
+              </div>
+              </a>
+          </div>
+          
+          
+      </div>
+  
     </div>
   </nav>
   <!-- /Navigation top -->
@@ -311,46 +291,34 @@ $(".friends-send-messages div.see-profile i").click(function(){
     <div class="nano has-scrollbar">
       <div class="nano-content" tabindex="0" style="right: -17px;">
         <ul class="aside-menu messages-left-side">
-          <li class="aside-menu-item active messages-inbox">
+          <li class="aside-menu-item messages-inbox">
          Inbox
           </li>
-          <li class="aside-menu-item messages-converstiontab">
+          <li class="aside-menu-item active messages-converstiontab">
             Last Conversation
           </li>
-          
+        
         </ul>
         <ul class="aside-items messages-ul-left-side">
 
           <div class="aside-item">
-            <li class="aside-hubs-switch">
-              <p class="switch messages-switch">
-                <label>
-                  All messages
-                  <input type="checkbox" checked="">
-                  <span class="lever"></span>
-                  Important
-                </label>
-              </p>
-            </li>
+            
+              <div class="tab-last-conversation">
+                  
+                  <a data-target="#modaldesktopaddfriendtoconversation" data-toggle="modal" href="#"><i class="mdi-social-person-add"></i>Add friend to conversation </a><br/>
+                  <a href="#" ><i class="fa fa-diamond"></i>Show attached hubs</a><br/>
+                  <a href="#" data-target="#modaldesktopattachedfiles" data-toggle="modal" ><i class="mdi-editor-attach-file"></i>Show attachments</a><br/>
+                  <a data-target="#deletallmessages" data-toggle="modal" href="#"><i class="fa fa-trash-o"></i>Delete all messages</a><br/>
+                  
+                  
+                  
+              </div>  
+              
+              
+              
           </div>
 
-          <div class="aside-item messages-left-side-show-me">
-            <li class="label">Show me</li>
-            <li class="aside-show-options">
-            
-                <span class="checkbox pull-left">
-<input id="checkbox13" type="checkbox">
-<label for="checkbox13"> My messages </label>
-</span>
-              
-                <span class="checkbox  pull-left">
-<input id="checkbox23" type="checkbox">
-<label for="checkbox23">Spam </label>
-                </span> 
-     <span class="spam-messages-count  pull-left"> 135</span>
-            
-             </li>
-          </div>
+       
     <div class="aside-item meesages-sound-notify">
             <li class="label">Sound notification</li>
             <li class="aside-show-options">
@@ -368,14 +336,14 @@ $(".friends-send-messages div.see-profile i").click(function(){
         <div class="aside-item messages-friends-section">
            
             
-            <i class="mdi-social-group"></i> My friends <a href="#"> <i class="fa fa-arrow-circle-right"></i> </a>
+            <i class="mdi-social-group"></i> My friends <a href="#"> <i class="fa fa-arrow-circle-right"></i></a>
             
           </div>
         
         <div class="aside-item friends-send-messages">
             <img src="images/John-Swift.png" class="pull-left" />
             <div class="send-message-corner pull-left">
-                <p class="friends-message-name"><a href="#">John Swift</a></p>
+                <p class="friends-message-name"> <a href="#"> John Swift</a></p>
                 <p class="friends-location">LA, California, USA  </p>
                 <a href="#" class="send-message-link pull-left"> Send a message </a> 
                 <div class="dropdown-messages-select see-profile pull-left">
@@ -387,23 +355,17 @@ $(".friends-send-messages div.see-profile i").click(function(){
                         
                         <li class=""><a class="" href="#">john's Profile</a></li>
             <li><a href="#">open conversation</a></li>
-            <li><a data-target="#deletallmessages" data-toggle="modal" href="#">delete john's messages</a></li>
+            <li><a  data-toggle="modal" data-target="#deletallmessages" href="#">delete john's messages</a></li>
             <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite john to hubs</a>
 
    
         
-        </li>
+        </li> 
             
-            
-            
-            
-            
-            
-            
-            <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows john's hubs</a></li>
-            <li><a data-target="#modaldesktopfriends" data-toggle="modal" href="#">brows john's friends</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modaldesktophubs">brows john's hubs</a></li>
+            <li><a data-toggle="modal" data-target="#modaldesktopfriends" href="#">brows john's friends</a></li>
             <li class="divider"></li>
-            <li><a data-target="#deletallmessages" data-toggle="modal" href="#">remove from friends</a></li>
+            <li><a  data-toggle="modal" data-target="#deletallmessages"    href="#">remove from friends</a></li>
           </ul>
         </div>
                 
@@ -413,7 +375,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
          <div class="aside-item friends-send-messages">
             <img src="images/Petterson-Green.png" class="pull-left" />
             <div class="send-message-corner pull-left">
-                <p class="friends-message-name"><a href="#"> Jane Petterson-Green</a></p>
+                <p class="friends-message-name"> <a href="#">Jane Petterson-Green</a></p>
                 <p class="friends-location">Velington, New Zeland </p>
                 <a href="#" class="send-message-link pull-left"> Send a message </a> 
                 <div class="dropdown-messages-select see-profile pull-left">
@@ -425,12 +387,12 @@ $(".friends-send-messages div.see-profile i").click(function(){
             
                         <li class=""><a class="" href="#">Jane's Profile</a></li>
             <li><a href="#">open conversation</a></li>
-            <li><a  href="#">delete john's messages</a></li>
+            <li><a  data-toggle="modal" data-target="#deletallmessages"    href="#">delete john's messages</a></li>
             <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite john to hubs</a></li>
-            <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows john's hubs</a></li>
-            <li><a data-target="#modaldesktopfriends" data-toggle="modal" href="#">brows john's friends</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modaldesktophubs">brows john's hubs</a></li>
+            <li><a data-toggle="modal" data-target="#modaldesktopfriends" href="#">brows john's friends</a></li>
             <li class="divider"></li>
-            <li><a href="#">remove from friends</a></li>
+            <li><a  data-toggle="modal" data-target="#deletallmessages"    href="#">remove from friends</a></li>
           </ul>
         </div>
                 
@@ -440,7 +402,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
             <div class="aside-item friends-send-messages">
             <img src="images/Nicolas-Zucklinsky.jpg" class="pull-left" />
             <div class="send-message-corner pull-left">
-                <p class="friends-message-name"><a href="#"> Nicolas Zucklinsky</a></p>
+                <p class="friends-message-name"> <a href="#"> Nicolas Zucklinsky </a> </p>
                 <p class="friends-location">Warsaw, Poland  </p>
                 <a href="#" class="send-message-link pull-left"> Send a message </a> 
                 <div class="dropdown-messages-select see-profile pull-left">
@@ -449,15 +411,15 @@ $(".friends-send-messages div.see-profile i").click(function(){
          
                     
                     <ul role="menu" class="dropdown-menu">
-           
-                        <li class=""><a class="" href="#">Nicolas's Profile</a></li>
+            
+                        <li class=""><a class="naming-blue" href="#">Nicolas's Profile</a></li>
             <li><a href="#">open conversation</a></li>
-            <li><a data-target="#deletallmessages" data-toggle="modal" href="#">delete john's messages</a></li>
+            <li><a  data-toggle="modal" data-target="#deletallmessages"   href="#">delete john's messages</a></li>
             <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite john to hubs</a></li>
-            <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows john's hubs</a></li>
-            <li><a data-target="#modaldesktopfriends" data-toggle="modal" href="#">brows john's friends</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modaldesktophubs">brows john's hubs</a></li>
+            <li><a data-toggle="modal" data-target="#modaldesktopfriends" href="#">brows john's friends</a></li>
             <li class="divider"></li>
-            <li><a data-target="#deletallmessages" data-toggle="modal" href="#">remove from friends</a></li>
+            <li><a  data-toggle="modal" data-target="#deletallmessages" href="#">remove from friends</a></li>
           </ul>
         </div>
                 
@@ -468,7 +430,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
            <div class="aside-item messages-friends-section">
            
             
-            <i class="fa fa-diamond"></i> <a class="link-my-hubs" href="#"> My hubs </a> <a href="#"> <i class="fa fa-arrow-circle-right"></i> </a>
+            <i class="fa fa-diamond"></i> <a class="link-my-hubs" href="#"> My hubs </a> <a href="#"> <i class="fa fa-arrow-circle-right"></i></a>
             
           </div>
         
@@ -484,7 +446,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
          
                     
                     <ul role="menu" class="dropdown-menu shorter-dropdown">
-      
+         
             <li class=""><a href="#">suggest hub to   </a></li>
             <li><a href="#">brows hub's followers</a></li>
             <li class="divider"></li>
@@ -530,7 +492,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
          
                     
                     <ul role="menu" class="dropdown-menu shorter-dropdown">
-           
+      
             <li class=""><a href="#">suggest hub to   </a></li>
             <li><a href="#">brows hub's followers</a></li>
             <li class="divider"></li>
@@ -554,514 +516,345 @@ $(".friends-send-messages div.see-profile i").click(function(){
     <div class="row margin-adjustment-mobile-view">
     
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-adjustment-mobile-view">
-          <section class="bluk-option hidden-xs"> 
-          
-            <ul class="nav navbar-nav">
+         
         
-        <li class="dropdown-messages-select">
+        
+              <div class="wrapper-blocking-system clearfix hidden-xs">
+              
+                  <div class="row">
+                      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pull-left">
+                          <div class="conversation-title">   Amazing hub </div>
+                          
+                      </div>
+                      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pull-right">
+                          <div class="inner-blockings">
+                              <span><a href="#"><i class="fa fa-trash-o"></i></a></span> <span><a href="#">Block John Swift</a></span> <span><a href="#">spam</a></span> 
+                          </div> 
+                          <div class="unclicked-conversation">
+                              
+                              Block John Swift
+                          </div>
+                          
+                          
+                      </div>
+                      
+                  </div>     
+                  
+              </div>   
+                <div class="wrapper-messages-conversation">
+              
+              <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        
+                        <div class="individual-messages-conversation">
+                            <div class="fancy-scroll-bar">
+                          <aside class="yaybar yay-gestures yay-light yay-shrink">
+
+    <div class="top">
+      <div>
+        <a class="yay-toggle" href="#">
+          <div class="burg1"></div>
+          <div class="burg2"></div>
+          <div class="burg3"></div>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="nano has-scrollbar">
+      <div style="right: -17px;" tabindex="0" class="nano-content">
+        <ul class="aside-menu messages-left-side">
+          <li class="aside-menu-item messages-inbox">
+         Inbox
+          </li>
+          <li class="aside-menu-item active messages-converstiontab">
+            Last Conversation
+          </li>
+        
+        </ul>
+        <ul class="aside-items messages-ul-left-side">
+
+          <div class="aside-item">
             
+              <div class="tab-last-conversation">
+                  
+                  <a href="#" data-toggle="modal" data-target="#modaldesktopaddfriendtoconversation"><i class="mdi-social-person-add"></i>Add friend to conversation </a><br>
+                  <a href="#"><i class="fa fa-diamond"></i>Show attached hubs</a><br>
+                  <a data-toggle="modal" data-target="#modaldesktopattachedfiles" href="#"><i class="mdi-editor-attach-file"></i>Show attachments</a><br>
+                  <a href="#" data-toggle="modal" data-target="#deletallmessages"><i class="fa fa-trash-o"></i>Delete all messages</a><br>
+                  
+                  
+                  
+              </div>  
+              
+              
+              
+          </div>
+
+       
+    <div class="aside-item meesages-sound-notify">
+            <li class="label">Sound notification</li>
+            <li class="aside-show-options">
+              <p>
+                <input type="radio" class="with-gap" name="radios2" id="radios2-1" checked="">
+                <label for="radios2-1">Enable</label>
+              </p>
+              <p>
+                <input type="radio" class="with-gap" name="radios2" id="radios2-2">
+                <label for="radios2-2">Disable</label>
+              </p>
+              <p>
+            </p></li>
+          </div>
+        <div class="aside-item messages-friends-section">
+           
             
-      <span class="checkbox">
-                        <input id="checkboxall" type="checkbox">
-                        <label for="checkboxall"> </label>
-                    </span><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="pull-right fa fa-caret-down"></i></a>
+            <i class="mdi-social-group"></i> My friends <a href="#"> <i class="fa fa-arrow-circle-right"></i></a>
+            
+          </div>
+        
+        <div class="aside-item friends-send-messages">
+            <img class="pull-left" src="images/John-Swift.png">
+            <div class="send-message-corner pull-left">
+                <p class="friends-message-name"> <a href="#"> John Swift</a></p>
+                <p class="friends-location">LA, California, USA  </p>
+                <a class="send-message-link pull-left" href="#"> Send a message </a> 
+                <div class="dropdown-messages-select see-profile pull-left">
+                    
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-caret-down"></i></a>
          
                     
                     <ul class="dropdown-menu" role="menu">
-                       
-                        <li class=""><a href="#">select all </a></li>
-            <li><a href="#">unselect all</a></li>
-            <li><a href="#"> marked as important</a></li>
-            <li><a href="#"> unmarked as important</a></li>
-            <li><a href="#">read</a></li>
-            <li><a href="#">unread</a></li>
-          </ul>
-        </li>
-        <li class="important-messages"><a href="#"><i class="fa fa-star-o"></i></a></li>
-        <li class="trash-messages"><a href="#" data-toggle="modal" data-target="#deletallmessages"><i class="fa fa-trash-o"></i></a>
+                        
+                        <li class=""><a href="#" class="">john's Profile</a></li>
+            <li><a href="#">open conversation</a></li>
+            <li><a href="#" data-target="#deletallmessages" data-toggle="modal">delete john's messages</a></li>
+            <li><a data-target="#invitetohub" data-toggle="modal" href="#">invite john to hubs</a>
 
    
         
-        </li>
-        <li class="operations-messages"><a href="#">Spam</a></li>
-        <li class="operations-messages"><a href="#">Mark as New</a></li>
-        <li class="operations-messages"><a href="#">mark as read</a></li>
-        <li class="operations-messages"><a href="#">mark as important</a></li>
-        <li class="operations-messages"><a href="#">unmark as important</a></li>
-        <li class="messages-update" style="">You have 14 new of 212 massages </li>
-        <li class="create-newmessage"><a href="#"> new message </a></li>
-        
-      </ul>  
-              
-              
-          </section> 
-          
-          
-          <section class="bluk-messages unread-messages">
-              <div class="row">
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
-                  
-                <span class="checkbox">
-                    <input id="checkbox1" type="checkbox" class="checked-message">
-                        <label for="checkbox1"> </label>
-                    </span>  
-                              <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
-                                  
-                                      <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
-                                  </a></span>
-                  
-                  
-                  <span class="inbox-trash-icon"> 
-                      
-                      
-                      <span class="messages-delete-tooltip" href="#">  <i class="fa fa-trash-o"></i>
-                      
-                      
-                       <span>  <img class="tool-tip-top" src="images/tool-tip-top.png" /> 
-                           
-                           <a href="#">    delete </a> <br/> <a href="#"> mark as spam</a>  </span>
-                      
-                      </span>
-                  
-                  </span>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
-                  
-                  <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
-                  
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
-                  <p>
-                      <span> <a href="#"> John Swift</a> </span><br/>
-                      online <br/>
-                      today at 22:30
-                  </p>
-                  
-              </div>
-                  <a href="#"> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
-                  <h6> 
-                  <span class="visible-xs pull-left">  John Swift </span>    <span class="hidden-xs">  Awesome hub </span>  <span class="custom-badge"> new </span>
-                  </h6>
-                  
-                  <p>
-                      
-                      Hi, dude! How are you? I’ve just found out new int<span class="hidden-xs">eresting hub check the</span>...
-                  </p>
-                      </div></a>
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
-                  
-                   <span class="custom-badge"> +4 </span>
-              </div>
-                  <span class="pull-right set-mobile-date visible-xs"> 18.05.01 </span>
-                  
-      </div>
-          </section>
-          
-             <section class="bluk-messages">
-              <div class="row">
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
-                  
-                <span class="checkbox">
-                        <input id="checkbox2" type="checkbox" class="checked-message">
-                        <label for="checkbox2"> </label>
-                    </span>  
-                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
-                                  
-                                      <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
-                                  </a></span>
-                 <span class="inbox-trash-icon"> 
-                      
-                      
-                      <span class="messages-delete-tooltip" href="#">  <i class="fa fa-trash-o"></i>
-                      
-                      
-                       <span>  <img class="tool-tip-top" src="images/tool-tip-top.png" /> 
-                           
-                           <a href="#">    delete </a> <br/> <a href="#"> mark as spam</a>  </span>
-                      
-                      </span>
-                  
-                  </span>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
-                  
-                  <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
-                  
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
-                  <p>
-                      <span> <a href="#"> John Swift</a> </span><br/>
-                      online <br/>
-                      today at 22:30
-                  </p>
-                  
-              </div>
-           <a href="#">   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages read-messages">
-                 
-                  
-                  <p>
-                      
-                      Hi, dude! How are you? I’ve just found out new int<span class="hidden-xs">eresting hub check the</span>...
-                  </p>
-               </div> </a>
-              <span class="pull-right set-mobile-date visible-xs"> 18.05.01 </span>
-      </div>
-          </section>
-          
-          <section class="bluk-messages unread-messages">
-              <div class="row">
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
-                  
-                <span class="checkbox">
-                        <input id="checkbox3" type="checkbox">
-                        <label for="checkbox3"> </label>
-                    </span>  
-                 <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
-                                  
-                                      <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
-                                  </a></span>
-                   <span class="inbox-trash-icon"> 
-                      
-                      
-                      <span class="messages-delete-tooltip" href="#">  <i class="fa fa-trash-o"></i>
-                      
-                      
-                       <span>  <img class="tool-tip-top" src="images/tool-tip-top.png" /> 
-                           
-                           <a href="#">    delete </a> <br/> <a href="#"> mark as spam</a>  </span>
-                      
-                      </span>
-                  
-                  </span>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
-                  
-                <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
-                  
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
-                  <p>
-                      <span class=""><a href="#"> John Swift</a> </span><br/>
-                      online <br/>
-                      today at 22:30
-                  </p>
-                  
-              </div>
-          <a href="#">    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
-                  <h6> 
-                  <span class="visible-xs pull-left">  John Swift </span>    <span class="hidden-xs">  Awesome hub </span>  <span class="custom-badge"> new </span> <span class="spam-badge"> spam </span>
-                  </h6>
-                  
-                  <p>
-                      
-                      Hi, dude! How are you? I’ve just found out new int<span class="hidden-xs">eresting hub check the</span>...
-                  </p>
-              </div> </a>
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
-                  
-                   <span class="custom-badge"> +4 </span>
-              </div><span class="pull-right set-mobile-date visible-xs"> 18.05.01 </span>
-      </div>
-          </section>
-        <section class="bluk-messages less-opacity-background">
-              <div class="row">
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
-                  
-                <span class="checkbox">
-                        <input id="checkbox4" type="checkbox">
-                        <label for="checkbox4"> </label>
-                    </span>  
-                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
-                                  
-                                      <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
-                                  </a></span>
-                   <span class="inbox-trash-icon"> 
-                      
-                      
-                      <span class="messages-delete-tooltip" href="#">  <i class="fa fa-trash-o"></i>
-                      
-                      
-                       <span>  <img class="tool-tip-top" src="images/tool-tip-top.png" /> 
-                           
-                           <a href="#">    delete </a> <br/> <a href="#"> mark as spam</a>  </span>
-                      
-                      </span>
-                  
-                  </span>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
-                  
-                 <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
-                  
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
-                  <p>
-                      <span> <a href="#"> John Swift</a> </span><br/>
-                      online <br/>
-                      today at 22:30
-                  </p>
-                  
-              </div>
-           <a href="#">   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
-                  <h6> 
-                  <span class="visible-xs pull-left">  John Swift </span>    <span class="hidden-xs">  Awesome hub </span>  <span class="custom-badge"> new </span> <span class="spam-badge"> spam </span>
-                  </h6>
-                  
-                  <p>
-                      
-                      Hi, dude! How are you? I’ve just found out new int<span class="hidden-xs">eresting hub check the</span>...
-                  </p>
-               </div> </a>
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
-                  
-                   <span class="custom-badge"> +4 </span>
-              </div>
-                  
-      </div>
-            <div class="delete-conversation">
-                <div>    
-                <span class="confirm-delete-conversation"> <a href="#"> delete conversation</a> </span><span class="undo-delete"><a href="#"> Undo </a> </span>
-                </div>
-                <span class="pull-right set-mobile-date visible-xs"> 18.05.01 </span>
+        </li> 
+            
+            <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows john's hubs</a></li>
+            <li><a href="#" data-target="#modaldesktopfriends" data-toggle="modal">brows john's friends</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-target="#deletallmessages" data-toggle="modal">remove from friends</a></li>
+          </ul>
+        </div>
+                
             </div>
-          </section>
-           <section class="bluk-messages">
-              <div class="row">
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
-                  
-                <span class="checkbox">
-                        <input id="checkbox5" type="checkbox">
-                        <label for="checkbox5"> </label>
-                    </span>  
-                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
-                                  
-                                      <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
-                                  </a></span>
-                  <span class="inbox-trash-icon"> 
-                      
-                      
-                      <span class="messages-delete-tooltip" href="#">  <i class="fa fa-trash-o"></i>
-                      
-                      
-                       <span>  <img class="tool-tip-top" src="images/tool-tip-top.png" /> 
-                           
-                           <a href="#">    delete </a> <br/> <a href="#"> mark as spam</a>  </span>
-                      
-                      </span>
-                  
-                  </span>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
-                  
-                 <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
-                  
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
-                  <p>
-                      <span> <a href="#"> John Swift</a> </span><br/>
-                      online <br/>
-                      today at 22:30
-                  </p>
-                  
-              </div>
-           <a href="#">   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
-                  <h6> 
-                  <span class="visible-xs">  John Swift </span>    <span class="hidden-xs">  Awesome hub </span>
-                  </h6>
-                  
-                  <p>
-                      
-                      Hi, dude! How are you? I’ve just found out new int<span class="hidden-xs">eresting hub check the</span>...
-                  </p>
-                  <p class="set-attachments"><a href="#">+</a><a href="#"><img src="images/hub-notification.png" /></a><a href="#"> 2 hubs</a></p>
-               </div> </a>
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
-                  
-                   <span class="custom-badge"> +4 </span>
-              </div> <span class="pull-right set-mobile-date visible-xs"> 18.05.01 </span>
+            
+          </div>
+         <div class="aside-item friends-send-messages">
+            <img class="pull-left" src="images/Petterson-Green.png">
+            <div class="send-message-corner pull-left">
+                <p class="friends-message-name"> <a href="#">Jane Petterson-Green</a></p>
+                <p class="friends-location">Velington, New Zeland </p>
+                <a class="send-message-link pull-left" href="#"> Send a message </a> 
+                <div class="dropdown-messages-select see-profile pull-left">
+            
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-caret-down"></i></a>
+         
+                    
+                    <ul class="dropdown-menu" role="menu">
+            
+                        <li class=""><a href="#" class="">Jane's Profile</a></li>
+            <li><a href="#">open conversation</a></li>
+            <li><a href="#" data-target="#deletallmessages" data-toggle="modal">delete john's messages</a></li>
+            <li><a data-target="#invitetohub" data-toggle="modal" href="#">invite john to hubs</a></li>
+            <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows john's hubs</a></li>
+            <li><a href="#" data-target="#modaldesktopfriends" data-toggle="modal">brows john's friends</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-target="#deletallmessages" data-toggle="modal">remove from friends</a></li>
+          </ul>
+        </div>
+                
+            </div>
+            
+          </div>
+            <div class="aside-item friends-send-messages">
+            <img class="pull-left" src="images/Nicolas-Zucklinsky.jpg">
+            <div class="send-message-corner pull-left">
+                <p class="friends-message-name"> <a href="#"> Nicolas Zucklinsky </a> </p>
+                <p class="friends-location">Warsaw, Poland  </p>
+                <a class="send-message-link pull-left" href="#"> Send a message </a> 
+                <div class="dropdown-messages-select see-profile pull-left">
+            
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-caret-down"></i></a>
+         
+                    
+                    <ul class="dropdown-menu" role="menu">
+            
+                        <li class=""><a href="#" class="naming-blue">Nicolas's Profile</a></li>
+            <li><a href="#">open conversation</a></li>
+            <li><a href="#" data-target="#deletallmessages" data-toggle="modal">delete john's messages</a></li>
+            <li><a data-target="#invitetohub" data-toggle="modal" href="#">invite john to hubs</a></li>
+            <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows john's hubs</a></li>
+            <li><a href="#" data-target="#modaldesktopfriends" data-toggle="modal">brows john's friends</a></li>
+            <li class="divider"></li>
+            <li><a href="#" data-target="#deletallmessages" data-toggle="modal">remove from friends</a></li>
+          </ul>
+        </div>
+                
+            </div>
+            
+          </div>
+            
+           <div class="aside-item messages-friends-section">
+           
+            
+            <i class="fa fa-diamond"></i> <a href="#" class="link-my-hubs"> My hubs </a> <a href="#"> <i class="fa fa-arrow-circle-right"></i></a>
+            
+          </div>
+        
+        <div class="aside-item friends-send-messages">
+            <img class="pull-left" src="images/Jewelry.jpg">
+            <div class="send-message-corner pull-left">
+                <p class="friends-message-name"> Jewelry</p>
+                <p class="friends-location">Public hub  </p>
+                <a class="send-message-link pull-left" href="#"> open </a> 
+                <div class="dropdown-messages-select see-profile pull-left">
+            
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-caret-down"></i></a>
+         
+                    
+                    <ul class="dropdown-menu shorter-dropdown" role="menu">
+         
+            <li class=""><a href="#">suggest hub to   </a></li>
+            <li><a href="#">brows hub's followers</a></li>
+            <li class="divider"></li>
+            <li><a href="#">unfollow</a></li>
+          </ul>
+        </div>
+                
+            </div>
+            
+          </div>
+         <div class="aside-item friends-send-messages">
+            <img class="pull-left" src="images/motorcycle.jpg">
+            <div class="send-message-corner pull-left">
+                <p class="friends-message-name"> Extreme sports</p>
+                <p class="friends-location">Private hub </p>
+                <a class="send-message-link pull-left" href="#"> open </a> 
+                <div class="dropdown-messages-select see-profile pull-left">
+            
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-caret-down"></i></a>
+         
+                    
+                    <ul class="dropdown-menu shorter-dropdown" role="menu">
+            
+            <li class=""><a href="#">suggest hub to   </a></li>
+            <li><a href="#">brows hub's followers</a></li>
+            <li class="divider"></li>
+            <li><a href="#">unfollow</a></li>
+          </ul>
+        </div>
+                
+            </div>
+            
+          </div>
+            <div class="aside-item friends-send-messages">
+            <img class="pull-left" src="images/Sweets-Food-Donuts.jpg">
+            <div class="send-message-corner pull-left">
+                <p class="friends-message-name"> Sweets </p>
+                <p class="friends-location">Private hub </p>
+                <a class="send-message-link pull-left" href="#"> open </a> 
+                <div class="dropdown-messages-select see-profile pull-left">
+            
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-caret-down"></i></a>
+         
+                    
+                    <ul class="dropdown-menu shorter-dropdown" role="menu">
+      
+            <li class=""><a href="#">suggest hub to   </a></li>
+            <li><a href="#">brows hub's followers</a></li>
+            <li class="divider"></li>
+            <li><a href="#">unfollow</a></li>
+          </ul>
+        </div>
+                
+            </div>
+            
+          </div>
+        </ul>
+
       </div>
-          </section>
-          
-          
-          
-          
-         <section class="bluk-messages">
-              <div class="row">
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
-                  
-                <span class="checkbox">
-                        <input id="checkbox6" type="checkbox">
-                        <label for="checkbox6"> </label>
-                    </span>  
-                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
-                                  
-                                      <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
-                                  </a></span>
-                  <span class="inbox-trash-icon"> 
-                      
-                      
-                      <span class="messages-delete-tooltip" href="#">  <i class="fa fa-trash-o"></i>
-                      
-                      
-                       <span>  <img class="tool-tip-top" src="images/tool-tip-top.png" /> 
-                           
-                           <a href="#">    delete </a> <br/> <a href="#"> mark as spam</a>  </span>
-                      
-                      </span>
-                  
-                  </span>
+    <div style="" class="nano-pane"><div style="height: 87px; transform: translate(0px, 0px);" class="nano-slider"></div></div></div>
+  </aside>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                    </div>
+              
               </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
-                  
-               <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
-                  
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
-                  <p>
-                      <span> <a href="#"> John Swift</a> </span><br/>
-                      online <br/>
-                      today at 22:30
-                  </p>
-                  
-              </div>
-       <a href="#">  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
-                  <img class="pull-left reply-person" src="images/reply-notification.jpg">
-                 <div class="pull-left wrapper-replay-mesage">
-                     <h6 class="message-replay-title"> 
-                  re:Awesome hub
-                  </h6>
-                  
-                 <p class="replay-mesage">
-                      
-                      hello. ok thanx i’m glad to make a deal with you<span class="hidden-xs">.That Hub is ama</span>...
-                  </p>
-                 
-                 </div></div> </a>
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
-                  
-                   <span class="custom-badge"> +4 </span>
-              </div> <span class="pull-right set-mobile-date visible-xs"> 18.05.01 </span>
-      </div>
-          </section>
+              
+                    <section class="enter-messages-area clearfix hidden-xs">
+                        <textarea class="pull-left" placeholder="Start type you comment here" cols="" rows=""></textarea>
+                        <div class="pull-right current-conversation-person">
+                        <img src="images/current-conversation-person.jpg"/>
+                        </div>
+                        
+                    </section>     
+                    
+                    <section class="submit-messages-conversation hidden-xs">
+
+                        <span class="conversation-send"><a href="#">send </a></span>
+                        
+                        
+                        
+                        <span class="dropdown add-an-attachment" aria-expanded="false" role="button" data-toggle="dropdown">
+                        
+                        
+             
+                         
+  <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+    <div class="circle-icons-fill">+</div> Add an attachement 
+  
+  </a>
+
+  <ul class="dropdown-menu" role="menu">
+                                <img class="tool-tip-top" src="images/tool-tip-top.png">
+<li class="">
+<a href="#"> <i class="fa fa-diamond"></i> add hubs </a>
+</li>
+<li class="">
+<a href="#"> <i class="mdi-editor-attach-file"></i> add files  </a>
+</li>
+  </ul>
+
+
+
+                        </span>
+                        
+                        
+                        
+                        
+                        <!--<span class="add-an-attachment"><span class="circle-icons-fill">+</span> Add an attachement <input  type="file"/> </span> -->
+                    </section>
+                    <section class="conversation-mobile-pad visible-xs clearfix">
+                        
+                        <div class="conversation-arranged-center">
+                           <div class="row">
+<div class="col-xs-12"> 
+<div class="conversation-set-display">
+<div class="converation-set-margin">
+                        <a class="mobile-attach-files pull-left" href="#">+</a>
+                        <textarea class="pull-left" placeholder="" cols="" rows=""></textarea>
+                        <a class="mobile-send-message pull-left" href="#">Send</a>
+                        
+</div></div></div></div></div>  
+                    </section>
+                    
+          </div>
           
           
           
           
           
-           <section class="bluk-messages">
-              <div class="row">
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
-                  
-                <span class="checkbox">
-                        <input id="checkbox7" type="checkbox">
-                        <label for="checkbox7"> </label>
-                    </span>  
-                  <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
-                                  
-                                      <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
-                                  </a></span>
-                  <span class="inbox-trash-icon"> 
-                      
-                      
-                      <span class="messages-delete-tooltip" href="#">  <i class="fa fa-trash-o"></i>
-                      
-                      
-                       <span>  <img class="tool-tip-top" src="images/tool-tip-top.png" /> 
-                           
-                           <a href="#">    delete </a> <br/> <a href="#"> mark as spam</a>  </span>
-                      
-                      </span>
-                  
-                  </span>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
-                  
-             <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
-                  
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
-                  <p>
-                      <span> <a href="#"> John Swift</a> </span><br/>
-                      online <br/>
-                      today at 22:30
-                  </p>
-                  
-              </div>
-           <a href="#">   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
-                  <img class="pull-left reply-person" src="images/reply-notification.jpg">
-                 <div class="pull-left wrapper-replay-mesage">
-                     <h6 class="message-replay-title"> 
-                  re:Awesome hub
-                  </h6>
-                  
-                 <p class="replay-mesage">
-                      
-                      hello. ok thanx i’m glad to make a deal with you<span class="hidden-xs">.That Hub is ama</span>...
-                  </p>
-                  <p class="set-attachments"><a href="#">+</a><a href="#"><img src="images/hub-notification.png" /></a><a href="#">hubs</a></p>
-                 </div></div> </a>
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
-                  
-                   <span class="custom-badge"> +4 </span>
-              </div> <span class="pull-right set-mobile-date visible-xs"> 18.05.01 </span>
-      </div>
-          </section>
           
-          
-           <section class="bluk-messages">
-              <div class="row">
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 checked-info hidden-xs">
-                  
-                <span class="checkbox">
-                        <input id="checkbox8" type="checkbox">
-                        <label for="checkbox8"> </label>
-                    </span>  
-                 <span class="marked-important"><a class="messages-important-tooltip" href="#"> <i class="fa fa-star-o"> </i>
-                                  
-                                      <span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Important</span>
-                                  </a></span>
-                   <span class="inbox-trash-icon"> 
-                      
-                      
-                      <span class="messages-delete-tooltip" href="#">  <i class="fa fa-trash-o"></i>
-                      
-                      
-                       <span>  <img class="tool-tip-top" src="images/tool-tip-top.png" /> 
-                           
-                           <a href="#">    delete </a> <br/> <a href="#"> mark as spam</a>  </span>
-                      
-                      </span>
-                  
-                  </span>
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 messages-person">
-                  
-                 <img data-target="#profilemobilemodal" data-toggle="modal" src="images/messages_person.jpg"/>
-                  
-              </div>
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 message-person-name hidden-xs">
-                  <p>
-                      <span> <a href="#"> John Swift</a> </span><br/>
-                      online <br/>
-                      today at 22:30
-                  </p>
-                  
-              </div>
-         <a href="#">     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 received-messages">
-                 <img class="pull-left reply-person" src="images/reply-notification.jpg">
-                 <div class="pull-left wrapper-replay-mesage">
-                 <p class="replay-mesage">
-                      
-                      hello. ok thanx i’m glad to make a deal with you<span class="hidden-xs">.That Hub is ama</span>...
-                  </p>
-                  <p class="set-attachments"><a href="#">+</a><a href="#"><img src="images/hub-notification.png" /></a><a href="#"> 2 hubs</a> &nbsp;<a href="#">+</a><a href="#"><img src="images/attach-notification.png" /></a><a href="#"> 2 files</a></p>
-                 </div></div> </a>
-              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 total-messages hidden-xs">
-                  
-                   <span class="custom-badge"> +4 </span>
-              </div> <span class="pull-right set-mobile-date visible-xs "> 18.05.01 </span>
-      </div>
-          </section>
       </div>
 
     </div>
@@ -1091,7 +884,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
           </div>
           <!-- Modal INVITE TO HUBS -->
           <div class="modal-invite-to-hub">
-<div class="modal fade" id="invitetohub" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="invitetohub" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="padding-right: 0px;">
   <div class="modal-dialog">
     <div class="modal-content">
       
@@ -1194,8 +987,7 @@ There is a limit of 6 invitations for one friend.
              <div class="row">
                       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <textarea  rows="" cols="" placeholder="Start type you comment here"></textarea>
-                       
-                             <div class="invite-submit-buttons pull-right">
+                         <div class="invite-submit-buttons pull-right">
   <div class="modal-invite-undo pull-left">
                                <a href="#"> UNDO </a>
     
@@ -1246,7 +1038,7 @@ INVITE JOHN
           <a href="#">Open conversation</a><br/>
           <a href="#">Delete John's messages</a><br/>
           <a href="#">Invite John to hubs</a><br/>
-          <a data-toggle="modal" data-target="#modalmobilehubs" href="#">Brows John's hubs</a><br/>
+          <a href="#">Brows John's hubs</a><br/>
           <a href="#">Brows John's friends</a><br/>
           <a href="#">Remove from friends</a>
            
@@ -1258,120 +1050,8 @@ INVITE JOHN
   </div>
 </div>
           </div>
-                       <!-- Modal mobile Hubs-->
-          
-<div class="modal-mobile-hubs">
-<div aria-hidden="false" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="modalmobilehubs" class="modal fade in" style="padding-right: 0px;">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      
-      <div class="modal-body">
-          <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 modal-padding"> 
-          <div class="invite-header">
-             John hubs  
-          </div>
-                  <div class="search-item">
-<i class="fa fa-search active"></i>
-<input type="search" placeholder="Type hub's or location here">
-</div>
-                  <div class="wrapper-hub-selecttion-mobile"> 
-                  
-                      
-                      
-                      
-                      <div class="friends-send-messages">
-            <img class="pull-left" src="images/Jewelry.jpg">
-            <div class="send-message-corner pull-left">
-                <p class="friends-message-name"> Jewelry</p>
-                <p class="friends-location">Public hub  </p>
-                <a class="send-message-link pull-left" href="#"> open </a> 
-                <div class="dropdown-messages-select see-profile pull-left">
-            
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-caret-down"></i></a>
-         
-                    
-                    <ul class="dropdown-menu" role="menu">
-      
-            <li class=""><a href="#">suggest hub to   </a></li>
-            <li><a href="#">brows hub's followers</a></li>
-            <li class="divider"></li>
-            <li><a href="#">unfollow</a></li>
-          </ul>
-        </div>
-                
-            </div>
-            
-          </div>
-                      
-              <div class="friends-send-messages">
-            <img class="pull-left" src="images/motorcycle.jpg">
-            <div class="send-message-corner pull-left">
-                <p class="friends-message-name"> Extreme sports</p>
-                <p class="friends-location">Private hub </p>
-                <a class="send-message-link pull-left" href="#"> open </a> 
-                <div class="dropdown-messages-select see-profile pull-left">
-            
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-caret-down"></i></a>
-         
-                    
-                    <ul class="dropdown-menu" role="menu">
-            
-            <li class=""><a href="#">suggest hub to   </a></li>
-            <li><a href="#">brows hub's followers</a></li>
-            <li class="divider"></li>
-            <li><a href="#">unfollow</a></li>
-          </ul>
-        </div>
-                
-            </div>
-            
-          </div>       
-                      
-               <div class="friends-send-messages">
-            <img class="pull-left" src="images/Sweets-Food-Donuts.jpg">
-            <div class="send-message-corner pull-left">
-                <p class="friends-message-name"> Sweets</p>
-                <p class="friends-location">Private hub </p>
-                <a class="send-message-link pull-left" href="#"> open </a> 
-                <div class="dropdown-messages-select see-profile pull-left">
-            
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-caret-down"></i></a>
-         
-                    
-                    <ul class="dropdown-menu" role="menu">
-            
-            <li class=""><a href="#">suggest hub to   </a></li>
-            <li><a href="#">brows hub's followers</a></li>
-            <li class="divider"></li>
-            <li><a href="#">unfollow</a></li>
-          </ul>
-        </div>
-                
-            </div>
-            
-          </div>       
-                  
-                  </div>
-                  
-                  
-                  
-                  
-              </div>
-          </div>
           
           
-          
-          
-      </div>
-     
-    </div>
-  </div>
-</div>
-          </div>
-
-
-      
 
      <!-- Modal desktop Friends-->
           
@@ -1513,7 +1193,153 @@ INVITE JOHN
           </div>
 
      
+     
+     
+     
+     
+     
+          <!-- Modal desktop add friend to conversation-->
+          
+<div class="modal-desktop-add-friend-to-conversation">
+<div aria-hidden="false" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="modaldesktopaddfriendtoconversation" class="modal fade in" style="padding-right: 0px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
       
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 modal-padding"> 
+          <div class="invite-header">
+             add friend to conversation
+          </div>
+                  <div class="search-item">
+<i class="fa fa-search active"></i>
+<input type="search" placeholder="Type follower's name or location here">
+</div>
+                  <div class="wrapper-modal-desktop-friends"> 
+                  
+                      <div class="row">
+                         
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#">     <img src="images/modal-desktop-friends-1.png" class="img-pink-border img-responsive" /></a>
+                          
+                                  <h5>Alice Russell</h5>
+                                  <p> Singer, Song writter <br/><span>London. UK</span></p>
+                                  
+                                  <a class="add-to-friends" href="#">add to  conversation</a>
+                              
+                              
+                              </div> 
+                              
+                          </div> 
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                               <div class="inner-modal-desktop-friends">
+                                   <a href="#">  <img src="images/modal-desktop-friends-2.png" class="img-blue-border img-responsive" /></a>
+                          
+                                  <h5>John Green</h5>
+                                  <p> Founder, Develloper<br/><span>Los Angeles, California</span></p>
+                                 
+                                  <a class="add-to-friends" href="#">add to  conversation</a>
+                              
+                              
+                              </div>
+                              
+                              
+                          </div> 
+                          
+                          
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#"> <img src="images/modal-desktop-friends-3.png" class="img-pink-border img-responsive" /></a>
+                          
+                                  <h5>Ann Clarckson</h5>
+                                  <p> Founder<br/><span>Los Angeles, California</span></p>
+                                  <a class="add-to-friends" href="#">add to  conversation</a>
+                              
+                              
+                              </div>
+                              
+                              
+                          </div> 
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#"><img src="images/modal-desktop-friends-4.png" class="img-pink-border img-responsive" /></a>
+                          
+                                  <h5>Ann Peterson</h5>
+                                  <p> Web, UI/UX designer<br/><span>Los Angeles, California</span></p>
+                                  
+                                  <a class="add-to-friends" href="#">add to  conversation</a>
+                              
+                              
+                              </div> 
+                              
+                          </div> 
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                               <div class="inner-modal-desktop-friends">
+                                   <a href="#"> <img src="images/modal-desktop-friends-5.png" class="img-blue-border img-responsive" /></a>
+                          
+                                  <h5>John Swift</h5>
+                                  <p><span>New York, Washington DC</span></p>
+                                  <a class="add-to-friends" href="#">add to  conversation</a>
+                              
+                              
+                              </div>
+                              
+                                </div> 
+                                 <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#"> <img src="images/modal-desktop-friends-6.jpg" class="img-blue-border img-responsive" /></a>
+                          
+                                  <h5>Peter Kavalski</h5>
+                                  <p><span>New York, Washington DC</span></p>
+                                  
+                                  <a class="add-to-friends" href="#">add to  conversation</a>
+                              
+                              
+                              </div>
+                              
+                              
+                          </div> 
+                              
+                        
+                          
+                      </div>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                   
+                  </div>
+                  
+                  
+                  
+                  
+              </div>
+          </div>
+          
+          
+          
+          
+      </div>
+     
+    </div>
+  </div>
+</div>
+          </div>
+     
+     
+          
+          
           <!-- Modal desktop hubs -->
           
 <div class="modal-desktop-hubs">
@@ -1738,9 +1564,86 @@ INVITE JOHN
           
           
           
+                <!-- Modal desktop attached files -->
           
           
+          <div class="modal-desktop-attached-files">
+<div class="modal fade in" id="modaldesktopattachedfiles" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="padding-right: 0px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 modal-padding"> 
+          <div class="invite-header">
+             attached files
+          </div>
+                  <div class="search-item">
+<i class="fa fa-search active"></i>
+<input type="search" placeholder="Type file's name here">
+</div>
+                  <div class="wrapper-desktop-attached-files"> 
+                  
+                      <a href="#">  <div class="invite-results-hubs pull-left">
+                               <img class="pull-left" src="images/document.png">
+                               <div class="pull-left doc-attachment-width">
+                                   <p> Trade<br>treaty 20.05.2015...</p>
+                               
+                               
+                               </div></a>
+                               
+                              </div>
+                       <a href="#">  <div class="invite-results-hubs pull-left img-top">
+                               <img class="pull-left" src="images/image-type.png">
+                               <div class="pull-left">
+                               <p> Image.png</p>
+                               
+                               
+                               </div>
+                               
+                              </div> </a>
+                              
+                      
+                      <a href="#">   <div class="invite-results-hubs pull-left">
+                               <img class="pull-left" src="images/document.png">
+                               <div class="pull-left doc-attachment-width">
+                                   <p> Trade<br>treaty 20.05.2015...</p>
+                               
+                               
+                               </div>
+                               
+                          </div> </a>
+                 
+                  
+                 
+                  
+                  </div>
+                  
+                  
+                  
+                  
+              </div>
+          </div>
+          
+          
+          
+          
+      </div>
      
+    </div>
+  </div>
+</div>
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+
 
   <!-- Materialize -->
   <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -1750,4 +1653,4 @@ INVITE JOHN
 
 
 
-<div class="hiddendiv common"></div><div id="window-resizer-tooltip" class="window-resizer-color" style="display: block;"><a href="#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1440</span> x <span class="tooltipHeight" id="winHeight">860</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1440</span> x <span class="tooltipHeight" id="vpHeight">755</span></div></body></html>
+  <div class="hiddendiv common"></div><div id="window-resizer-tooltip" class="window-resizer-color" style="display: block;"><a href="#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1440</span> x <span class="tooltipHeight" id="winHeight">860</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1440</span> x <span class="tooltipHeight" id="vpHeight">755</span></div></body></html>

@@ -60,7 +60,12 @@
       
 });
 
-
+$(".friends-send-messages div.see-profile i").click(function(){
+         
+            $(this).toggleClass('fa-caret-up');
+          
+       
+});
 
 });  
      
@@ -338,17 +343,17 @@
         <div class="aside-item friends-send-messages">
             <img src="images/John-Swift.png" class="pull-left" />
             <div class="send-message-corner pull-left">
-                <p class="friends-message-name naming-blue"> John Swift</p>
+                <p class="friends-message-name"> <a href="#"> John Swift</a></p>
                 <p class="friends-location">LA, California, USA  </p>
                 <a href="#" class="send-message-link pull-left"> Send a message </a> 
                 <div class="dropdown-messages-select see-profile pull-left">
                     
-       <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#"> <i class="fa fa-caret-up"></i></a>
+       <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#"> <i class="fa fa-caret-down"></i></a>
          
                     
                     <ul role="menu" class="dropdown-menu">
                         
-                        <li class=""><a class="naming-blue" href="#">john's Profile</a></li>
+                        <li class=""><a class="" href="#">john's Profile</a></li>
             <li><a href="#">open conversation</a></li>
             <li><a  data-toggle="modal" data-target="#deletallmessages" href="#">delete john's messages</a></li>
             <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite john to hubs</a>
@@ -370,17 +375,17 @@
          <div class="aside-item friends-send-messages">
             <img src="images/Petterson-Green.png" class="pull-left" />
             <div class="send-message-corner pull-left">
-                <p class="friends-message-name"> Jane Petterson-Green</p>
+                <p class="friends-message-name"> <a href="#">Jane Petterson-Green</a></p>
                 <p class="friends-location">Velington, New Zeland </p>
                 <a href="#" class="send-message-link pull-left"> Send a message </a> 
                 <div class="dropdown-messages-select see-profile pull-left">
             
-       <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#"> <i class="fa fa-caret-up"></i></a>
+       <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#"> <i class="fa fa-caret-down"></i></a>
          
                     
                     <ul role="menu" class="dropdown-menu">
             
-                        <li class=""><a class="naming-blue" href="#">Jane's Profile</a></li>
+                        <li class=""><a class="" href="#">Jane's Profile</a></li>
             <li><a href="#">open conversation</a></li>
             <li><a  data-toggle="modal" data-target="#deletallmessages"    href="#">delete john's messages</a></li>
             <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite john to hubs</a></li>
@@ -397,12 +402,12 @@
             <div class="aside-item friends-send-messages">
             <img src="images/Nicolas-Zucklinsky.jpg" class="pull-left" />
             <div class="send-message-corner pull-left">
-                <p class="friends-message-name"> Nicolas Zucklinsky</p>
+                <p class="friends-message-name"> <a href="#"> Nicolas Zucklinsky </a> </p>
                 <p class="friends-location">Warsaw, Poland  </p>
                 <a href="#" class="send-message-link pull-left"> Send a message </a> 
                 <div class="dropdown-messages-select see-profile pull-left">
             
-       <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#"> <i class="fa fa-caret-up"></i></a>
+       <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#"> <i class="fa fa-caret-down"></i></a>
          
                     
                     <ul role="menu" class="dropdown-menu">
@@ -425,7 +430,7 @@
            <div class="aside-item messages-friends-section">
            
             
-            <i class="fa fa-diamond"></i> My hubs <a href="#"> <i class="fa fa-arrow-circle-right"></i></a>
+            <i class="fa fa-diamond"></i> <a class="link-my-hubs" href="#"> My hubs </a> <a href="#"> <i class="fa fa-arrow-circle-right"></i></a>
             
           </div>
         
@@ -542,6 +547,12 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         
                         <div class="individual-messages-conversation">
+                            
+                              <div class="yaybar yay-gestures yay-light yay-shrink">
+                             <div class="nano has-scrollbar">
+                             <div class="nano-content" tabindex="0" style="right: -17px;">
+                            
+                            
                             <section  class="clearfix">
                             <div class="pull-left conversated-pic">
                                 <img src="images/conversation-pic-2.jpg" alt="dp"/>
@@ -720,7 +731,12 @@
                         </section>  
                             
                             
-                            
+                            </div>
+<div class="nano-pane" style="">
+<div class="nano-slider" style="height: 118px; transform: translate(0px, 0px);"></div>
+</div>
+</div>
+</div>
                             
                             
                         </div>
@@ -837,10 +853,12 @@
           </div>
                   <div class="search-item">
 <i class="fa fa-search active"></i>
-<input type="search" placeholder="Start typing hub’s name here">
+<input type="search" placeholder="Start typing hub's name here">
 </div>
                   <div class="wrapper-hub-selecttion"> 
-                  <div class="row">
+                 
+                      
+                      <div class="row">
                       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 modal-split-padding-right">
                          
                           <div class="invite-design-structure">
@@ -922,6 +940,9 @@ There is a limit of 6 invitations for one friend.
                       
                       
                   </div>
+                      
+                      
+                      
                   
                   </div>
                   <div class="wrapper-textarea-adjustment">
@@ -1157,7 +1178,9 @@ INVITE JOHN
 <input type="search" placeholder="Type follower's name or location here">
 </div>
                   <div class="wrapper-modal-desktop-friends"> 
-                  
+                  <div class="yaybar yay-gestures yay-light yay-shrink">
+                             <div class="nano has-scrollbar">
+                             <div class="nano-content" tabindex="0" style="right: -17px;">
                       <div class="row">
                          
                           <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
@@ -1250,7 +1273,12 @@ INVITE JOHN
                       
                       
                       
-                      
+                      </div>
+<div class="nano-pane" style="">
+<div class="nano-slider" style="height: 90px; transform: translate(0px, 181px);"></div>
+</div>
+</div>
+</div>
                       
                       
                       
@@ -1292,7 +1320,7 @@ INVITE JOHN
           <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 modal-padding"> 
           <div class="invite-header">
-             add friend to conversation
+             john's hubs
           </div>
                   <div class="search-item">
 <i class="fa fa-search active"></i>
@@ -1300,6 +1328,12 @@ INVITE JOHN
 </div>
                   <div class="wrapper-modal-desktop-hubs"> 
                   
+                      
+                      
+                      <div class="yaybar yay-gestures yay-light yay-shrink yay-overlap-content">
+<div class="nano">
+<div class="nano-content" style="">
+                      
                       <div class="row">
                          
                           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
@@ -1467,7 +1501,12 @@ INVITE JOHN
                           
                       </div>
                       
-                      
+                      </div>
+<div class="nano-pane" style="display: none;">
+<div class="nano-slider" style="transform: translate(0px, 0px);"></div>
+</div>
+</div>
+</div>
                       
                       
                       
@@ -1594,4 +1633,4 @@ INVITE JOHN
 
 
 
-<div class="hiddendiv common"></div><div id="window-resizer-tooltip" style="display: block;"><a href="#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1440</span> x <span class="tooltipHeight" id="winHeight">860</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1440</span> x <span class="tooltipHeight" id="vpHeight">755</span></div></body></html>
+  <div class="hiddendiv common"></div><div id="window-resizer-tooltip" class="window-resizer-color" style="display: block;"><a href="#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1440</span> x <span class="tooltipHeight" id="winHeight">860</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1440</span> x <span class="tooltipHeight" id="vpHeight">755</span></div></body></html>
