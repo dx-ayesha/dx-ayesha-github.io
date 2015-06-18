@@ -3190,7 +3190,206 @@ padding: 0 50px 0 33px;
     
 }
 
+.wrapper-hubs-page-sidebar.yaybar{
+    
+     position: absolute;
+    top: 422px; 
+    
+}
 
+
+
+.wrapper-hubs-page-sidebar.yaybar .top {
+    height: 0;
+   
+}
+
+.hubs-page-body{
+    background-color: #e6ebef;
+}
+
+.wrapper-hubs-page-body-content.content-wrap {
+    padding: 6px 2rem 2rem;
+}
+.hubs-membercount-section{
+   color: #717c80;
+    font-weight: 600;
+    height: 33px;
+    padding-top: 6px;
+}
+
+.hubs-membercount-section span.members-digit{
+   background-color: #bbbbbb;
+    border-radius: 11px;
+    color: #fff;
+    font-size: 0.85em;
+    margin-left: 10px;
+    padding: 2px 6px;
+}
+.hubs-membercount-section div.show-all{
+ color: #717c80;
+    font-size: 0.85em;
+    padding-top: 1px;
+    text-transform: uppercase;
+}
+.hubs-membercount-section a i.fa-arrow-circle-right{
+font-size:1.2em;
+    margin-left: 6px;
+      color: #1d7ad0;
+}
+
+.hubspage-members{
+    min-height: 118px;
+    padding-top: 19px;
+}
+
+.hubspage-members .friends-message-name{
+    margin-top: -4px;
+   color: #4a575b;
+    font-size: 1.15em;
+    font-weight: 600;
+     margin-bottom: 0;
+}
+.hubspage-members .hub-members-height{
+    min-height: 52px;
+}
+.hubspage-members .friends-message-name a {
+    color: #4a575b;
+    text-decoration: none;
+   
+}
+.hubspage-members .friends-message-name a:hover{
+    color: #1d7ad0; 
+   
+}
+.hubspage-members .friends-message-name a:active, .hubspage-members .friends-message-name a:focus{
+    color: #10263d;
+   
+}
+
+.hubspage-members .friends-location{
+  color: #717c80;
+    font-size: 0.8em;
+    margin-bottom: 2px;
+    margin-top: 0;
+    
+}
+.hubspage-members img{
+    width: 80px;
+    height: 80px;
+}
+.hubspage-members .send-message-link{
+background-color: #1e7ad1;
+    color: #fff;
+    font-size: 0.85em;
+    font-weight: 600;
+    padding: 6px;
+    text-transform: uppercase;
+     text-decoration: none;
+}
+.hubspage-members .send-message-link:hover{
+background-color: #0e579b;
+
+}
+.hubspage-members .send-message-link:active, .hubspage-members .send-message-link:focus{
+background-color: #10263d;
+
+}
+
+.hubspage-members div.see-profile{
+   background-color: #1e7ad1; 
+  height: 28px;
+    margin-left: 0px;
+    margin-top: 0;
+    width: 105px;
+    position: relative;
+    text-decoration: none;
+}
+
+.hubspage-members div.see-profile:hover{
+   background-color: #0e579b; 
+}
+.hubspage-members div.open , .hubspage-members div.open{
+   background-color: #10263d; 
+}
+.hubspage-members div.see-profile:focus, .hubspage-members div.see-profile:active{
+   background-color: #0e579b; 
+}
+
+.hubspage-members div.see-profile .dropdown-toggle{
+     color: #fff;
+}
+.hubspage-members div.see-profile .dropdown-toggle span{
+     font-size: 0.85em;
+    font-weight: 600;
+    padding-left: 14px;
+    padding-top: 6px;
+    text-transform: uppercase;
+}
+.hubspage-members div.see-profile img.dropdown-top{
+  height: 8px;
+    margin: -46px auto 0;
+    width: 11px;
+}
+.hubspage-members div.see-profile .dropdown-menu{
+-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #113556;
+    border-image: none;
+    border-radius: 0;
+    border-style: solid none none;
+    border-width: 1px medium medium;
+    left: -38px;
+    top: 40px;
+     text-align: center;
+}
+
+
+.hubspage-members div.see-profile .dropdown-menu li a{
+     color: #acb4b5;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    text-align: left !important;
+    text-transform: uppercase;
+}
+
+.hubspage-members div.see-profile .dropdown-menu li.divider{
+   background-color: #e0e0e0;
+    margin: 0;
+}
+.hubspage-members div.see-profile .dropdown-menu li:last-child a{
+   text-align: center !important;
+    
+}
+
+.hubspage-members div.see-profile .dropdown-menu li a:hover{
+    background-color: #eeeeee;
+ color: #1d7ad0;
+}
+.hubspage-members div.see-profile .dropdown-menu li a:active, .hubspage-members div.see-profile .dropdown-menu li a:focus{
+ color: #10263d;
+    background-color: #eeeeee;
+}
+
+
+.hubspage-members div.see-profile i.fa-caret-down{
+ border-left: 1px solid #dddddd;
+    color: #fff;
+    font-size: 0.6em;
+    margin-left: -3px;
+    margin-right: 3px;
+    padding: 10px 15px 10px 10px;
+}
+
+.hubspage-members .send-message-corner{
+    padding-left: 15px;
+}
+.default-toggle-hubs-page.yaybar {
+    display: none;
+}  
 
 /* hubs Page ends  here  */
 
@@ -3385,6 +3584,50 @@ padding: 0 50px 0 33px;
 
     width:327px;
 }
+
+
+
+
+/* hubs Page starts  here  */
+
+.hubspage-members div.see-profile .dropdown-menu {
+ 
+  left: auto;
+ 
+  
+  right: -26px;
+}
+
+
+.hubspage-members div.see-profile .shorter-dropdown{
+      left: -91px !important;
+    right: auto !important; 
+}
+.hubspage-members img {
+    height: 60px !important;
+    width: 60px !important;
+}
+.hubspage-members .friends-location {
+
+    margin-bottom: 2px !important;
+   
+}
+.hubspage-members {
+    min-height: 113px !important;
+    
+}
+
+
+
+
+/* hubs Page ends  here  */
+
+
+
+
+
+
+
 
 
 }
@@ -3792,8 +4035,16 @@ padding: 0 50px 0 33px;
 /* Landing Page ends  here  */
 
   }
+  @media (max-width: 1015px) {
 
-  
+ .wrapper-hubs-page-sidebar.yaybar {
+    display: none;
+}
+
+.default-toggle-hubs-page.yaybar {
+    display: block;
+}  
+  }
 @media (min-width: 1015px)and (max-width: 1999px) {
 /* Messages Page Starts here */
 .bluk-messages .received-messages {
