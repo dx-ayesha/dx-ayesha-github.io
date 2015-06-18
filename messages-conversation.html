@@ -44,8 +44,10 @@
     $( document ).ready(function() {
 
 
-
-
+  $(".nano").nanoScroller({
+        alwaysVisible: true,
+        scroll: "bottom"    
+    });
  
 
  $(".individual-messages-conversation section").click(function(){
@@ -1025,6 +1027,8 @@ INVITE JOHN
      <!-- Modal desktop Friends-->
           
 <div class="modal-desktop-friends">
+    
+    
 <div aria-hidden="false" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="modaldesktopfriends" class="modal fade in" style="padding-right: 0px !important;">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -1039,6 +1043,11 @@ INVITE JOHN
 <i class="fa fa-search active"></i>
 <input type="search" placeholder="Type follower's name or location here">
 </div>
+        
+                
+               
+                  
+                  
                   <div class="wrapper-modal-desktop-friends"> 
                   
                       <div class="yaybar yay-gestures yay-light yay-shrink">
@@ -1139,8 +1148,8 @@ INVITE JOHN
                       
                       
                                    </div>
-<div class="nano-pane" style="display: block;">
-<div class="nano-slider" style="height: 264px; transform: translate(0px, 166.844px);"></div>
+<div class="nano-pane" style="display: block !important;">
+<div class="nano-slider" style="height: 264px; transform: translate(0px, 0px) !important;"></div>
 </div>
 </div>
 </div>
