@@ -3391,6 +3391,21 @@ background-color: #10263d;
     display: none;
 }  
 
+.hubs-page-special-toggle.yay-toggle {
+    display: inline-block !important;
+}
+.default-toggle-hubs-page.yaybar .top{
+   height: 0;
+}
+
+.usersidemenushow{
+    display: block !important;
+    z-index: 1001;
+}
+.memberssidemenuhide{
+    display: none !important;
+}
+
 /* hubs Page ends  here  */
 
 
