@@ -3398,7 +3398,7 @@ background-color: #10263d;
 
 .usersidemenushow{
     display: block !important;
-    z-index: 1001;
+ /*    z-index: 1001; */
 }
 .memberssidemenuhide{
    /* display: none !important; */
