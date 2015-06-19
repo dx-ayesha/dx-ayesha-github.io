@@ -54,11 +54,16 @@ $(".hubspage-members div.see-profile i").click(function(){
 });
 
 
- $(".hubs-page-special-toggle.yay-toggle").click(function(){
-         $(".default-toggle-hubs-page.yaybar").toggleClass('usersidemenushow');
-   // $(".wrapper-hubs-page-sidebar.yaybar ").toggleClass('memberssidemenuhide'); 
+ $("#testing-2").click(function(){
+     $(".default-toggle-hubs-page.yaybar").toggleClass('yay-overlap-content');
+    $(".default-toggle-hubs-page.yaybar").toggleClass('usersidemenushow'); 
 });
-
+$(".friends-send-messages div.see-profile i").click(function(){
+         
+            $(this).toggleClass('fa-caret-up');
+          
+       
+});
 });  
      
       </script>
@@ -68,14 +73,14 @@ $(".hubspage-members div.see-profile i").click(function(){
 
 
 
-<body class="hubs-page-body">
+<body class="hubs-page-body yay-hide">
 
  <!--Navigation top-->
   <nav class="navbar-top ">
     <div class="nav-wrapper">
 
       <!-- Sidebar toggle -->
-      <a href="#" class="hubs-page-special-toggle yay-toggle">
+      <a id="testing-2" href="#" class="hubs-page-special-toggle yay-toggle">
         <div class="burg11"></div>
         <div class="burg22"></div>
         <div class="burg33"></div>
@@ -251,7 +256,7 @@ $(".hubspage-members div.see-profile i").click(function(){
     </div>
   </nav>
   <!--/Navigation bottom-->
-<aside class="default-toggle-hubs-page yaybar yay-gestures yay-light yay-shrink">
+  <aside id="testing" class="default-toggle-hubs-page yaybar yay-gestures yay-light yay-shrink">
 
     <div class="top">
       <div>
@@ -699,220 +704,336 @@ $(".hubspage-members div.see-profile i").click(function(){
     
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-adjustment-mobile-view">
          
-        
-        
-              <div class="wrapper-blocking-system clearfix hidden-xs">
-              
-                  <div class="row">
-                      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pull-left">
-                          <div class="conversation-title">   Amazing hub </div>
-                          
-                      </div>
-                      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pull-right">
-                          <div class="inner-blockings">
-                              <span><a href="#"><i class="fa fa-trash-o"></i></a></span> <span><a href="#">Block John Swift</a></span> <span><a href="#">spam</a></span> 
-                          </div> 
-                          <div class="unclicked-conversation">
-                              
-                              Block John Swift
-                          </div>
-                          
-                          
-                      </div>
-                      
-                  </div>     
-                  
-              </div>   
-                <div class="wrapper-messages-conversation">
+         <ul role="tablist" class="nav nav-tabs hubs-page-functionality-tabs" id="myTabs">
+      <li class="active" role="presentation"><a aria-expanded="true" aria-controls="home" data-toggle="tab" role="tab" href="#toplistings">top 10 listings</a></li>
+      <li role="presentation"><a aria-controls="profile" data-toggle="tab"  role="tab" href="#newlistings">new listings</a></li>
+      <li role="presentation"><a aria-controls="profile" data-toggle="tab"  role="tab" href="#alllistings">all Listings</a></li>
+    </ul>
+                <div class="wrapper-hubs-data">
               
               <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         
-                        <div class="individual-messages-conversation">
+                        <div class="wraper-hubs-page-tabs">
                             
                               <div class="yaybar yay-gestures yay-light yay-shrink">
                              <div class="nano has-scrollbar">
                              <div class="nano-content" tabindex="0" style="right: -17px;">
-                            
-                            
-                            <section  class="clearfix">
-                            <div class="pull-left conversated-pic">
-                                <img src="images/conversation-pic-2.jpg" alt="dp"/>
-                            </div> 
-                            <div class="pull-left conversated-text">
-                                <h5>Me</h5> 
-                                <p>
-                                 Yeah, and you can build your own & download image with no watermark! Use the editor to the left to get started, it will automatically remove these messages.    
-                                    
-                                </p>
-                                
-                                <p>
-                                   Yeah, and you can build your own & download image with no watermark! Use the editor! 
-                                </p>
-                                
-                            </div> 
-                            <div class="pull-right conversated-date">
-                                <span>18.05.2015</span>  
-                            </div> 
-                            
-                                </section>
-                           <section class="clearfix">
-                            <div class="pull-left conversated-pic">
-                                <img src="images/conversation-pic-1.jpg" alt="dp"/><br/>
-                                <span>online</span>
-                            </div> 
-                            <div class="pull-left conversated-text">
-                                <h5> John swift</h5> 
-                                <p>
-                             Amazing!       
-                                </p>
-                                
-                              
-                                
-                            </div> 
-                            <div class="pull-right conversated-date">
-                                      <span>18.05.2015</span> 
-                            </div> 
-                            
-                        </section>
-                         <section class="clearfix">
-                            <div class="pull-left conversated-pic">
-                                <img src="images/conversation-pic-2.jpg" alt="dp"/><br/>
-                               
-                            </div> 
-                            <div class="pull-left conversated-text">
-                                <h5>Me</h5> 
-                                <p>
-                             Yeah, forget about it! Look at these amazing hubs and files!     
-                                </p>
-                                
-                              
-                                
-                            </div> 
-                            <div class="pull-right conversated-date">
-                                      <span>18.05.2015</span> 
-                            </div> 
-                            
-                        </section> 
-                            
-                             <section class="clearfix">
-                            <div class="pull-left conversated-pic">
-                                <img src="images/conversation-pic-3.jpg" alt="dp"/><br/>
-                                <span>online</span>
-                            </div> 
-                            <div class="pull-left conversated-text">
-                                <h5>Jane Clarkson</h5> 
-                                <p>
-                              Hello! i want to buy a ring! 
-                                </p>
-                                <div class="delivery-notification">
-                                    <img src="images/messages-ring.jpg" class="pull-left"/>
-                                    
-                                    <div class="delivered-pending pull-left">
-                                        <p>Pending confirmation on awesome golden ring with diamonds </p>    
-                                      <a href="#">
-<div class="pull-left">move to dashboard </div>
-<div class="pull-left">
-<i class="fa fa-arrow-circle-right" style=""></i>
+                           
+            
+    
+    <div class="tab-content hubs-page-functionality-tabs-content" id="myTabContent">
+      <div id="toplistings" class="tab-pane fade in active" role="tabpanel">
+      
+          <div class="row removemargins">
+              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-1.jpg" /> </a>
+                      <div class="card-label card-sale-label"> for sale </div>
+                      <span>Los Angeles, California</span>
+                     <h4> <a href="#">Suzuki x678</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x" ></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
 </div>
-</a>
-                                    </div>
-                                    
-                                    
-                                </div>
-                              
-                                
-                            </div> 
-                            <div class="pull-right conversated-date">
-                                      <span>18.05.2015</span> 
-                            </div> 
+   <div class="price-box-currency">$12 000</div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">   <img src="images/hubs-page-images-2.jpg" /> </a>
+                      <div class="card-label card-jobs-label"> jobs </div>
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Yamaha</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x" ></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                      
+                      
+                  </div>
+                  
+                  
+              </div>
+              
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">  <img src="images/hubs-page-images-2.jpg" /> </a>
+                      <div class="card-label card-jobs-label"> jobs </div>
+                      
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Yamaha</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x" ></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                      
+                  </div>
+                  
+                  
+              </div>
+             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-3.jpg" /> </a>
+                      
+                      <div class="card-label card-trades-label"> trades </div>
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Awesome motorcycle</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x" ></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                      
+                  </div>
+                  
+                  
+              </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">   <img src="images/hubs-page-images-4.jpg" />  </a>
+                      <div class="card-label card-free-label"> free </div>
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Awesome motorcycle</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x" ></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                      
+                      
+                  </div>
+                  
+                  
+              </div>
+              
+             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">  <img src="images/hubs-page-images-4.jpg" /> </a>
+                      <div class="card-label card-free-label"> free </div>
+                      
+                      
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Awesome motorcycle</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x" ></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+              
+                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">  <img src="images/hubs-page-images-4.jpg" /> </a>
+                      <div class="card-label card-free-label"> free </div>
+                      
+                      
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Awesome motorcycle</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x" ></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">  <img src="images/hubs-page-images-4.jpg" /> </a>
+                      <div class="card-label card-free-label"> free </div>
+                      
+                      
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Awesome motorcycle</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x" ></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+              
+          </div>
+          
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      </div>
+      <div id="newlistings" class="tab-pane fade" role="tabpanel">
+        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+      </div>
+      
+      <div id="alllistings" class="tab-pane fade" role="tabpanel">
+        <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+      </div>
+    </div>
+
                             
-                        </section>  
-                            
-                            
-                          <section class="clearfix">
-                            <div class="pull-left conversated-pic">
-                                <img alt="dp" src="images/conversation-pic-2.jpg"><br>
-                               
-                            </div> 
-                            <div class="pull-left conversated-text">
-                                <h5>Me</h5> 
-                                <p>
-                            Hello. How much carats do you want?     
-                                </p>
-                                 <div class="wrapper-conversation-attachment-div clearfix">
-                                  
-                                     <a href="#">  <div class="invite-results-hubs pull-left">
-                               <img src="images/modal-Jewelry.png" class="pull-left">
-                               <div class="pull-left">
-                               <p> Amazing <br/>jewels for ...</p>
-                               <span> Public hub</span>
-                               
-                               </div>
-                               
-                                         </div>  </a>  
-                               <a href="#"> <div class="invite-results-hubs pull-left">
-                               <img src="images/modal-Jewelry.png" class="pull-left">
-                               <div class="pull-left">
-                               <p> Jewelry</p>
-                               <span> Public hub</span>
-                               
-                               </div>
-                               
-                                   </div>  </a>  
-                                <a href="#"> <div class="invite-results-hubs pull-left">
-                               <img src="images/modal-Jewelry.png" class="pull-left">
-                               <div class="pull-left">
-                               <p> Jewelry</p>
-                               <span> Public hub</span>
-                               
-                               </div>
-                               
-                              </div> </a>  
-                                  
-                                 </div> 
-                                <div class="wrapper-conversation-attachment-div clearfix">
-                                  
-                             <a href="#">  <div class="invite-results-hubs pull-left">
-                               <img src="images/document.png" class="pull-left">
-                               <div class="pull-left doc-attachment-width">
-                                   <p> Trade<br/>treaty 20.05.2015...</p>
-                               
-                               
-                               </div>
-                               
-                                 </div>  </a> 
-                               <a href="#">  <div class="invite-results-hubs pull-left img-top">
-                               <img src="images/image-type.png" class="pull-left">
-                               <div class="pull-left">
-                               <p> Image.png</p>
-                               
-                               
-                               </div>
-                               
-                              </div>    </a>
-                              
-                                  
-                              </div>
-                                
-</div>  
-                            <div class="pull-right conversated-date">
-                                      <span>18.05.2015</span> 
-                            </div> 
-                            
-                             
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                        </section>  
-                            
-                            
+                                 
+                                 
+                                 
                             </div>
 <div class="nano-pane" style="">
 <div class="nano-slider" style="height: 118px; transform: translate(0px, 0px);"></div>
@@ -930,62 +1051,8 @@ $(".hubspage-members div.see-profile i").click(function(){
               
               </div>
               
-                    <section class="enter-messages-area clearfix hidden-xs">
-                        <textarea class="pull-left" placeholder="Start type you comment here" cols="" rows=""></textarea>
-                        <div class="pull-right current-conversation-person">
-                        <img src="images/current-conversation-person.jpg"/>
-                        </div>
-                        
-                    </section>     
-                    
-                    <section class="submit-messages-conversation hidden-xs">
-
-                        <span class="conversation-send"><a href="#">send </a></span>
-                        
-                        
-                        
-                        <span class="dropdown add-an-attachment" aria-expanded="false" role="button" data-toggle="dropdown">
-                        
-                        
-             
                          
-  <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-    <div class="circle-icons-fill">+</div> Add an attachement 
-  
-  </a>
-
-  <ul class="dropdown-menu" role="menu">
-                                <img class="tool-tip-top" src="images/tool-tip-top.png">
-<li class="">
-<a href="#"> <i class="fa fa-diamond"></i> add hubs </a>
-</li>
-<li class="">
-<a href="#"> <i class="mdi-editor-attach-file"></i> add files  </a>
-</li>
-  </ul>
-
-
-
-                        </span>
-                        
-                        
-                        
-                        
-                        <!--<span class="add-an-attachment"><span class="circle-icons-fill">+</span> Add an attachement <input  type="file"/> </span> -->
-                    </section>
-                    <section class="conversation-mobile-pad visible-xs clearfix">
-                        
-                        <div class="conversation-arranged-center">
-                           <div class="row">
-<div class="col-xs-12"> 
-<div class="conversation-set-display">
-<div class="converation-set-margin">
-                        <a class="mobile-attach-files pull-left" href="#">+</a>
-                        <textarea class="pull-left" placeholder="" cols="" rows=""></textarea>
-                        <a class="mobile-send-message pull-left" href="#">Send</a>
-                        
-</div></div></div></div></div>  
-                    </section>
+                 
                     
           </div>
           
@@ -1003,7 +1070,831 @@ $(".hubspage-members div.see-profile i").click(function(){
   
           
           
+  
+          <!-- Modal Delete ALL Messages -->
+          <div class="modal-delete-all-messages">
+<div class="modal fade" id="deletallmessages" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  style="padding-right: 0px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     
+      <div class="modal-body">
+        
+          <p>Are you sure that you want to delete all messages?</p>
+          <p class="recovery-message">You will not be able to recover them.</p><br/>
           
+          <span class="delete-all-messages"> <a href="#"> delete all messages</a> </span><span class="allmessages-undo"> <a href="#"> Undo </a></span>
+      </div>
+      
+    </div>
+  </div>
+</div>
+          </div>
+          <!-- Modal INVITE TO HUBS -->
+          <div class="modal-invite-to-hub">
+<div class="modal fade" id="invitetohub" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="padding-right: 0px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 modal-padding"> 
+          <div class="invite-header">
+            Invite John to hubs  
+          </div>
+                  <div class="search-item">
+<i class="fa fa-search active"></i>
+<input type="search" placeholder="Start typing hub's name here">
+</div>
+                  <div class="wrapper-hub-selecttion"> 
+                 <div class="yaybar yay-gestures yay-light yay-shrink">
+<div class="nano has-scrollbar">
+<div class="nano-content" style="right: -17px;">
+                      
+                      <div class="row">
+                      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 modal-split-padding-right">
+                         
+                          <div class="invite-design-structure">
+                          <div class="select-messageshubs">
+                              <p>Select hubs for John <span class="modal-alert-notify messages-info-tooltip">i
+                                  <span>
+<img class="tool-tip-left" src="images/tool-tip-left.png">
+There is a limit of 6 invitations for one friend.
+</span>
+                                  
+                                  
+                                  </span></p> 
+                          </div>  
+                              <span  class="hidden"> Sorry, but nothing was found </span>
+                              
+                              <div class="invite-results-hubs">
+                               <img class="pull-left" src="images/modal-Jewelry.png"/>
+                               <div class="pull-left">
+                               <p> Jewelry</p>
+                               <span> Public hub</span>
+                               
+                               </div>
+                               <span class="pull-right modal-alert-plus">+</span>
+                              </div>
+                              
+                              <div class="invite-results-hubs">
+                                   <img class="pull-left" src="images/modal- sports.png"/>
+                               <div class="pull-left">
+                               
+                                   <p> Extreme sports<span class="hidden-xs"> eve</span></p>
+                               <span> Public hub</span>
+                               </div>
+                                   <span class="pull-right modal-alert-plus">+</span>
+                              </div>
+                              <div class="invite-results-hubs">
+                                    <img class="pull-left" src="images/modal-Donuts.jpg"/>
+                               <div class="pull-left">
+                            
+                               <p> Donuts</p>
+                               <span> Public hub</span>
+                                  
+                              </div>
+                                    <span class="pull-right modal-alert-plus">+</span>
+                              </div>
+                              <div class="invite-results-hubs">
+                                  <img class="pull-left" src="images/modal-hub.jpg"/>
+                               <div class="pull-left">
+                            
+                                   <p> Photographers<span class="hidden-xs"> hub</span></p>
+                               <span> Public hub</span>
+                                
+                              </div>
+                                    <span class="pull-right modal-alert-plus">+</span>
+                              </div>
+                              
+                              
+                          </div>
+                          
+                          
+                          
+                          
+                      </div>
+                      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 modal-split-padding-left">
+                           <div class="select-messageshubs">
+                               <p>Select hubs for John</p>
+                          </div> 
+                         <div class="invite-results-hubs">
+                               <img class="pull-left right-img" src="images/modal-Jewelry.png"/>
+                               <div class="pull-left">
+                               <p> Jewelry</p>
+                               <span> Public hub</span>
+                               </div>
+                               <span class="pull-right modal-alert-cross">x</span>
+                              </div>
+                              
+                          
+                      </div>
+                      
+                      
+                      
+                  </div>
+                      
+                      </div>
+<div class="nano-pane" style="display: block;">
+<div class="nano-slider" style="height: 264px; transform: translate(0px, 166.844px);"></div>
+</div>
+</div>
+</div>
+                      
+                  
+                  </div>
+                  <div class="wrapper-textarea-adjustment">
+             <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <textarea  rows="" cols="" placeholder="Start type you comment here"></textarea>
+                         <div class="invite-submit-buttons pull-right">
+  <div class="modal-invite-undo pull-left">
+                               <a href="#"> UNDO </a>
+    
+  </div>
+    <div class="modal-invite-submit-button pull-left">
+    
+  
+<a class="messages-invite-tooltip" href="#">
+INVITE JOHN
+<span>  <img class="tool-tip-right" src="images/tool-tip-right.png" /> Select hubs to invite John to them</span></a>
+
+  </div>
+                          </div>
+                          
+                      </div>
+                      </div>
+                  </div>
+                  
+                  
+                  
+              </div>
+          </div>
+          
+          
+          
+          
+      </div>
+     
+    </div>
+  </div>
+</div>
+          </div>
+          
+          
+          
+          
+          
+                <!-- Modal Profile for mobile -->
+                
+          <div class="modal-profile-for-mobile">
+<div class="modal fade" id="profilemobilemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="padding-right: 0px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     
+      <div class="modal-body">
+        
+          <a href="#">John's Profile</a><br/>
+          <a href="#">Open conversation</a><br/>
+          <a href="#">Delete John's messages</a><br/>
+          <a href="#">Invite John to hubs</a><br/>
+          <a href="#">Brows John's hubs</a><br/>
+          <a href="#">Brows John's friends</a><br/>
+          <a href="#">Remove from friends</a>
+           
+          
+       
+      </div>
+      
+    </div>
+  </div>
+</div>
+          </div>
+          
+          
+
+     <!-- Modal desktop Friends-->
+          
+<div class="modal-desktop-friends">
+    
+    
+<div aria-hidden="false" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="modaldesktopfriends" class="modal fade in" style="padding-right: 0px !important;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 modal-padding"> 
+          <div class="invite-header">
+             john's friends
+          </div>
+                  <div class="search-item">
+<i class="fa fa-search active"></i>
+<input type="search" placeholder="Type follower's name or location here">
+</div>
+        
+                
+               
+                  
+                  
+                  <div class="wrapper-modal-desktop-friends"> 
+                  
+                      <div class="yaybar yay-gestures yay-light yay-shrink">
+<div class="nano has-scrollbar">
+<div class="nano-content" style="right: -17px;">
+                      
+                      
+                      <div class="row">
+                         
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#">     <img src="images/modal-desktop-friends-1.png" class="img-pink-border img-responsive" /></a>
+                          
+                                  <h5>Alice Russell</h5>
+                                  <p> Singer, Song writter <br/><span>London. UK</span></p>
+                                  
+                                  <a class="add-to-friends" href="#">add to friends</a>
+                              
+                              
+                              </div> 
+                              
+                          </div> 
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                               <div class="inner-modal-desktop-friends">
+                                   <a href="#">  <img src="images/modal-desktop-friends-2.png" class="img-blue-border img-responsive" /></a>
+                          
+                                  <h5>John Green</h5>
+                                  <p> Founder, Develloper<br/><span>Los Angeles, California</span></p>
+                                 
+                                  <a class="add-to-friends" href="#">add to friends</a>
+                              
+                              
+                              </div>
+                              
+                              
+                          </div> 
+                          
+                          
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#"> <img src="images/modal-desktop-friends-3.png" class="img-pink-border img-responsive" /></a>
+                          
+                                  <h5>Ann Clarckson</h5>
+                                  <p> Founder<br/><span>Los Angeles, California</span></p>
+                                  <a class="add-to-friends" href="#">add to friends</a>
+                              
+                              
+                              </div>
+                              
+                              
+                          </div> 
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#"><img src="images/modal-desktop-friends-4.png" class="img-pink-border img-responsive" /></a>
+                          
+                                  <h5>Ann Peterson</h5>
+                                  <p> Web, UI/UX designer<br/><span>Los Angeles, California</span></p>
+                                  
+                                  <a class="add-to-friends" href="#">add to friends</a>
+                              
+                              
+                              </div> 
+                              
+                          </div> 
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                               <div class="inner-modal-desktop-friends">
+                                   <a href="#"> <img src="images/modal-desktop-friends-5.png" class="img-blue-border img-responsive" /></a>
+                          
+                                  <h5>John Swift</h5>
+                                  <p><span>New York, Washington DC</span></p>
+                                  <a class="add-to-friends" href="#">add to friends</a>
+                              
+                              
+                              </div>
+                              
+                                </div> 
+                                 <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#"> <img src="images/modal-desktop-friends-6.jpg" class="img-blue-border img-responsive" /></a>
+                          
+                                  <h5>Peter Kavalski</h5>
+                                  <p><span>New York, Washington DC</span></p>
+                                  
+                                  <a class="add-to-friends" href="#">add to friends</a>
+                              
+                              
+                              </div>
+                              
+                              
+                          </div> 
+                              
+                        
+                          
+                      </div>
+                      
+                      
+                      
+                                   </div>
+<div class="nano-pane" style="display: block !important;">
+<div class="nano-slider" style="height: 264px; transform: translate(0px, 0px) !important;"></div>
+</div>
+</div>
+</div>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                   
+                  </div>
+                  
+                  
+                  
+                  
+              </div>
+          </div>
+          
+          
+          
+          
+      </div>
+     
+    </div>
+  </div>
+</div>
+          </div>
+
+     
+     
+     
+     
+     
+     
+          <!-- Modal desktop add friend to conversation-->
+          
+<div class="modal-desktop-add-friend-to-conversation">
+<div aria-hidden="false" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="modaldesktopaddfriendtoconversation" class="modal fade in" style="padding-right: 0px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 modal-padding"> 
+          <div class="invite-header">
+             add friend to conversation
+          </div>
+                  <div class="search-item">
+<i class="fa fa-search active"></i>
+<input type="search" placeholder="Type follower's name or location here">
+</div>
+                  <div class="wrapper-modal-desktop-friends"> 
+                  <div class="yaybar yay-gestures yay-light yay-shrink">
+                             <div class="nano has-scrollbar">
+                             <div class="nano-content" tabindex="0" style="right: -17px;">
+                      <div class="row">
+                         
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#">     <img src="images/modal-desktop-friends-1.png" class="img-pink-border img-responsive" /></a>
+                          
+                                  <h5>Alice Russell</h5>
+                                  <p> Singer, Song writter <br/><span>London. UK</span></p>
+                                  
+                                  <a class="add-to-friends" href="#">add to  conversation</a>
+                              
+                              
+                              </div> 
+                              
+                          </div> 
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                               <div class="inner-modal-desktop-friends">
+                                   <a href="#">  <img src="images/modal-desktop-friends-2.png" class="img-blue-border img-responsive" /></a>
+                          
+                                  <h5>John Green</h5>
+                                  <p> Founder, Develloper<br/><span>Los Angeles, California</span></p>
+                                 
+                                  <a class="add-to-friends" href="#">add to  conversation</a>
+                              
+                              
+                              </div>
+                              
+                              
+                          </div> 
+                          
+                          
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#"> <img src="images/modal-desktop-friends-3.png" class="img-pink-border img-responsive" /></a>
+                          
+                                  <h5>Ann Clarckson</h5>
+                                  <p> Founder<br/><span>Los Angeles, California</span></p>
+                                  <a class="add-to-friends" href="#">add to  conversation</a>
+                              
+                              
+                              </div>
+                              
+                              
+                          </div> 
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#"><img src="images/modal-desktop-friends-4.png" class="img-pink-border img-responsive" /></a>
+                          
+                                  <h5>Ann Peterson</h5>
+                                  <p> Web, UI/UX designer<br/><span>Los Angeles, California</span></p>
+                                  
+                                  <a class="add-to-friends" href="#">add to  conversation</a>
+                              
+                              
+                              </div> 
+                              
+                          </div> 
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                               <div class="inner-modal-desktop-friends">
+                                   <a href="#"> <img src="images/modal-desktop-friends-5.png" class="img-blue-border img-responsive" /></a>
+                          
+                                  <h5>John Swift</h5>
+                                  <p><span>New York, Washington DC</span></p>
+                                  <a class="add-to-friends" href="#">add to  conversation</a>
+                              
+                              
+                              </div>
+                              
+                                </div> 
+                                 <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#"> <img src="images/modal-desktop-friends-6.jpg" class="img-blue-border img-responsive" /></a>
+                          
+                                  <h5>Peter Kavalski</h5>
+                                  <p><span>New York, Washington DC</span></p>
+                                  
+                                  <a class="add-to-friends" href="#">add to  conversation</a>
+                              
+                              
+                              </div>
+                              
+                              
+                          </div> 
+                              
+                        
+                          
+                      </div>
+                      
+                      
+                      
+                      </div>
+<div class="nano-pane" style="">
+<div class="nano-slider" style="height: 90px; transform: translate(0px, 181px);"></div>
+</div>
+</div>
+</div>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                   
+                  </div>
+                  
+                  
+                  
+                  
+              </div>
+          </div>
+          
+          
+          
+          
+      </div>
+     
+    </div>
+  </div>
+</div>
+          </div>
+     
+     
+          
+          
+          <!-- Modal desktop hubs   -->
+          
+<div class="modal-desktop-hubs">
+<div aria-hidden="false" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="modaldesktophubs" class="modal fade in" style="padding-right: 0px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 modal-padding"> 
+          <div class="invite-header">
+             john's hubs
+          </div>
+                  <div class="search-item">
+<i class="fa fa-search active"></i>
+<input type="search" placeholder="Type follower's name or location here">
+</div>
+                  <div class="wrapper-modal-desktop-hubs"> 
+                  
+                      
+                      
+                      <div class="yaybar yay-gestures yay-light yay-shrink yay-overlap-content">
+<div class="nano">
+<div class="nano-content" style="">
+                      
+                      <div class="row">
+                         
+                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                              
+                              <div class="inner-modal-desktop-hubs">
+                                
+                                  <a href="#"> <img class="Modal-desktop-hubs-image" src="images/Modal-desktop-hubs-1.png"   /> </a>
+                              
+                                  <span>Public hub</span>
+                                  <h4>Awesome motorcyc...</h4>
+                                  <div class="listen-notify">
+                                      <a href="#"> <i class="mdi-content-content-copy"></i> 126 listenings </a>
+                                   <a href="#"> <i class="fa fa-user"></i> 12 members </a> 
+                                      
+                                  </div>
+                                  <div class="join-invite clearfix">
+                                      <a href="#"> <div class="pull-left">
+                                           <i class="fa fa-user"></i> JOIN
+                                          </div> </a>
+                                       <a href="#">  <div class="pull-right">
+                                           <i class="fa fa-share-square-o"></i> invite
+                                           </div> </a>
+                                      
+                                  </div>
+                                  
+                              </div> 
+                              
+                          </div> 
+                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <div class="inner-modal-desktop-hubs">
+                                    <a href="#"> <img class="Modal-desktop-hubs-image" src="images/Modal-desktop-hubs-2.png"   /> </a>
+                                <span>Public hub</span>
+                                  <h4>Donuts</h4>
+                                  <div class="listen-notify">
+                                      <a href="#"> <i class="mdi-content-content-copy"></i> 126 listenings </a>
+                                   <a href="#"> <i class="fa fa-user"></i> 12 members </a> 
+                                      
+                                  </div>
+                                  <div class="join-invite clearfix">
+                                      <a href="#"> <div class="pull-left">
+                                           <i class="fa fa-user"></i> JOIN
+                                          </div> </a>
+                                       <a href="#">  <div class="pull-right">
+                                           <i class="fa fa-share-square-o"></i> invite
+                                           </div> </a>
+                                      
+                                  </div>
+                                    
+                                    
+                                    
+                              </div> 
+                              
+                              
+                          </div> 
+                          
+                          
+                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                 <div class="inner-modal-desktop-hubs">
+                                 <a href="#"> <img class="Modal-desktop-hubs-image" src="images/Modal-desktop-hubs-3.png"   /> </a>
+                              
+                                   <span>Public hub</span>
+                                  <h4>Cars</h4>
+                                  <div class="listen-notify">
+                                      <a href="#"> <i class="mdi-content-content-copy"></i> 126 listenings </a>
+                                   <a href="#"> <i class="fa fa-user"></i> 12 members </a> 
+                                      
+                                  </div>
+                                  <div class="join-invite clearfix">
+                                      <a href="#"> <div class="pull-left">
+                                           <i class="fa fa-user"></i> JOIN
+                                          </div> </a>
+                                       <a href="#">  <div class="pull-right">
+                                           <i class="fa fa-share-square-o"></i> invite
+                                           </div> </a>
+                                      
+                                  </div>
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                              </div> 
+                              
+                              
+                          </div> 
+                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <div class="inner-modal-desktop-hubs">
+                                 <a href="#"> <img class="Modal-desktop-hubs-image" src="images/Modal-desktop-hubs-4.png"   /> </a>
+                              
+                                   <span>Public hub</span>
+                                  <h4>Surfing</h4>
+                                  <div class="listen-notify">
+                                      <a href="#"> <i class="mdi-content-content-copy"></i> 126 listenings </a>
+                                   <a href="#"> <i class="fa fa-user"></i> 12 members </a> 
+                                      
+                                  </div>
+                                  <div class="join-invite clearfix">
+                                      <a href="#"> <div class="pull-left">
+                                           <i class="fa fa-user"></i> JOIN
+                                          </div> </a>
+                                       <a href="#">  <div class="pull-right">
+                                           <i class="fa fa-share-square-o"></i> invite
+                                           </div> </a>
+                                      
+                                  </div>
+                                 
+                              </div> 
+                              
+                          </div> 
+                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                  <div class="inner-modal-desktop-hubs">
+                                 <a href="#"> <img class="Modal-desktop-hubs-image" src="images/Modal-desktop-hubs-5.png"   /> </a>
+                              
+                                   <span>Public hub</span>
+                                  <h4>jewelry</h4>
+                                  <div class="listen-notify">
+                                      <a href="#"> <i class="mdi-content-content-copy"></i> 126 listenings </a>
+                                   <a href="#"> <i class="fa fa-user"></i> 12 members </a> 
+                                      
+                                  </div>
+                                  <div class="join-invite clearfix">
+                                      <a href="#"> <div class="pull-left">
+                                           <i class="fa fa-user"></i> JOIN
+                                          </div> </a>
+                                       <a href="#">  <div class="pull-right">
+                                           <i class="fa fa-share-square-o"></i> invite
+                                           </div> </a>
+                                      
+                                  </div>
+                                 
+                              </div> 
+                              
+                                </div> 
+                                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                               <div class="inner-modal-desktop-hubs">
+                                 <a href="#"> <img class="Modal-desktop-hubs-image" src="images/Modal-desktop-hubs-6.png"   /> </a>
+                              
+                                   <span>Public hub</span>
+                                  <h4>Women's clothing</h4>
+                                  <div class="listen-notify">
+                                      <a href="#"> <i class="mdi-content-content-copy"></i> 126 listenings </a>
+                                   <a href="#"> <i class="fa fa-user"></i> 12 members </a> 
+                                      
+                                  </div>
+                                  <div class="join-invite clearfix">
+                                      <a href="#"> <div class="pull-left">
+                                           <i class="fa fa-user"></i> JOIN
+                                          </div> </a>
+                                       <a href="#">  <div class="pull-right">
+                                           <i class="fa fa-share-square-o"></i> invite
+                                           </div> </a>
+                                      
+                                  </div>
+                                 
+                              </div> 
+                              
+                              
+                          </div> 
+                              
+                        
+                          
+                      </div>
+                      
+                      </div>
+<div class="nano-pane" style="display: none;">
+<div class="nano-slider" style="transform: translate(0px, 0px);"></div>
+</div>
+</div>
+</div>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                   
+                  </div>
+                  
+                  
+                  
+                  
+              </div>
+          </div>
+          
+          
+          
+          
+      </div>
+     
+    </div>
+  </div>
+</div>
+          </div>
+     
+     
+     
+      
+          
+        
+          
+          
+                <!-- Modal desktop attached files -->
+          
+          
+          <div class="modal-desktop-attached-files">
+<div class="modal fade in" id="modaldesktopattachedfiles" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="padding-right: 0px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 modal-padding"> 
+          <div class="invite-header">
+             attached files
+          </div>
+                  <div class="search-item">
+<i class="fa fa-search active"></i>
+<input type="search" placeholder="Type file's name here">
+</div>
+                  <div class="wrapper-desktop-attached-files"> 
+                  
+                      <a href="#">  <div class="invite-results-hubs pull-left">
+                               <img class="pull-left" src="images/document.png">
+                               <div class="pull-left doc-attachment-width">
+                                   <p> Trade<br>treaty 20.05.2015...</p>
+                               
+                               
+                               </div></a>
+                               
+                              </div>
+                       <a href="#">  <div class="invite-results-hubs pull-left img-top">
+                               <img class="pull-left" src="images/image-type.png">
+                               <div class="pull-left">
+                               <p> Image.png</p>
+                               
+                               
+                               </div>
+                               
+                              </div> </a>
+                              
+                      
+                      <a href="#">   <div class="invite-results-hubs pull-left">
+                               <img class="pull-left" src="images/document.png">
+                               <div class="pull-left doc-attachment-width">
+                                   <p> Trade<br>treaty 20.05.2015...</p>
+                               
+                               
+                               </div>
+                               
+                          </div> </a>
+                 
+                  
+                 
+                  
+                  </div>
+                  
+                  
+                  
+                  
+              </div>
+          </div>
+          
+          
+          
+          
+      </div>
+     
+    </div>
+  </div>
+</div>
+          </div>
+          
+          
+          
+          
+          
+          
+          
+                  
           
 
 

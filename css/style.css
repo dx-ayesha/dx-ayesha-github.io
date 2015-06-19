@@ -3191,7 +3191,7 @@ padding: 0 50px 0 33px;
 }
 
 .wrapper-hubs-page-sidebar.yaybar{
-    
+     display: inline-block !important;
      position: absolute;
     top: 422px; 
     
@@ -3398,12 +3398,102 @@ background-color: #10263d;
 
 .usersidemenushow{
     display: block !important;
- /*    z-index: 1001; */
+    z-index: 1001; 
+    top: 90px;
 }
+.usersidemenushow .top{
+    height: 0;
+}
+
 .memberssidemenuhide{
    /* display: none !important; */
 }
 
+.wraper-hubs-page-tabs{
+    margin: 0 -15px;
+    overflow: auto;
+}
+
+.wraper-hubs-page-tabs .yaybar {
+    display: block;
+    height: 435px;
+    left: auto;
+    padding-bottom: 0;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+}
+
+.hubs-page-functionality-tabs-content .row.removemargins{
+    
+    margin: 0;
+}
+.hubs-page-functionality-tabs-content .wraper-hubs-block{
+    
+     background-color: #fff;
+    margin-bottom: 20px;
+    min-height: 360px;
+    position: relative;  
+    
+}
+.hubs-page-functionality-tabs-content .wraper-hubs-block img{
+    margin-bottom: 13px;
+width: 100%;  
+    
+}
+.hubs-page-functionality-tabs-content .wraper-hubs-block span{
+    color: #717c80;
+    font-size: 0.85em;
+     padding-left: 20px;
+}
+
+.hubs-page-functionality-tabs-content .wraper-hubs-block h4{
+ margin: 0;
+  padding-left: 20px;
+}
+
+.hubs-page-functionality-tabs-content .wraper-hubs-block h4 a{
+    color: #4a575b;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+.hubs-page-functionality-tabs-content .row{
+    background-color: #e6ebef;
+}
+.price-box{
+    margin-top: 10px;
+     margin-left: 9px;
+}
+.price-box .fa-circle{
+    font-size: 1.9em;
+     color: #bbbbbb;
+     
+}
+.price-box .fa-usd{
+    
+  font-size: 1.1em;
+    margin-left: 10px;
+    margin-top: -1px;
+}
+.price-box .price-box-currency{
+     color: #4a575b;
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-left: 47px;
+    padding-top: 4px;
+}
+
+
+.hubs-page-functionality-tabs-content .wraper-hubs-block ul.card-footer .card-footer-favorite{
+ padding-left: 15px;
+}
+.hubs-page-functionality-tabs-content .wraper-hubs-block ul.card-footer{
+font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
 /* hubs Page ends  here  */
 
 
@@ -4056,7 +4146,15 @@ background-color: #10263d;
 
 .default-toggle-hubs-page.yaybar {
     display: block;
-}  
+} 
+
+.usersidemenushow{
+     
+    top: 0px;
+}
+.usersidemenushow .top{
+    height: 90px;
+}
   }
 @media (min-width: 1015px)and (max-width: 1999px) {
 /* Messages Page Starts here */
