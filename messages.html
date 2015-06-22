@@ -44,7 +44,9 @@
   <script type="text/javascript">
     $( document ).ready(function() {
 
-
+$('body').on('show.bs.modal', function(e){
+  setTimeout(function(){$(".nano").nanoScroller(); }, 1000)
+});
 
  $(".marked-important a i").click(function(){
      if($(this).hasClass('fa-star-o')){

@@ -3456,7 +3456,7 @@ width: 100%;
     color: #4a575b;
     margin: 0;
     font-weight: 600;
-    font-size: 1.1em;
+  font-size: 0.95em;
     text-decoration: none;
 }
 .hubs-page-functionality-tabs-content .row{
@@ -3493,6 +3493,19 @@ width: 100%;
 font-weight: 600;
     text-transform: uppercase;
     margin-top: 15px;
+}
+
+.hubs-page-functionality-tabs{
+    background-color: #fff;
+}
+.hubs-page-functionality-tabs li a{
+    color: #717c80 !important;
+    font-size: 0.75em;
+    font-weight: 600;
+    text-transform: uppercase;
+     cursor: pointer;
+     border-radius: 0;
+     
 }
 /* hubs Page ends  here  */
 
