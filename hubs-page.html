@@ -45,7 +45,9 @@
 
 
  
-
+$('body').on('show.bs.modal', function(e){
+  setTimeout(function(){$(".nano").nanoScroller(); }, 1000)
+});
 $(".hubspage-members div.see-profile i").click(function(){
          
             $(this).toggleClass('fa-caret-up');
@@ -493,7 +495,51 @@ $(".friends-send-messages div.see-profile i").click(function(){
    <!-- Hub page banner -->
    
    <div class="wrapper-hubs-profile-page-banner">
+       <h3> Awesome motorcycles hub  <span><a href="#"> public hub</a> </span></h3>  
+      
+       <div class="hubs-banner-data">
+        
+           
+              <ul>
+                  <li class="set-to-bold">
+                      Location:
+                  </li>
+                  <li class="set-to-bold">
+                      Description:  
+                  </li>
+                    <li class="set-to-bold">
+                      Allowed Listing Types:
+                  </li>
+                  
+                   <li class="set-to-bold">  Additional Rules:  </li>
+                  
+                  <li >
+                      Santa Monica, CA
+                  </li>
+                   
+                   <li>
+                      A helmeted motorcycle rider on a powerful 
+                      redand black racing bike weaved skillfully..<br/><span class="show-more">show more</span>
+                  </li>
+                 
+                  <li>
+                      
+                      For sale, services, job, for rent
+                  </li>
+             
+                 
+                  <li>
+                       A helmeted motorcycle rider on a powerful 
+                      redand black racing bike weaved skillfully..<br/><span class="show-more">show more</span>
+                      
+                  </li>
+       </ul>
+           
+           
+       </div>
        
+      
+    
        
        
        
@@ -506,17 +552,18 @@ $(".friends-send-messages div.see-profile i").click(function(){
     <!--/ Hub page banner -->
   
   
-  <aside class="wrapper-hubs-page-sidebar yaybar yay-gestures yay-light yay-shrink">
-
-    <div class="nano has-scrollbar">
-      <div class="nano-content" tabindex="0" style="right: -17px;">
+    
+    <div class="wrapper-combined-section clearfix">
+        
+        <div class="combined-hubs-asside pull-left">
+          
         
         <ul class="aside-items messages-ul-left-side">
 
         <div class="aside-item hubs-membercount-section clearfix">
             <div class="pull-left">Members <span class="members-digit">26</span>  </div>
-            <div class=" pull-right">  <a class=" pull-right" href="#">
-<div class="show-all pull-left"> show all </div>
+            <div class=" pull-right">  <a href="#" class=" pull-right">
+<div class="show-all pull-left" data-toggle="modal" data-target="#modaldesktopshowdetail"> show all </div>
 <i class="fa fa-arrow-circle-right"></i>
 </a>  </div>
             
@@ -524,7 +571,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
            
           </div>
           <div class="aside-item hubspage-members">
-            <img src="images/Petterson-Green.png" class="pull-left" />
+            <img class="pull-left" src="images/Petterson-Green.png">
             <div class="send-message-corner pull-left">
                 <div class="hub-members-height">
                 <p class="friends-location">Administator </p>
@@ -534,17 +581,17 @@ $(".friends-send-messages div.see-profile i").click(function(){
                 
               <div class="dropdown-messages-select see-profile">
             
-       <a style="" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="pull-left" style="">Actions</span> <i class="fa fa-caret-down pull-right"></i></a>
+       <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#" style=""><span style="" class="pull-left">Actions</span> <i class="fa fa-caret-down pull-right"></i></a>
          
                     
-                    <ul role="menu" class="dropdown-menu">
+                    <ul class="dropdown-menu" role="menu">
             
-            <li class=""><a class="" href="#">open Profile</a></li>
-            <li><a href="#">add to friends</a></li>
-            <li><a data-toggle="modal" data-target="#deletallmessages" href="#">write a message</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite jane to hubs</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modaldesktophubs">brows jane's hubs</a></li>
-            <li><a data-toggle="modal" data-target="#modaldesktopfriends" href="#">brows jane's friends</a></li>
+            <li class=""><a href="#" class="">open Profile</a></li>
+            <li><a href="#" data-target="#hubsfollowers" data-toggle="modal">add to friends</a></li>
+            <li><a href="#" data-target="#" data-toggle="modal">write a message</a></li>
+            <li><a data-target="#invitetohub" data-toggle="modal" href="#">invite jane to hubs</a></li>
+            <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows jane's hubs</a></li>
+            <li><a href="#" data-target="#modaldesktopfriends" data-toggle="modal">brows jane's friends</a></li>
           
           </ul>
         </div>
@@ -554,7 +601,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
           </div>
        
          <div class="aside-item hubspage-members">
-            <img src="images/Petterson-Green.png" class="pull-left" />
+            <img class="pull-left" src="images/Petterson-Green.png">
             <div class="send-message-corner pull-left">
                 <div class="hub-members-height">
                 <p class="friends-message-name"> <a href="#">Jane Petterson-Green</a></p>
@@ -562,17 +609,17 @@ $(".friends-send-messages div.see-profile i").click(function(){
                 </div>
                 <div class="dropdown-messages-select see-profile">
             
-       <a style="" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="pull-left" style="">Actions</span> <i class="fa fa-caret-down pull-right"></i></a>
+       <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#" style=""><span style="" class="pull-left">Actions</span> <i class="fa fa-caret-down pull-right"></i></a>
          
                     
-                    <ul role="menu" class="dropdown-menu">
+                    <ul class="dropdown-menu" role="menu">
             
-            <li class=""><a class="" href="#">open Profile</a></li>
-            <li><a href="#">add to friends</a></li>
-            <li><a data-toggle="modal" data-target="#deletallmessages" href="#">write a message</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite jane to hubs</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modaldesktophubs">brows jane's hubs</a></li>
-            <li><a data-toggle="modal" data-target="#modaldesktopfriends" href="#">brows jane's friends</a></li>
+            <li class=""><a href="#" class="">open Profile</a></li>
+            <li><a href="#" data-target="#hubsfollowers" data-toggle="modal">add to friends</a></li>
+            <li><a href="#" data-target="#" data-toggle="modal">write a message</a></li>
+            <li><a data-target="#invitetohub" data-toggle="modal" href="#">invite jane to hubs</a></li>
+            <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows jane's hubs</a></li>
+            <li><a href="#" data-target="#modaldesktopfriends" data-toggle="modal">brows jane's friends</a></li>
           
           </ul>
         </div>
@@ -581,7 +628,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
             
           </div>
             <div class="aside-item hubspage-members">
-            <img src="images/Nicolas-Zucklinsky.jpg" class="pull-left" />
+            <img class="pull-left" src="images/Nicolas-Zucklinsky.jpg">
             <div class="send-message-corner pull-left">
                 <div class="hub-members-height">
                 <p class="friends-message-name"> <a href="#"> Nicolas Zucklinsky </a> </p>
@@ -589,17 +636,17 @@ $(".friends-send-messages div.see-profile i").click(function(){
                 </div>
                 <div class="dropdown-messages-select see-profile">
             
-       <a style="" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="pull-left" style="">Actions</span> <i class="fa fa-caret-down pull-right"></i></a>
+       <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#" style=""><span style="" class="pull-left">Actions</span> <i class="fa fa-caret-down pull-right"></i></a>
          
                     
-                    <ul role="menu" class="dropdown-menu">
+                    <ul class="dropdown-menu" role="menu">
             
-            <li class=""><a class="" href="#">open Profile</a></li>
-            <li><a href="#">add to friends</a></li>
-            <li><a data-toggle="modal" data-target="#deletallmessages" href="#">write a message</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite jane to hubs</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modaldesktophubs">brows jane's hubs</a></li>
-            <li><a data-toggle="modal" data-target="#modaldesktopfriends" href="#">brows jane's friends</a></li>
+            <li class=""><a href="#" class="">open Profile</a></li>
+            <li><a href="#" data-target="#hubsfollowers" data-toggle="modal">add to friends</a></li>
+            <li><a href="#" data-target="#" data-toggle="modal">write a message</a></li>
+            <li><a data-target="#invitetohub" data-toggle="modal" href="#">invite jane to hubs</a></li>
+            <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows jane's hubs</a></li>
+            <li><a href="#" data-target="#modaldesktopfriends" data-toggle="modal">brows jane's friends</a></li>
           
           </ul>
         </div>
@@ -609,7 +656,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
           </div>
             
              <div class="aside-item hubspage-members">
-            <img src="images/Petterson-Green.png" class="pull-left" />
+            <img class="pull-left" src="images/Petterson-Green.png">
             <div class="send-message-corner pull-left">
                 <div class="hub-members-height">
                 <p class="friends-message-name"> <a href="#">Jane Petterson-Green</a></p>
@@ -617,17 +664,17 @@ $(".friends-send-messages div.see-profile i").click(function(){
                 </div>
                  <div class="dropdown-messages-select see-profile">
             
-       <a style="" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="pull-left" style="">Actions</span> <i class="fa fa-caret-down pull-right"></i></a>
+       <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#" style=""><span style="" class="pull-left">Actions</span> <i class="fa fa-caret-down pull-right"></i></a>
          
                     
-                    <ul role="menu" class="dropdown-menu">
+                    <ul class="dropdown-menu" role="menu">
             
-            <li class=""><a class="" href="#">open Profile</a></li>
-            <li><a href="#">add to friends</a></li>
-            <li><a data-toggle="modal" data-target="#deletallmessages" href="#">write a message</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite jane to hubs</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modaldesktophubs">brows jane's hubs</a></li>
-            <li><a data-toggle="modal" data-target="#modaldesktopfriends" href="#">brows jane's friends</a></li>
+            <li class=""><a href="#" class="">open Profile</a></li>
+            <li><a href="#" data-target="#hubsfollowers" data-toggle="modal">add to friends</a></li>
+            <li><a href="#" data-target="#" data-toggle="modal">write a message</a></li>
+            <li><a data-target="#invitetohub" data-toggle="modal" href="#">invite jane to hubs</a></li>
+            <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows jane's hubs</a></li>
+            <li><a href="#" data-target="#modaldesktopfriends" data-toggle="modal">brows jane's friends</a></li>
           
           </ul>
         </div>
@@ -636,7 +683,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
             
           </div>
             <div class="aside-item hubspage-members">
-            <img src="images/Nicolas-Zucklinsky.jpg" class="pull-left" />
+            <img class="pull-left" src="images/Nicolas-Zucklinsky.jpg">
             <div class="send-message-corner pull-left">
                 <div class="hub-members-height">
                 <p class="friends-message-name"> <a href="#"> Nicolas Zucklinsky </a> </p>
@@ -644,17 +691,17 @@ $(".friends-send-messages div.see-profile i").click(function(){
                 </div>
                <div class="dropdown-messages-select see-profile">
             
-       <a style="" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="pull-left" style="">Actions</span> <i class="fa fa-caret-down pull-right"></i></a>
+       <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#" style=""><span style="" class="pull-left">Actions</span> <i class="fa fa-caret-down pull-right"></i></a>
          
                     
-                    <ul role="menu" class="dropdown-menu">
+                    <ul class="dropdown-menu" role="menu">
             
-            <li class=""><a class="" href="#">open Profile</a></li>
-            <li><a href="#">add to friends</a></li>
-            <li><a data-toggle="modal" data-target="#deletallmessages" href="#">write a message</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite jane to hubs</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modaldesktophubs">brows jane's hubs</a></li>
-            <li><a data-toggle="modal" data-target="#modaldesktopfriends" href="#">brows jane's friends</a></li>
+            <li class=""><a href="#" class="">open Profile</a></li>
+            <li><a href="#" data-target="#hubsfollowers" data-toggle="modal">add to friends</a></li>
+            <li><a href="#" data-target="#" data-toggle="modal">write a message</a></li>
+            <li><a data-target="#invitetohub" data-toggle="modal" href="#">invite jane to hubs</a></li>
+            <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows jane's hubs</a></li>
+            <li><a href="#" data-target="#modaldesktopfriends" data-toggle="modal">brows jane's friends</a></li>
           
           </ul>
         </div>
@@ -663,7 +710,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
             
           </div>
             <div class="aside-item hubspage-members">
-            <img class="pull-left" src="images/John-Swift.png">
+            <img src="images/John-Swift.png" class="pull-left">
             <div class="send-message-corner pull-left">
                 <div class="hub-members-height">
                 <p class="friends-message-name"> <a href="#"> John Swift</a></p>
@@ -671,17 +718,17 @@ $(".friends-send-messages div.see-profile i").click(function(){
                 </div>
                <div class="dropdown-messages-select see-profile">
             
-       <a style="" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="pull-left" style="">Actions</span> <i class="fa fa-caret-down pull-right"></i></a>
+       <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#" style=""><span style="" class="pull-left">Actions</span> <i class="fa fa-caret-down pull-right"></i></a>
          
                     
-                    <ul role="menu" class="dropdown-menu">
+                    <ul class="dropdown-menu" role="menu">
             
-            <li class=""><a class="" href="#">open Profile</a></li>
-            <li><a href="#">add to friends</a></li>
-            <li><a data-toggle="modal" data-target="#deletallmessages" href="#">write a message</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite jane to hubs</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modaldesktophubs">brows jane's hubs</a></li>
-            <li><a data-toggle="modal" data-target="#modaldesktopfriends" href="#">brows jane's friends</a></li>
+            <li class=""><a href="#" class="">open Profile</a></li>
+            <li><a href="#" data-target="#hubsfollowers" data-toggle="modal">add to friends</a></li>
+            <li><a href="#" data-target="#" data-toggle="modal">write a message</a></li>
+            <li><a data-target="#invitetohub" data-toggle="modal" href="#">invite jane to hubs</a></li>
+            <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows jane's hubs</a></li>
+            <li><a href="#" data-target="#modaldesktopfriends" data-toggle="modal">brows jane's friends</a></li>
           
           </ul>
         </div>
@@ -693,22 +740,22 @@ $(".friends-send-messages div.see-profile i").click(function(){
         </ul>
 
       </div>
-    <div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 683px; transform: translate(0px, 0px);"></div></div></div>
-  </aside>
-  <!-- /Yay Sidebar -->
-  
-  <!-- Main Content -->
-  <section class="wrapper-hubs-page-body-content content-wrap ecommerce-customers wrapper-messages-moible-view">
+    
+     <section class="wrapper-hubs-page-body-content content-wrap ecommerce-customers wrapper-messages-moible-view">
 
     <div class="row margin-adjustment-mobile-view">
     
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-adjustment-mobile-view">
          
-         <ul role="tablist" class="nav nav-tabs hubs-page-functionality-tabs" id="myTabs">
-      <li class="active" role="presentation"><a aria-expanded="true" aria-controls="home" data-toggle="tab" role="tab" href="#toplistings">top 10 listings</a></li>
-      <li role="presentation"><a aria-controls="profile" data-toggle="tab"  role="tab" href="#newlistings">new listings</a></li>
-      <li role="presentation"><a aria-controls="profile" data-toggle="tab"  role="tab" href="#alllistings">all Listings</a></li>
-    </ul>
+         <ul id="myTabs" class="nav nav-tabs hubs-page-functionality-tabs" role="tablist">
+             <li role="presentation" class="active"><a href="#toplistings" role="tab" data-toggle="tab" aria-controls="top listing" aria-expanded="true"><span class="span-hover">top 10 listings</span></a></li>
+             <li role="presentation"><a href="#newlistings" role="tab" data-toggle="tab" aria-controls="new listing"><span class="span-hover">new listings</span></a></li>
+             <li role="presentation"><a href="#alllistings" role="tab" data-toggle="tab" aria-controls="all listing"><span class="span-hover">all Listings <span class="all-listing-counter">135</span></span></a></li>
+             <li class="fixed-hubs-li pull-right" role="presentation"><a href="#">invite to hub</a></li>
+             <li class="fixed-hubs-li pull-right set-to-border" role="presentation"><a href="#">join hub</a></li>
+             
+         
+         </ul>
                 <div class="wrapper-hubs-data">
               
               <div class="row">
@@ -718,24 +765,24 @@ $(".friends-send-messages div.see-profile i").click(function(){
                             
                               <div class="yaybar yay-gestures yay-light yay-shrink">
                              <div class="nano has-scrollbar">
-                             <div class="nano-content" tabindex="0" style="right: -17px;">
+                             <div style="" tabindex="0" class="nano-content">
                            
             
     
-    <div class="tab-content hubs-page-functionality-tabs-content" id="myTabContent">
-      <div id="toplistings" class="tab-pane fade in active" role="tabpanel">
+    <div id="myTabContent" class="tab-content hubs-page-functionality-tabs-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="toplistings">
       
           <div class="row removemargins">
-              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+             <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                   <div class="wraper-hubs-block">
                    
-                      <a href="#">   <img src="images/hubs-page-images-1.jpg" /> </a>
+                      <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
                       <div class="card-label card-sale-label"> for sale </div>
                       <span>Los Angeles, California</span>
                      <h4> <a href="#">Suzuki x678</a></h4>
         <div class="price-box clearfix">
 <div class="fa-stack fa-lg pull-left">
-<i class="fa fa-circle fa-stack-2x" ></i>
+<i class="fa fa-circle fa-stack-2x"></i>
 <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
 </div>
    <div class="price-box-currency">$12 000</div>
@@ -759,16 +806,16 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
                   
               </div>
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                    <div class="wraper-hubs-block">
                    
-                       <a href="#">   <img src="images/hubs-page-images-2.jpg" /> </a>
+                       <a href="#">   <img src="images/hubs-page-images-2.jpg"> </a>
                       <div class="card-label card-jobs-label"> jobs </div>
                             <span>Los Angeles, California</span>
                      <h4> <a href="#">Yamaha</a></h4>
         <div class="price-box clearfix">
 <div class="fa-stack fa-lg pull-left">
-<i class="fa fa-circle fa-stack-2x" ></i>
+<i class="fa fa-circle fa-stack-2x"></i>
 <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
 </div>
    <div class="price-box-currency"> $12 / hour </div>
@@ -795,17 +842,17 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
               </div>
               
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                    <div class="wraper-hubs-block">
                    
-                       <a href="#">  <img src="images/hubs-page-images-2.jpg" /> </a>
+                       <a href="#">  <img src="images/hubs-page-images-2.jpg"> </a>
                       <div class="card-label card-jobs-label"> jobs </div>
                       
                             <span>Los Angeles, California</span>
                      <h4> <a href="#">Yamaha</a></h4>
         <div class="price-box clearfix">
 <div class="fa-stack fa-lg pull-left">
-<i class="fa fa-circle fa-stack-2x" ></i>
+<i class="fa fa-circle fa-stack-2x"></i>
 <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
 </div>
    <div class="price-box-currency"> $12 / hour </div>
@@ -830,17 +877,17 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
                   
               </div>
-             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                   <div class="wraper-hubs-block">
                    
-                      <a href="#">   <img src="images/hubs-page-images-3.jpg" /> </a>
+                      <a href="#">   <img src="images/hubs-page-images-3.jpg"> </a>
                       
                       <div class="card-label card-trades-label"> trades </div>
                             <span>Los Angeles, California</span>
                      <h4> <a href="#">Awesome motorcycle</a></h4>
         <div class="price-box clearfix">
 <div class="fa-stack fa-lg pull-left">
-<i class="fa fa-circle fa-stack-2x" ></i>
+<i class="fa fa-circle fa-stack-2x"></i>
 <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
 </div>
    <div class="price-box-currency"> $12 / hour </div>
@@ -865,16 +912,16 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
                   
               </div>
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+           <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                    <div class="wraper-hubs-block">
                    
-                       <a href="#">   <img src="images/hubs-page-images-4.jpg" />  </a>
+                       <a href="#">   <img src="images/hubs-page-images-4.jpg">  </a>
                       <div class="card-label card-free-label"> free </div>
                             <span>Los Angeles, California</span>
                      <h4> <a href="#">Awesome motorcycle</a></h4>
         <div class="price-box clearfix">
 <div class="fa-stack fa-lg pull-left">
-<i class="fa fa-circle fa-stack-2x" ></i>
+<i class="fa fa-circle fa-stack-2x"></i>
 <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
 </div>
    <div class="price-box-currency"> $12 / hour </div>
@@ -901,10 +948,10 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
               </div>
               
-             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                    <div class="wraper-hubs-block">
                    
-                       <a href="#">  <img src="images/hubs-page-images-4.jpg" /> </a>
+                       <a href="#">  <img src="images/hubs-page-images-4.jpg"> </a>
                       <div class="card-label card-free-label"> free </div>
                       
                       
@@ -912,7 +959,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
                      <h4> <a href="#">Awesome motorcycle</a></h4>
         <div class="price-box clearfix">
 <div class="fa-stack fa-lg pull-left">
-<i class="fa fa-circle fa-stack-2x" ></i>
+<i class="fa fa-circle fa-stack-2x"></i>
 <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
 </div>
    <div class="price-box-currency"> $12 / hour </div>
@@ -937,10 +984,10 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
               </div>
               
-                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                    <div class="wraper-hubs-block">
                    
-                       <a href="#">  <img src="images/hubs-page-images-4.jpg" /> </a>
+                       <a href="#">  <img src="images/hubs-page-images-4.jpg"> </a>
                       <div class="card-label card-free-label"> free </div>
                       
                       
@@ -948,7 +995,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
                      <h4> <a href="#">Awesome motorcycle</a></h4>
         <div class="price-box clearfix">
 <div class="fa-stack fa-lg pull-left">
-<i class="fa fa-circle fa-stack-2x" ></i>
+<i class="fa fa-circle fa-stack-2x"></i>
 <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
 </div>
    <div class="price-box-currency"> $12 / hour </div>
@@ -972,10 +1019,10 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
                   
               </div>
-                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+             <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                    <div class="wraper-hubs-block">
                    
-                       <a href="#">  <img src="images/hubs-page-images-4.jpg" /> </a>
+                       <a href="#">  <img src="images/hubs-page-images-4.jpg"> </a>
                       <div class="card-label card-free-label"> free </div>
                       
                       
@@ -983,7 +1030,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
                      <h4> <a href="#">Awesome motorcycle</a></h4>
         <div class="price-box clearfix">
 <div class="fa-stack fa-lg pull-left">
-<i class="fa fa-circle fa-stack-2x" ></i>
+<i class="fa fa-circle fa-stack-2x"></i>
 <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
 </div>
    <div class="price-box-currency"> $12 / hour </div>
@@ -1007,7 +1054,138 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
                   
               </div>
-              
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
+                      <div class="card-label card-sale-label"> for sale </div>
+                      <span>Los Angeles, California</span>
+                     <h4> <a href="#">Suzuki x678</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency">$12 000</div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+           <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
+                      <div class="card-label card-sale-label"> for sale </div>
+                      <span>Los Angeles, California</span>
+                     <h4> <a href="#">Suzuki x678</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency">$12 000</div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
+                      <div class="card-label card-sale-label"> for sale </div>
+                      <span>Los Angeles, California</span>
+                     <h4> <a href="#">Suzuki x678</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency">$12 000</div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
+                      <div class="card-label card-sale-label"> for sale </div>
+                      <span>Los Angeles, California</span>
+                     <h4> <a href="#">Suzuki x678</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency">$12 000</div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
           </div>
           
           
@@ -1021,13 +1199,839 @@ $(".friends-send-messages div.see-profile i").click(function(){
       
       
       </div>
-      <div id="newlistings" class="tab-pane fade" role="tabpanel">
-        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
-      </div>
+      <div role="tabpanel" class="tab-pane fade" id="newlistings">
+    <div class="row removemargins">
+             <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
+                      <div class="card-label card-sale-label"> for sale </div>
+                      <span>Los Angeles, California</span>
+                     <h4> <a href="#">Suzuki x678</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency">$12 000</div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">   <img src="images/hubs-page-images-2.jpg"> </a>
+                      <div class="card-label card-jobs-label"> jobs </div>
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Yamaha</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                      
+                      
+                  </div>
+                  
+                  
+              </div>
+              
+       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">  <img src="images/hubs-page-images-2.jpg"> </a>
+                      <div class="card-label card-jobs-label"> jobs </div>
+                      
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Yamaha</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                      
+                  </div>
+                  
+                  
+              </div>
+          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-3.jpg"> </a>
+                      
+                      <div class="card-label card-trades-label"> trades </div>
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Awesome motorcycle</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                      
+                  </div>
+                  
+                  
+              </div>
+           <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">   <img src="images/hubs-page-images-4.jpg">  </a>
+                      <div class="card-label card-free-label"> free </div>
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Awesome motorcycle</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                      
+                      
+                  </div>
+                  
+                  
+              </div>
+              
+          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">  <img src="images/hubs-page-images-4.jpg"> </a>
+                      <div class="card-label card-free-label"> free </div>
+                      
+                      
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Awesome motorcycle</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+              
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">  <img src="images/hubs-page-images-4.jpg"> </a>
+                      <div class="card-label card-free-label"> free </div>
+                      
+                      
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Awesome motorcycle</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+             <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">  <img src="images/hubs-page-images-4.jpg"> </a>
+                      <div class="card-label card-free-label"> free </div>
+                      
+                      
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Awesome motorcycle</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
+                      <div class="card-label card-sale-label"> for sale </div>
+                      <span>Los Angeles, California</span>
+                     <h4> <a href="#">Suzuki x678</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency">$12 000</div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+           <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
+                      <div class="card-label card-sale-label"> for sale </div>
+                      <span>Los Angeles, California</span>
+                     <h4> <a href="#">Suzuki x678</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency">$12 000</div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
+                      <div class="card-label card-sale-label"> for sale </div>
+                      <span>Los Angeles, California</span>
+                     <h4> <a href="#">Suzuki x678</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency">$12 000</div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
+                      <div class="card-label card-sale-label"> for sale </div>
+                      <span>Los Angeles, California</span>
+                     <h4> <a href="#">Suzuki x678</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency">$12 000</div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+          </div> </div>
       
-      <div id="alllistings" class="tab-pane fade" role="tabpanel">
-        <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
-      </div>
+      <div role="tabpanel" class="tab-pane fade" id="alllistings">
+     <div class="row removemargins">
+             <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
+                      <div class="card-label card-sale-label"> for sale </div>
+                      <span>Los Angeles, California</span>
+                     <h4> <a href="#">Suzuki x678</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency">$12 000</div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">   <img src="images/hubs-page-images-2.jpg"> </a>
+                      <div class="card-label card-jobs-label"> jobs </div>
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Yamaha</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                      
+                      
+                  </div>
+                  
+                  
+              </div>
+              
+       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">  <img src="images/hubs-page-images-2.jpg"> </a>
+                      <div class="card-label card-jobs-label"> jobs </div>
+                      
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Yamaha</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                      
+                  </div>
+                  
+                  
+              </div>
+          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-3.jpg"> </a>
+                      
+                      <div class="card-label card-trades-label"> trades </div>
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Awesome motorcycle</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                      
+                  </div>
+                  
+                  
+              </div>
+           <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">   <img src="images/hubs-page-images-4.jpg">  </a>
+                      <div class="card-label card-free-label"> free </div>
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Awesome motorcycle</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                      
+                      
+                  </div>
+                  
+                  
+              </div>
+              
+          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">  <img src="images/hubs-page-images-4.jpg"> </a>
+                      <div class="card-label card-free-label"> free </div>
+                      
+                      
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Awesome motorcycle</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+              
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">  <img src="images/hubs-page-images-4.jpg"> </a>
+                      <div class="card-label card-free-label"> free </div>
+                      
+                      
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Awesome motorcycle</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+             <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                   <div class="wraper-hubs-block">
+                   
+                       <a href="#">  <img src="images/hubs-page-images-4.jpg"> </a>
+                      <div class="card-label card-free-label"> free </div>
+                      
+                      
+                            <span>Los Angeles, California</span>
+                     <h4> <a href="#">Awesome motorcycle</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency"> $12 / hour </div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
+                      <div class="card-label card-sale-label"> for sale </div>
+                      <span>Los Angeles, California</span>
+                     <h4> <a href="#">Suzuki x678</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency">$12 000</div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+           <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
+                      <div class="card-label card-sale-label"> for sale </div>
+                      <span>Los Angeles, California</span>
+                     <h4> <a href="#">Suzuki x678</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency">$12 000</div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
+                      <div class="card-label card-sale-label"> for sale </div>
+                      <span>Los Angeles, California</span>
+                     <h4> <a href="#">Suzuki x678</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency">$12 000</div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                  <div class="wraper-hubs-block">
+                   
+                      <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
+                      <div class="card-label card-sale-label"> for sale </div>
+                      <span>Los Angeles, California</span>
+                     <h4> <a href="#">Suzuki x678</a></h4>
+        <div class="price-box clearfix">
+<div class="fa-stack fa-lg pull-left">
+<i class="fa fa-circle fa-stack-2x"></i>
+<i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+</div>
+   <div class="price-box-currency">$12 000</div>
+</div>
+                     
+      <ul class="card-footer">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
+                <i class="mdi-action-favorite-outline"></i>
+              35
+            </li>
+            <li class="col-xs-3 col-sm-3 col-md-3 col-lg-3 nopadding">
+             <i class="mdi-communication-messenger"></i>
+              12
+            </li>
+            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+             <i class="fa fa-share-square-o"></i> share
+            </li>
+          </ul>
+                      
+                  </div>
+                  
+                  
+              </div>
+          </div></div>
     </div>
 
                             
@@ -1035,8 +2039,8 @@ $(".friends-send-messages div.see-profile i").click(function(){
                                  
                                  
                             </div>
-<div class="nano-pane" style="">
-<div class="nano-slider" style="height: 118px; transform: translate(0px, 0px);"></div>
+<div style="" class="nano-pane">
+<div style="height: 244px; transform: translate(0px, 0px);" class="nano-slider"></div>
 </div>
 </div>
 </div>
@@ -1066,6 +2070,22 @@ $(".friends-send-messages div.see-profile i").click(function(){
     </div>
 
   </section>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+   
+  <!-- /Yay Sidebar -->
+  
+  <!-- Main Content -->
+
   <!-- /Main Content -->
   
           
@@ -1890,13 +2910,337 @@ INVITE JOHN
           
           
           
+             <!-- Modal desktop followers -->
           
           
           
-          
+                  <div class="modal-desktop-friends">
+    
+    
+<div class="modal fade in" id="hubsfollowers" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 modal-padding"> 
+          <div class="invite-header">
+             followers
+          </div>
+                  <div class="search-item">
+<i class="fa fa-search active"></i>
+<input type="search" placeholder="Type follower's name or location here">
+</div>
+        
+                
+               
                   
+                  
+                  <div class="wrapper-modal-desktop-friends"> 
+                  
+                      <div class="yaybar yay-gestures yay-light yay-shrink">
+<div class="nano has-scrollbar">
+<div style="right: -17px;" class="nano-content" tabindex="0">
+                      
+                      
+                      <div class="row">
+                         
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#">     <img class="img-pink-border img-responsive" src="images/modal-desktop-friends-1.png"></a>
+                          
+                                  <h5>Alice Russell</h5>
+                                  <p> Singer, Song writter <br><span>London. UK</span></p>
+                                  
+                                  <a href="#" class="add-to-friends">add to friends</a>
+                              
+                              
+                              </div> 
+                              
+                          </div> 
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                               <div class="inner-modal-desktop-friends">
+                                   <a href="#">  <img class="img-blue-border img-responsive" src="images/modal-desktop-friends-2.png"></a>
+                          
+                                  <h5>John Green</h5>
+                                  <p> Founder, Develloper<br><span>Los Angeles, California</span></p>
+                                 
+                                  <a href="#" class="add-to-friends">add to friends</a>
+                              
+                              
+                              </div>
+                              
+                              
+                          </div> 
+                          
+                          
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#"> <img class="img-pink-border img-responsive" src="images/modal-desktop-friends-3.png"></a>
+                          
+                                  <h5>Ann Clarckson</h5>
+                                  <p> Founder<br><span>Los Angeles, California</span></p>
+                                  <a href="#" class="add-to-friends">add to friends</a>
+                              
+                              
+                              </div>
+                              
+                              
+                          </div> 
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#"><img class="img-pink-border img-responsive" src="images/modal-desktop-friends-4.png"></a>
+                          
+                                  <h5>Ann Peterson</h5>
+                                  <p> Web, UI/UX designer<br><span>Los Angeles, California</span></p>
+                                  
+                                  <a href="#" class="add-to-friends">add to friends</a>
+                              
+                              
+                              </div> 
+                              
+                          </div> 
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                               <div class="inner-modal-desktop-friends">
+                                   <a href="#"> <img class="img-blue-border img-responsive" src="images/modal-desktop-friends-5.png"></a>
+                          
+                                  <h5>John Swift</h5>
+                                  <p><span>New York, Washington DC</span></p>
+                                  <a href="#" class="add-to-friends">add to friends</a>
+                              
+                              
+                              </div>
+                              
+                                </div> 
+                                 <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#"> <img class="img-blue-border img-responsive" src="images/modal-desktop-friends-6.jpg"></a>
+                          
+                                  <h5>Peter Kavalski</h5>
+                                  <p><span>New York, Washington DC</span></p>
+                                  
+                                  <a href="#" class="add-to-friends">add to friends</a>
+                              
+                              
+                              </div>
+                              
+                              
+                          </div> 
+                              
+                        
+                          
+                      </div>
+                      
+                      
+                      
+                                   </div>
+<div style="display: block;" class="nano-pane">
+<div style="height: 272px; transform: translate(0px, 103.727px);" class="nano-slider"></div>
+</div>
+</div>
+</div>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                   
+                  </div>
+                  
+                  
+                  
+                  
+              </div>
+          </div>
+          
+          
+          
+          
+      </div>
+     
+    </div>
+  </div>
+</div>
+          </div>
           
 
+             
+             
+             
+             
+     <!-- Modal desktop show detail -->
+          
+          
+          
+                  <div class="modal-desktop-friends">
+    
+    
+<div class="modal fade in" id="modaldesktopshowdetail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 modal-padding"> 
+          <div class="invite-header">
+           About awesome motorcycle hub
+          </div>
+                  <div class="search-item">
+<i class="fa fa-search active"></i>
+<input type="search" placeholder="Type follower's name or location here">
+</div>
+        
+                
+               
+                  
+                  
+                  <div class="wrapper-modal-desktop-friends"> 
+                  
+                      <div class="yaybar yay-gestures yay-light yay-shrink">
+<div class="nano has-scrollbar">
+<div style="right: -17px;" class="nano-content" tabindex="0">
+                      
+                      
+                      <div class="row">
+                         
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#">     <img class="img-pink-border img-responsive" src="images/modal-desktop-friends-1.png"></a>
+                          
+                                  <h5>Alice Russell</h5>
+                                  <p> Singer, Song writter <br><span>London. UK</span></p>
+                                  
+                                  <a href="#" class="add-to-friends">add to friends</a>
+                              
+                              
+                              </div> 
+                              
+                          </div> 
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                               <div class="inner-modal-desktop-friends">
+                                   <a href="#">  <img class="img-blue-border img-responsive" src="images/modal-desktop-friends-2.png"></a>
+                          
+                                  <h5>John Green</h5>
+                                  <p> Founder, Develloper<br><span>Los Angeles, California</span></p>
+                                 
+                                  <a href="#" class="add-to-friends">add to friends</a>
+                              
+                              
+                              </div>
+                              
+                              
+                          </div> 
+                          
+                          
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#"> <img class="img-pink-border img-responsive" src="images/modal-desktop-friends-3.png"></a>
+                          
+                                  <h5>Ann Clarckson</h5>
+                                  <p> Founder<br><span>Los Angeles, California</span></p>
+                                  <a href="#" class="add-to-friends">add to friends</a>
+                              
+                              
+                              </div>
+                              
+                              
+                          </div> 
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#"><img class="img-pink-border img-responsive" src="images/modal-desktop-friends-4.png"></a>
+                          
+                                  <h5>Ann Peterson</h5>
+                                  <p> Web, UI/UX designer<br><span>Los Angeles, California</span></p>
+                                  
+                                  <a href="#" class="add-to-friends">add to friends</a>
+                              
+                              
+                              </div> 
+                              
+                          </div> 
+                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                               <div class="inner-modal-desktop-friends">
+                                   <a href="#"> <img class="img-blue-border img-responsive" src="images/modal-desktop-friends-5.png"></a>
+                          
+                                  <h5>John Swift</h5>
+                                  <p><span>New York, Washington DC</span></p>
+                                  <a href="#" class="add-to-friends">add to friends</a>
+                              
+                              
+                              </div>
+                              
+                                </div> 
+                                 <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                              <div class="inner-modal-desktop-friends">
+                                  <a href="#"> <img class="img-blue-border img-responsive" src="images/modal-desktop-friends-6.jpg"></a>
+                          
+                                  <h5>Peter Kavalski</h5>
+                                  <p><span>New York, Washington DC</span></p>
+                                  
+                                  <a href="#" class="add-to-friends">add to friends</a>
+                              
+                              
+                              </div>
+                              
+                              
+                          </div> 
+                              
+                        
+                          
+                      </div>
+                      
+                      
+                      
+                                   </div>
+<div style="display: block;" class="nano-pane">
+<div style="height: 272px; transform: translate(0px, 103.727px);" class="nano-slider"></div>
+</div>
+</div>
+</div>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                   
+                  </div>
+                  
+                  
+                  
+                  
+              </div>
+          </div>
+          
+          
+          
+          
+      </div>
+     
+    </div>
+  </div>
+</div>
+          </div>        
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
 
   <!-- Materialize -->
   <script type="text/javascript" src="js/materialize.min.js"></script>
