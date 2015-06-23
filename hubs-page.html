@@ -60,12 +60,24 @@ $(".hubspage-members div.see-profile i").click(function(){
      $(".default-toggle-hubs-page.yaybar").toggleClass('yay-overlap-content');
     $(".default-toggle-hubs-page.yaybar").toggleClass('usersidemenushow'); 
 });
+
+ $("#testing").click(function(){
+     $("body").toggleClass('yay-hide');
+   
+});
+
+
+
+
 $(".friends-send-messages div.see-profile i").click(function(){
          
             $(this).toggleClass('fa-caret-up');
           
        
 });
+
+
+
 });  
      
       </script>
@@ -106,14 +118,40 @@ $(".friends-send-messages div.see-profile i").click(function(){
 
       <div class="navbar-top-menu">
         <ul class="navbar-top-tabs">
-          <li class="top-tab-item active">
+            
+            <li class="top-tab-item hidden-xs">
+<img src="images/messages_diamond.png">
+HUBS
+</li>
+
+
+          <li class="top-tab-item active visible-xs">
             <img src="images/apps.svg" class="card-icon">
             Cards
           </li>
-          <li class="top-tab-item">
+          <li class="top-tab-item visible-xs">
             <img src="images/map.svg" class="map-icon">
             Map
           </li>
+          <li class="hidden mobile-menu-hubs-page">
+    
+   <a class="dropdown-toggle" aria-expanded="true" role="button" data-toggle="dropdown" href="#">
+<i class="fa fa-ellipsis-v"></i>
+
+</a> 
+   
+    <ul role="menu" class="dropdown-menu">
+                       
+           <li><a href="#">Join hub</a></li>
+            <li><a href="#">Invite to hub</a></li>
+            <li><a href="#">About hub</a></li>
+            <li><a  data-target="#modaldesktophubsrules" data-toggle="modal" href="#">Hub's rules</a></li>
+            
+          </ul> 
+    
+    
+</li>
+          
         </ul>
 
         <ul class="navbar-top-icons">
@@ -124,9 +162,9 @@ $(".friends-send-messages div.see-profile i").click(function(){
             </li>
 
             <ul id="add-hub" class="dropdown-content dropdown-add-hub">
-              <li><a href="#!"> + Hub</a>
+              <li><a href="#!"> everything</a>
               </li>
-              <li><a href="#!"> + Listing</a>
+              <li><a href="#!"> joined hubs</a>
               </li>
             </ul>
           </li>
@@ -494,47 +532,39 @@ $(".friends-send-messages div.see-profile i").click(function(){
   
    <!-- Hub page banner -->
    
-   <div class="wrapper-hubs-profile-page-banner">
+   <div class="wrapper-hubs-profile-page-banner hidden-xs">
        <h3> Awesome motorcycles hub  <span><a href="#"> public hub</a> </span></h3>  
       
-       <div class="hubs-banner-data">
-        
-           
-              <ul>
-                  <li class="set-to-bold">
-                      Location:
-                  </li>
-                  <li class="set-to-bold">
-                      Description:  
-                  </li>
-                    <li class="set-to-bold">
-                      Allowed Listing Types:
-                  </li>
+       <div class="hubs-banner-data clearfix">
+           <div class="alignment-left">
+                <div class="alignment-center">
+                <div class="display-block">
+                  <div class="set-to-bold pull-left">
+                      <div> Location: </div>
+                      <div> Description: </div>
+                       <div class="margin-set">  Allowed Listing Types: </div>
+                        <div> Additional Rules:  </div>
+               
                   
-                   <li class="set-to-bold">  Additional Rules:  </li>
                   
-                  <li >
-                      Santa Monica, CA
-                  </li>
+                  
+                  
+                  </div>
+                  
+                  
+                   <div class="pull-left discription-block">
+                      <div> Santa Monica, CA</div>
+                      <div> A helmeted motorcycle rider on a powerful<br/> 
+                          redand black racing bike weaved skillfully..<br/><span class="show-more"><a href="#">show more</a></span> </div>
+                      <div> For sale, services, job, for rent </div>
+                      <div>           A helmeted motorcycle rider on a powerful<br/>  
+                      redand black racing bike weaved skillfully..<br/><span class="show-more"><a href="#">show more</a></span> </div>
+                      
+                  </div>
                    
-                   <li>
-                      A helmeted motorcycle rider on a powerful 
-                      redand black racing bike weaved skillfully..<br/><span class="show-more">show more</span>
-                  </li>
-                 
-                  <li>
-                      
-                      For sale, services, job, for rent
-                  </li>
-             
-                 
-                  <li>
-                       A helmeted motorcycle rider on a powerful 
-                      redand black racing bike weaved skillfully..<br/><span class="show-more">show more</span>
-                      
-                  </li>
-       </ul>
-           
+              </div>
+      </div>
+           </div>
            
        </div>
        
@@ -546,7 +576,14 @@ $(".friends-send-messages div.see-profile i").click(function(){
        
        
    </div>
-   
+   <div class="wrapper-hubs-profile-page-banner-mobile visible-xs">
+       
+       
+       <div class="data">
+           <span>Santa Monica, CA</span>  
+           <h3> Awesome motorcycles hub  <span><a href="#"> public hub</a> </span></h3>
+       </div>    
+   </div>
    
    
     <!--/ Hub page banner -->
@@ -562,8 +599,8 @@ $(".friends-send-messages div.see-profile i").click(function(){
 
         <div class="aside-item hubs-membercount-section clearfix">
             <div class="pull-left">Members <span class="members-digit">26</span>  </div>
-            <div class=" pull-right">  <a href="#" class=" pull-right">
-<div class="show-all pull-left" data-toggle="modal" data-target="#modaldesktopshowdetail"> show all </div>
+            <div class=" pull-right">  <a href="#" class=" pull-right"  data-toggle="modal" data-target="#modaldesktopshowdetail">
+<div class="show-all pull-left"> show all </div>
 <i class="fa fa-arrow-circle-right"></i>
 </a>  </div>
             
@@ -751,6 +788,8 @@ $(".friends-send-messages div.see-profile i").click(function(){
              <li role="presentation" class="active"><a href="#toplistings" role="tab" data-toggle="tab" aria-controls="top listing" aria-expanded="true"><span class="span-hover">top 10 listings</span></a></li>
              <li role="presentation"><a href="#newlistings" role="tab" data-toggle="tab" aria-controls="new listing"><span class="span-hover">new listings</span></a></li>
              <li role="presentation"><a href="#alllistings" role="tab" data-toggle="tab" aria-controls="all listing"><span class="span-hover">all Listings <span class="all-listing-counter">135</span></span></a></li>
+             <li class="hidden mobile-members" role="presentation"><a href="#alllistings" role="tab" data-toggle="tab" aria-controls="members"><span class="span-hover">members<span class="all-listing-counter">135</span></span></a></li>
+             
              <li class="fixed-hubs-li pull-right" role="presentation"><a href="#">invite to hub</a></li>
              <li class="fixed-hubs-li pull-right set-to-border" role="presentation"><a href="#">join hub</a></li>
              
@@ -773,7 +812,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
       <div role="tabpanel" class="tab-pane fade in active" id="toplistings">
       
           <div class="row removemargins">
-             <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+             <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 set-right">
                   <div class="wraper-hubs-block">
                    
                       <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
@@ -806,7 +845,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
                   
               </div>
-       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 set-left">
                    <div class="wraper-hubs-block">
                    
                        <a href="#">   <img src="images/hubs-page-images-2.jpg"> </a>
@@ -842,7 +881,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
               </div>
               
-       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 set-right">
                    <div class="wraper-hubs-block">
                    
                        <a href="#">  <img src="images/hubs-page-images-2.jpg"> </a>
@@ -877,7 +916,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
                   
               </div>
-          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 set-left">
                   <div class="wraper-hubs-block">
                    
                       <a href="#">   <img src="images/hubs-page-images-3.jpg"> </a>
@@ -912,7 +951,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
                   
               </div>
-           <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+           <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 set-right">
                    <div class="wraper-hubs-block">
                    
                        <a href="#">   <img src="images/hubs-page-images-4.jpg">  </a>
@@ -948,7 +987,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
               </div>
               
-          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 set-left">
                    <div class="wraper-hubs-block">
                    
                        <a href="#">  <img src="images/hubs-page-images-4.jpg"> </a>
@@ -984,7 +1023,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
               </div>
               
-            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 set-right">
                    <div class="wraper-hubs-block">
                    
                        <a href="#">  <img src="images/hubs-page-images-4.jpg"> </a>
@@ -1019,7 +1058,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
                   
               </div>
-             <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+             <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 set-left">
                    <div class="wraper-hubs-block">
                    
                        <a href="#">  <img src="images/hubs-page-images-4.jpg"> </a>
@@ -1054,7 +1093,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
                   
               </div>
-                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 set-right">
                   <div class="wraper-hubs-block">
                    
                       <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
@@ -1087,7 +1126,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
                   
               </div>
-           <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+           <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 set-left">
                   <div class="wraper-hubs-block">
                    
                       <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
@@ -1120,7 +1159,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
                   
               </div>
-            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 set-right">
                   <div class="wraper-hubs-block">
                    
                       <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
@@ -1153,7 +1192,7 @@ $(".friends-send-messages div.see-profile i").click(function(){
                   
                   
               </div>
-                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 set-left">
                   <div class="wraper-hubs-block">
                    
                       <a href="#">   <img src="images/hubs-page-images-1.jpg"> </a>
@@ -3090,11 +3129,7 @@ INVITE JOHN
           <div class="invite-header">
            About awesome motorcycle hub
           </div>
-                  <div class="search-item">
-<i class="fa fa-search active"></i>
-<input type="search" placeholder="Type follower's name or location here">
-</div>
-        
+                  
                 
                
                   
@@ -3105,97 +3140,106 @@ INVITE JOHN
 <div class="nano has-scrollbar">
 <div style="right: -17px;" class="nano-content" tabindex="0">
                       
-                      
+  
                       <div class="row">
-                         
-                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                     
+                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                               
-                              <div class="inner-modal-desktop-friends">
-                                  <a href="#">     <img class="img-pink-border img-responsive" src="images/modal-desktop-friends-1.png"></a>
-                          
-                                  <h5>Alice Russell</h5>
-                                  <p> Singer, Song writter <br><span>London. UK</span></p>
-                                  
-                                  <a href="#" class="add-to-friends">add to friends</a>
+                                <div class="wrapper-desktop-show-detail">
+                                    <img class="pull-left title-img img-responsive" src="images/bed.jpg"/> <p> A helmeted motorcycle rider on a powerful red-and-black racing bike weaved skillfully between cars on the congested Harbor Freeway, alert for any sign that a driver might change lanes and wipe him out.</p>
+                                    <p>"Motorcycle riding is dangerous," Jack Worrall agreed on a recent sunny day, before starting the 28-mile commute home from his university job. "It scares me constantly, but I'm willing to trade that (fear) for the feel of riding."</p>
+                                    <p>
+Splitting traffic lanes on the most dangerous freeway 46 motorcyclists died in accidents that year.</p> 
+                                    
+                                    <p>
+                                        
+                                        <span class="set-to-bold"> Foundation paper:</span> piecing is a technique that can be used to achieve absolute perfection in your quilt designs. Because paper piecing sometimes requires you to look at things in a different way, many people find it difficult. However, by keeping <a class="set-to-link" href="#">a couple of things</a> in mind and by using a few simple tools, paper piecing can be an exciting addition to your quilting repertoire!   
+                                        
+                                        
+                                    </p>
+                                   
+                                    <h3 class="comma-qoutes"><img src="images/comma-left.png" class="comma-left"/>Lane splitting is legal, authorities agree <img src="images/comma-right.png" class="comma-right"/></h3>
+                                    <p>First of all let's take a look at the tools, as they're essential in order to succeed with paper piecing. You will need a simple glue stick, a hand pressing tool, and an "add an eighth" or "add a quarter" tool. I also like to have a small cutting mat, square ruler, and rotary cutter handy right next to my sewing machine to make cutting and trimming easier. I use the glue stick to just place the tiniest amount of "stickiness" on my paper to help keep the fabric from shifting. You won't want to use a heated iron in between each step of the paper piecing process, so a hand pressing tool is essential. It allows you to firmly and quickly press between steps. The "add an eighth" or "add a quarter" rulers allow you to trim, leaving minimal seam allowances so your project doesn't become too bulky. I prefer the "add an eighth" ruler.</p> 
+                                    
+                                    <h3 class="with-out-italic">
+                                        In 1983, Fountain Valley police stopped using motorcycles.
+                                    </h3>
+                              
+                                    <ul>
+                                        
+                                        <li><span>
+                                            
+                                                  Many people print their paper piecing patterns on regular paper and this can work just fine; how   ever, I have two other papers that I prefer and which make paper piecing a lot easier. 
+                                            </span></li>    
+                                         <li><span>
+                                            
+                                                  Using light newsprint (I bought mine at a school supply store) makes it easier to sew through and it's also easier to remove when you're finished. But my number one choice for paper piecing paper is light-weight vellum. 
+                                            </span></li>  
+                                         <li><span>
+                                            
+                                                  Not only is the vellum light and easy to sew, giving it the benefits of newsprint, but it is also easy to see through which really helps a lot in positioning your fabrics for sewing.
+                                            </span></li>  
+                                    </ul>
+                                    
+                                    <img class="img-responsive full-width" src="images/three-bikes.jpg" />
+                              
+                              <table class="table table-bordered descriptive-1">
+    <thead>
+      <tr>
+        <th>Title of the first column</th>
+        <th>Title of the second column</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Not only is the vellum light and easy to sew, giving it
+the benefits of newsprint, but it is also easy to see
+through which really helps a lot in positioning.</td>
+        <td class="pricing">20 yd</td>
+     
+      </tr>
+      <tr>
+        <td>Foundation paper piecing tools</td>
+            <td class="show-more"><a href="#">show more</a></td>
+        
+      </tr>
+       <tr>
+        <td>Not only is the vellum light and easy to sew, giving it the benefits of newsprint</td>
+        <td>Not only is the vellum light and easy to sew, giving it the benefits of newsprint</td>
+        
+      </tr>
+          </tbody>
+  </table>
+                       <table class="table table-bordered descriptive-2">
+    <thead>
+      <tr>
+        <th>Title of the first column</th>
+        <th>Title of the second column</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>First of all let's take a look at the tools, as they're essential in order to succeed with paper piecing. You will need a simple glue stick, a hand pressing tool, and an "add an eighth" or "add a quarter" tool. </td>
+        <td class="pricing">$17.50</td>
+     
+      </tr>
+      <tr>
+        <td>Foundation paper piecing tools</td>
+        <td class="show-more"><a href="#">show more</a></td>
+        
+      </tr>
+      
+          </tbody>
+  </table>              
                               
                               
-                              </div> 
-                              
-                          </div> 
-                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                               <div class="inner-modal-desktop-friends">
-                                   <a href="#">  <img class="img-blue-border img-responsive" src="images/modal-desktop-friends-2.png"></a>
-                          
-                                  <h5>John Green</h5>
-                                  <p> Founder, Develloper<br><span>Los Angeles, California</span></p>
-                                 
-                                  <a href="#" class="add-to-friends">add to friends</a>
-                              
-                              
-                              </div>
-                              
-                              
-                          </div> 
-                          
-                          
-                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                              <div class="inner-modal-desktop-friends">
-                                  <a href="#"> <img class="img-pink-border img-responsive" src="images/modal-desktop-friends-3.png"></a>
-                          
-                                  <h5>Ann Clarckson</h5>
-                                  <p> Founder<br><span>Los Angeles, California</span></p>
-                                  <a href="#" class="add-to-friends">add to friends</a>
-                              
-                              
-                              </div>
-                              
-                              
-                          </div> 
-                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                              
-                              <div class="inner-modal-desktop-friends">
-                                  <a href="#"><img class="img-pink-border img-responsive" src="images/modal-desktop-friends-4.png"></a>
-                          
-                                  <h5>Ann Peterson</h5>
-                                  <p> Web, UI/UX designer<br><span>Los Angeles, California</span></p>
-                                  
-                                  <a href="#" class="add-to-friends">add to friends</a>
-                              
-                              
-                              </div> 
-                              
-                          </div> 
-                          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                               <div class="inner-modal-desktop-friends">
-                                   <a href="#"> <img class="img-blue-border img-responsive" src="images/modal-desktop-friends-5.png"></a>
-                          
-                                  <h5>John Swift</h5>
-                                  <p><span>New York, Washington DC</span></p>
-                                  <a href="#" class="add-to-friends">add to friends</a>
-                              
-                              
-                              </div>
-                              
-                                </div> 
-                                 <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                              <div class="inner-modal-desktop-friends">
-                                  <a href="#"> <img class="img-blue-border img-responsive" src="images/modal-desktop-friends-6.jpg"></a>
-                          
-                                  <h5>Peter Kavalski</h5>
-                                  <p><span>New York, Washington DC</span></p>
-                                  
-                                  <a href="#" class="add-to-friends">add to friends</a>
-                              
-                              
-                              </div>
-                              
-                              
-                          </div> 
-                              
+                          </div>       
                         
                           
                       </div>
-                      
+    </div>
                       
                       
                                    </div>
@@ -3237,7 +3281,149 @@ INVITE JOHN
              
              
              
-             
+                          
+     <!-- Modal desktop hubs rules -->
+          
+          
+          
+                  <div class="modal-desktop-friends">
+    
+    
+<div class="modal fade in" id="modaldesktophubsrules" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 modal-padding"> 
+          <div class="invite-header">
+           About awesome motorcycle hub
+          </div>
+                  
+                
+               
+                  
+                  
+                  <div class="wrapper-modal-desktop-friends"> 
+                  
+                      <div class="yaybar yay-gestures yay-light yay-shrink">
+<div class="nano has-scrollbar">
+<div style="right: -17px;" class="nano-content" tabindex="0">
+                      
+  
+                      <div class="row">
+                     
+                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                              
+                                <div class="wrapper-desktop-show-detail">
+                                   <h3 class="with-out-italic"> Awesome motorcycle hub rules </h3> 
+                                    <p>
+                                        
+                                        <span class="set-to-bold">A helmeted</span> motorcycle rider on a powerful red-and-black
+racing bike weaved skillfully between cars on the congest-
+ed Harbor Freeway, alert for any sign that a driver might
+change lanes and wipe him out.
+</p>
+
+<p>
+    Jack Worrall agreed on a recent sunny day, before starting
+the 28-mile commute home from his university job. "It
+scares me constantly, but I'm willing to trade that (fear) for
+the feel of riding."
+
+</p>
+<p>
+    
+    Splitting traffic lanes on the most dangerous freeway 46
+    motorcyclists died in <a href="#">accidents</a> that year.
+</p>
+ <h3 class="comma-qoutes normal-font"><img src="images/comma-left.png" class="comma-left"/>Motorcycle riding is dangerous <img src="images/comma-right.png" class="comma-right"/></h3>
+                                  
+                              
+                                    <ul>
+                                        
+                                        <li><span>
+                                            A helmeted motorcycle rider on a powerful red-and-black racing bike weaved skillfully between cars on the congested Harbor Freeway, alert for any sign that a driver might change lanes and wipe him out.
+                                            </span></li>    
+                                         <li><span>
+                                            Jack Worrall agreed on a recent sunny day, before starting the 28-mile commute home from his university job. "It scares me constantly, but I'm willing to trade that (fear) for the feel of riding."
+                                             </span></li>  
+                                         <li><span>
+                                            Splitting traffic lanes on the most dangerous freeway 46 motorcyclists died in accidents that year.
+                                             </span></li>  
+                                    </ul>
+                                     <h3 class="with-out-italic"> In 1983, Fountain Valley police stopped using  motorcycles. </h3> 
+                                    <img class="img-responsive full-width" src="images/three-bikes.jpg" />
+                              
+                              <table class="table table-bordered descriptive-1">
+    <thead>
+      <tr>
+        <th>Title of the first column</th>
+        <th>Title of the second column</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Not only is the vellum light and easy to sew, giving it
+the benefits of newsprint, but it is also easy to see
+through which really helps a lot in positioning.</td>
+        <td class="pricing">20 yd</td>
+     
+      </tr>
+      <tr>
+        <td>Not only is the vellum light and easy to sew, giving it the benefits of newsprint</td>
+            <td class="show-more"><a href="#">show more</a></td>
+        
+      </tr>
+       <tr>
+        <td>Not only is the vellum light and easy to sew, giving it the benefits of newsprint</td>
+        <td>Not only is the vellum light and easy to sew, giving it the benefits of newsprint</td>
+        
+      </tr>
+          </tbody>
+  </table>
+                        <img class="img-responsive full-width" src="images/hubs-page-rules-bike.jpg" />                  
+                              
+                          </div>       
+                        
+                          
+                      </div>
+    </div>
+                      
+                      
+                                   </div>
+<div style="display: block;" class="nano-pane">
+<div style="height: 272px; transform: translate(0px, 103.727px);" class="nano-slider"></div>
+</div>
+</div>
+</div>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                   
+                  </div>
+                  
+                  
+                  
+                  
+              </div>
+          </div>
+          
+          
+          
+          
+      </div>
+     
+    </div>
+  </div>
+</div>
+          </div>   
              
              
              
