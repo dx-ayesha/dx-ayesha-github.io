@@ -54,7 +54,12 @@ $(".hubspage-members div.see-profile i").click(function(){
           
        
 });
-
+$(".hubs-page-functionality-tabs li.fixed-hubs-li a").click(function(){
+         
+            $(".hubs-page-functionality-tabs li.fixed-hubs-li a i.fa-caret-down").toggleClass('fa-caret-up');
+          
+       
+});
 
  $("#desktop-toggel").click(function(){
      $(".default-toggle-hubs-page.yaybar").toggleClass('yay-overlap-content');
@@ -527,6 +532,25 @@ HUBS
    <!-- Hub page banner -->
    
    <div class="wrapper-hubs-profile-page-banner hidden-xs">
+
+       <a class="btn-floating btn-large banner-button admin"><i class="mdi-editor-mode-edit"></i></a>
+
+       <a class="btn-floating btn-large banner-button dropdown-toggle" role="button" data-toggle="dropdown" href="#">
+           <i class="mdi-hardware-keyboard-arrow-down"></i>
+       <ul role="menu" class="dropdown-menu">
+            
+            <li class=""><a class="" href="#">open Profile</a></li>
+            <li><a data-toggle="modal" data-target="#hubsfollowers" href="#">add to friends</a></li>
+            <li><a data-toggle="modal" data-target="#" href="#">write a message</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite jane to hubs</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modaldesktophubs">brows jane's hubs</a></li>
+            <li><a data-toggle="modal" data-target="#modaldesktopfriends" href="#">brows jane's friends</a></li>
+          
+          </ul>
+       
+       </a>
+
+
        <h3> Awesome motorcycles hub  <span><a href="#"> public hub</a> </span></h3>  
       
        <div class="hubs-banner-data clearfix">
@@ -538,11 +562,6 @@ HUBS
                       <div> Description: </div>
                        <div class="margin-set">  Allowed Listing Types: </div>
                         <div> Additional Rules:  </div>
-               
-                  
-                  
-                  
-                  
                   </div>
                   
                   
@@ -571,11 +590,21 @@ HUBS
        
    </div>
    <div class="wrapper-hubs-profile-page-banner-mobile visible-xs">
-       
+
+       <a class="btn-floating banner-button dropdown-toggle" role="button" data-toggle="dropdown" href="#">
+           <i class="mdi-hardware-keyboard-arrow-down"></i>
+       </a>
        
        <div class="data">
-           <span>Santa Monica, CA</span>  
-           <h3> Awesome motorcycles hub  <span><a href="#"> public hub</a> </span></h3>
+
+
+
+           <span>Santa Monica, CA <span><a href="#"> public hub</a> </span></span>
+           <h3> Awesome motorcycles hub  </h3>
+
+           <a class="btn default-button">Join</a>
+
+           <a class="btn default-button" data-target="#invitefriends" data-toggle="modal" href="#">Invite</a>
        </div>    
    </div>
    
@@ -784,7 +813,9 @@ HUBS
              <li role="presentation"><a href="#alllistings" role="tab" data-toggle="tab" aria-controls="all listing"><span class="span-hover">all Listings <span class="all-listing-counter">135</span></span></a></li>
              <li class="hidden mobile-members" role="presentation"><a href="#alllistings" role="tab" data-toggle="tab" aria-controls="members"><span class="span-hover">members<span class="all-listing-counter">135</span></span></a></li>
              
-             <li class="fixed-hubs-li pull-right" role="presentation"><a href="#">invite to hub</a></li>
+             <li class="fixed-hubs-li pull-right" role="presentation">
+                 <a href="#" data-target="#invitefriends" data-toggle="modal">invite to hub</a></li>
+
              <li class="fixed-hubs-li pull-right set-to-border" role="presentation"><a class="dropdown-toggle" style="" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
                      <span class="edit-hub">edit hub</span>
 <i class="fa fa-caret-down"></i>
@@ -793,17 +824,14 @@ HUBS
              
              <ul role="menu" class="dropdown-menu">
             
-            <li class=""><a class="" href="#">open Profile</a></li>
-            <li><a data-toggle="modal" data-target="#hubsfollowers" href="#">add to friends</a></li>
-            <li><a data-toggle="modal" data-target="#" href="#">write a message</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite jane to hubs</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modaldesktophubs">brows jane's hubs</a></li>
-            <li><a data-toggle="modal" data-target="#modaldesktopfriends" href="#">brows jane's friends</a></li>
+            <li><a href="#"><i class="fa fa-pencil"></i>edit hub</a></li>
+            <li><a href="#"><i class="fa fa-plus"></i> add listings</a></li>
+            <li><a href="#"><i class="fa fa-trash-o"></i>delete hub</a></li>
+            
           
           </ul>
              </li>
-             
-         
+
          </ul>
                 <div class="wrapper-hubs-data">
               
@@ -846,9 +874,21 @@ HUBS
              <i class="mdi-communication-messenger"></i>
               12
             </li>
-            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
-             <i class="fa fa-share-square-o"></i> share
-            </li>
+           <a style="" href="#" class="dropdown-toggle  admin-hubs-edit" data-toggle="dropdown" role="button" aria-expanded="false">  <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+           
+
+            
+      <span class="edit-hub" style="">Edit</span> <i class="fa fa-caret-down pull-right"></i>
+         
+              
+            
+            </li></a>
+                 <ul role="menu" class="dropdown-menu hubs-edit-admin-ul">
+            <li><a href="#"><i class="fa fa-pencil"></i>edit listing</a></li>
+<li><a href="#"><i class="fa fa-trash-o"></i>delete listing</a></li>
+          
+          </ul>
+            
           </ul>
                       
                   </div>
@@ -870,7 +910,7 @@ HUBS
    <div class="price-box-currency"> $12 / hour </div>
 </div>
                      
-      <ul class="card-footer">
+    <ul class="card-footer">
             <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
                 <i class="mdi-action-favorite-outline"></i>
               35
@@ -879,9 +919,21 @@ HUBS
              <i class="mdi-communication-messenger"></i>
               12
             </li>
-            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
-             <i class="fa fa-share-square-o"></i> share
-            </li>
+           <a style="" href="#" class="dropdown-toggle  admin-hubs-edit" data-toggle="dropdown" role="button" aria-expanded="false">  <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+           
+
+            
+      <span class="edit-hub" style="">Edit</span> <i class="fa fa-caret-down pull-right"></i>
+         
+              
+            
+            </li></a>
+                 <ul role="menu" class="dropdown-menu hubs-edit-admin-ul">
+            <li><a href="#"><i class="fa fa-pencil"></i>edit listing</a></li>
+<li><a href="#"><i class="fa fa-trash-o"></i>delete listing</a></li>
+          
+          </ul>
+            
           </ul>
                       
                       
@@ -907,7 +959,7 @@ HUBS
    <div class="price-box-currency"> $12 / hour </div>
 </div>
                      
-      <ul class="card-footer">
+     <ul class="card-footer">
             <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
                 <i class="mdi-action-favorite-outline"></i>
               35
@@ -916,9 +968,21 @@ HUBS
              <i class="mdi-communication-messenger"></i>
               12
             </li>
-            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
-             <i class="fa fa-share-square-o"></i> share
-            </li>
+           <a style="" href="#" class="dropdown-toggle  admin-hubs-edit" data-toggle="dropdown" role="button" aria-expanded="false">  <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+           
+
+            
+      <span class="edit-hub" style="">Edit</span> <i class="fa fa-caret-down pull-right"></i>
+         
+              
+            
+            </li></a>
+                 <ul role="menu" class="dropdown-menu hubs-edit-admin-ul">
+            <li><a href="#"><i class="fa fa-pencil"></i>edit listing</a></li>
+<li><a href="#"><i class="fa fa-trash-o"></i>delete listing</a></li>
+          
+          </ul>
+            
           </ul>
                       
                       
@@ -951,9 +1015,21 @@ HUBS
              <i class="mdi-communication-messenger"></i>
               12
             </li>
-            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
-             <i class="fa fa-share-square-o"></i> share
-            </li>
+           <a style="" href="#" class="dropdown-toggle  admin-hubs-edit" data-toggle="dropdown" role="button" aria-expanded="false">  <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+           
+
+            
+      <span class="edit-hub" style="">Edit</span> <i class="fa fa-caret-down pull-right"></i>
+         
+              
+            
+            </li></a>
+                 <ul role="menu" class="dropdown-menu hubs-edit-admin-ul">
+            <li><a href="#"><i class="fa fa-pencil"></i>edit listing</a></li>
+<li><a href="#"><i class="fa fa-trash-o"></i>delete listing</a></li>
+          
+          </ul>
+            
           </ul>
                       
                       
@@ -976,7 +1052,7 @@ HUBS
    <div class="price-box-currency"> $12 / hour </div>
 </div>
                      
-      <ul class="card-footer">
+     <ul class="card-footer">
             <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
                 <i class="mdi-action-favorite-outline"></i>
               35
@@ -985,9 +1061,21 @@ HUBS
              <i class="mdi-communication-messenger"></i>
               12
             </li>
-            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
-             <i class="fa fa-share-square-o"></i> share
-            </li>
+           <a style="" href="#" class="dropdown-toggle  admin-hubs-edit" data-toggle="dropdown" role="button" aria-expanded="false">  <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+           
+
+            
+      <span class="edit-hub" style="">Edit</span> <i class="fa fa-caret-down pull-right"></i>
+         
+              
+            
+            </li></a>
+                 <ul role="menu" class="dropdown-menu hubs-edit-admin-ul">
+            <li><a href="#"><i class="fa fa-pencil"></i>edit listing</a></li>
+<li><a href="#"><i class="fa fa-trash-o"></i>delete listing</a></li>
+          
+          </ul>
+            
           </ul>
                       
                       
@@ -1014,7 +1102,7 @@ HUBS
    <div class="price-box-currency"> $12 / hour </div>
 </div>
                      
-      <ul class="card-footer">
+     <ul class="card-footer">
             <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
                 <i class="mdi-action-favorite-outline"></i>
               35
@@ -1023,9 +1111,21 @@ HUBS
              <i class="mdi-communication-messenger"></i>
               12
             </li>
-            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
-             <i class="fa fa-share-square-o"></i> share
-            </li>
+           <a style="" href="#" class="dropdown-toggle  admin-hubs-edit" data-toggle="dropdown" role="button" aria-expanded="false">  <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+           
+
+            
+      <span class="edit-hub" style="">Edit</span> <i class="fa fa-caret-down pull-right"></i>
+         
+              
+            
+            </li></a>
+                 <ul role="menu" class="dropdown-menu hubs-edit-admin-ul">
+            <li><a href="#"><i class="fa fa-pencil"></i>edit listing</a></li>
+<li><a href="#"><i class="fa fa-trash-o"></i>delete listing</a></li>
+          
+          </ul>
+            
           </ul>
                       
                   </div>
@@ -1050,7 +1150,7 @@ HUBS
    <div class="price-box-currency"> $12 / hour </div>
 </div>
                      
-      <ul class="card-footer">
+     <ul class="card-footer">
             <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
                 <i class="mdi-action-favorite-outline"></i>
               35
@@ -1059,9 +1159,21 @@ HUBS
              <i class="mdi-communication-messenger"></i>
               12
             </li>
-            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
-             <i class="fa fa-share-square-o"></i> share
-            </li>
+           <a style="" href="#" class="dropdown-toggle  admin-hubs-edit" data-toggle="dropdown" role="button" aria-expanded="false">  <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+           
+
+            
+      <span class="edit-hub" style="">Edit</span> <i class="fa fa-caret-down pull-right"></i>
+         
+              
+            
+            </li></a>
+                 <ul role="menu" class="dropdown-menu hubs-edit-admin-ul">
+            <li><a href="#"><i class="fa fa-pencil"></i>edit listing</a></li>
+<li><a href="#"><i class="fa fa-trash-o"></i>delete listing</a></li>
+          
+          </ul>
+            
           </ul>
                       
                   </div>
@@ -1085,7 +1197,7 @@ HUBS
    <div class="price-box-currency"> $12 / hour </div>
 </div>
                      
-      <ul class="card-footer">
+     <ul class="card-footer">
             <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
                 <i class="mdi-action-favorite-outline"></i>
               35
@@ -1094,9 +1206,21 @@ HUBS
              <i class="mdi-communication-messenger"></i>
               12
             </li>
-            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
-             <i class="fa fa-share-square-o"></i> share
-            </li>
+           <a style="" href="#" class="dropdown-toggle  admin-hubs-edit" data-toggle="dropdown" role="button" aria-expanded="false">  <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+           
+
+            
+      <span class="edit-hub" style="">Edit</span> <i class="fa fa-caret-down pull-right"></i>
+         
+              
+            
+            </li></a>
+                 <ul role="menu" class="dropdown-menu hubs-edit-admin-ul">
+            <li><a href="#"><i class="fa fa-pencil"></i>edit listing</a></li>
+<li><a href="#"><i class="fa fa-trash-o"></i>delete listing</a></li>
+          
+          </ul>
+            
           </ul>
                       
                   </div>
@@ -1118,7 +1242,7 @@ HUBS
    <div class="price-box-currency">$12 000</div>
 </div>
                      
-      <ul class="card-footer">
+     <ul class="card-footer">
             <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
                 <i class="mdi-action-favorite-outline"></i>
               35
@@ -1127,9 +1251,21 @@ HUBS
              <i class="mdi-communication-messenger"></i>
               12
             </li>
-            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
-             <i class="fa fa-share-square-o"></i> share
-            </li>
+           <a style="" href="#" class="dropdown-toggle  admin-hubs-edit" data-toggle="dropdown" role="button" aria-expanded="false">  <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+           
+
+            
+      <span class="edit-hub" style="">Edit</span> <i class="fa fa-caret-down pull-right"></i>
+         
+              
+            
+            </li></a>
+                 <ul role="menu" class="dropdown-menu hubs-edit-admin-ul">
+            <li><a href="#"><i class="fa fa-pencil"></i>edit listing</a></li>
+<li><a href="#"><i class="fa fa-trash-o"></i>delete listing</a></li>
+          
+          </ul>
+            
           </ul>
                       
                   </div>
@@ -1160,9 +1296,21 @@ HUBS
              <i class="mdi-communication-messenger"></i>
               12
             </li>
-            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
-             <i class="fa fa-share-square-o"></i> share
-            </li>
+           <a style="" href="#" class="dropdown-toggle  admin-hubs-edit" data-toggle="dropdown" role="button" aria-expanded="false">  <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+           
+
+            
+      <span class="edit-hub" style="">Edit</span> <i class="fa fa-caret-down pull-right"></i>
+         
+              
+            
+            </li></a>
+                 <ul role="menu" class="dropdown-menu hubs-edit-admin-ul">
+            <li><a href="#"><i class="fa fa-pencil"></i>edit listing</a></li>
+<li><a href="#"><i class="fa fa-trash-o"></i>delete listing</a></li>
+          
+          </ul>
+            
           </ul>
                       
                   </div>
@@ -1193,9 +1341,21 @@ HUBS
              <i class="mdi-communication-messenger"></i>
               12
             </li>
-            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
-             <i class="fa fa-share-square-o"></i> share
-            </li>
+           <a style="" href="#" class="dropdown-toggle  admin-hubs-edit" data-toggle="dropdown" role="button" aria-expanded="false">  <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+           
+
+            
+      <span class="edit-hub" style="">Edit</span> <i class="fa fa-caret-down pull-right"></i>
+         
+              
+            
+            </li></a>
+                 <ul role="menu" class="dropdown-menu hubs-edit-admin-ul">
+            <li><a href="#"><i class="fa fa-pencil"></i>edit listing</a></li>
+<li><a href="#"><i class="fa fa-trash-o"></i>delete listing</a></li>
+          
+          </ul>
+            
           </ul>
                       
                   </div>
@@ -1217,7 +1377,7 @@ HUBS
    <div class="price-box-currency">$12 000</div>
 </div>
                      
-      <ul class="card-footer">
+   <ul class="card-footer">
             <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nopadding card-footer-favorite">
                 <i class="mdi-action-favorite-outline"></i>
               35
@@ -1226,9 +1386,21 @@ HUBS
              <i class="mdi-communication-messenger"></i>
               12
             </li>
-            <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
-             <i class="fa fa-share-square-o"></i> share
-            </li>
+           <a style="" href="#" class="dropdown-toggle  admin-hubs-edit" data-toggle="dropdown" role="button" aria-expanded="false">  <li class="col-xs-5 col-sm-5 col-md-5 col-lg-5 card-footer-share">
+           
+
+            
+      <span class="edit-hub" style="">Edit</span> <i class="fa fa-caret-down pull-right"></i>
+         
+              
+            
+            </li></a>
+                 <ul role="menu" class="dropdown-menu hubs-edit-admin-ul">
+            <li><a href="#"><i class="fa fa-pencil"></i>edit listing</a></li>
+<li><a href="#"><i class="fa fa-trash-o"></i>delete listing</a></li>
+          
+          </ul>
+            
           </ul>
                       
                   </div>
@@ -2158,6 +2330,7 @@ HUBS
   </div>
 </div>
           </div>
+
           <!-- Modal INVITE TO HUBS -->
           <div class="modal-invite-to-hub">
 <div class="modal fade" id="invitetohub" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="padding-right: 0px;">
@@ -2308,9 +2481,115 @@ INVITE JOHN
   </div>
 </div>
           </div>
-          
-          
-          
+
+ <!--Modal invite friends-->
+
+ <div class="modal-invite-to-hub">
+     <div class="modal fade" id="invitefriends" style="padding-right: 0px;" tabindex="-1">
+         <div class="modal-dialog">
+             <div class="modal-content">
+                 <div class="modal-body">
+                     <div class="row">
+                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 modal-padding">
+                             <div class="invite-header">
+                                 Invite to hub
+                             </div>
+
+                             <div class="search-item">
+                                 <i class="fa fa-search active"></i> <input placeholder="Start typing hub's name here" type="search">
+                             </div>
+
+                             <div class="wrapper-hub-selecttion">
+                                 <div class="yaybar yay-gestures yay-light yay-shrink">
+                                     <div class="nano has-scrollbar">
+                                         <div class="nano-content" style="right: -17px;">
+                                             <div class="row">
+                                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 modal-split-padding-right">
+                                                     <div class="invite-design-structure">
+                                                         <div class="select-messageshubs">
+                                                             <p>Select friends to invite <span class="modal-alert-notify messages-info-tooltip">i <span><img class="tool-tip-left" src="images/tool-tip-left.png"> There is a limit of 6 invitations for one friend.</span></span></p>
+                                                         </div><span class="hidden">Sorry, but nothing was found</span>
+
+                                                         <div class="invite-results-hubs">
+                                                             <img class="pull-left" src="images/messages_person.jpg">
+
+                                                             <div class="pull-left">
+                                                                 <p>John Swift</p><span>Los Angeles, CA</span>
+                                                             </div><span class="pull-right modal-alert-plus">+</span>
+                                                         </div>
+
+                                                         <div class="invite-results-hubs">
+                                                             <img class="pull-left" src="images/messages_person.jpg">
+
+                                                             <div class="pull-left">
+                                                                 <p>John Swift</p><span>Los Angeles, CA</span>
+                                                             </div><span class="pull-right modal-alert-plus">+</span>
+                                                         </div>
+
+                                                         <div class="invite-results-hubs">
+                                                             <img class="pull-left" src="images/messages_person.jpg">
+
+                                                             <div class="pull-left">
+                                                                 <p>John Swift</p><span>Los Angeles, CA</span>
+                                                             </div><span class="pull-right modal-alert-plus">+</span>
+                                                         </div>
+
+                                                         <div class="invite-results-hubs">
+                                                             <img class="pull-left" src="images/messages_person.jpg">
+
+                                                             <div class="pull-left">
+                                                                 <p>John Swift</p><span>Los Angeles, CA</span>
+                                                             </div><span class="pull-right modal-alert-plus">+</span>
+                                                         </div>
+                                                     </div>
+                                                 </div>
+
+                                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 modal-split-padding-left">
+                                                     <div class="select-messageshubs">
+                                                         <p>You invited</p>
+                                                     </div>
+
+                                                     <div class="invite-results-hubs">
+                                                         <img class="pull-left" src="images/messages_person.jpg">
+
+                                                         <div class="pull-left">
+                                                             <p>John Swift</p><span>Los Angeles, CA</span>
+                                                         </div><span class="pull-right modal-alert-cross">x</span>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+
+                                         <div class="nano-pane" style="display: block;">
+                                             <div class="nano-slider" style="height: 264px; transform: translate(0px, 166.844px);"></div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <div class="wrapper-textarea-adjustment">
+                                 <div class="row">
+                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <textarea cols="" placeholder="Start type you comment here" rows=""></textarea>
+                                         <div class="invite-submit-buttons pull-right">
+                                             <div class="modal-invite-undo pull-left">
+                                                 <a href="#">UNDO</a>
+                                             </div>
+
+                                             <div class="modal-invite-submit-button pull-left">
+                                                 <a class="messages-invite-tooltip" href="#">INVITE<span><img class="tool-tip-right" src="images/tool-tip-right.png"> Select hubs to invite John to them</span></a>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
           
           
                 <!-- Modal Profile for mobile -->
