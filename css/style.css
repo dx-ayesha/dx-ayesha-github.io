@@ -1533,7 +1533,7 @@ color: #4a575b;
     padding-right: 31px;
     position: relative;
     width: 100%;
-    top: 18px;
+    top: 10px;
 }
 .modal-invite-to-hub .modal-content .modal-body .search-item i{
 margin-left: 5px;
@@ -1550,6 +1550,12 @@ margin-left: 5px;
     padding-left: 36px;
     width: 92%;
 }
+
+.modal-invite-to-hub .modal-content .modal-body .search-item input:focus {
+    border-bottom: 1px solid #919191 !important;
+    box-shadow: none;
+}
+
 .modal-invite-to-hub .modal-content .modal-body .modal-alert-notify{
      position: relative;
     background-color: #bbbbbb;
@@ -1560,7 +1566,6 @@ margin-left: 5px;
     padding: 1px 8px;
 }
 .modal-invite-to-hub .modal-content .modal-body .modal-alert-notify:hover{
-    
     background-color: #113556;
    
 }
@@ -1570,16 +1575,22 @@ margin-left: 5px;
     color: #fff;
     margin-right: 5px;
     margin-top: 14px;
-    padding: 1px 6px;
+    padding: 2px 7.3px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 .modal-invite-to-hub .modal-content .modal-body .modal-alert-cross{
      background-color: #bbbbbb;
     border-radius: 20px;
     color: #fff;
-    font-size: 0.6em;
+    font-size: 0.65em;
     margin-right: 5px;
     margin-top: 14px;
-    padding: 2px 8px 6px;
+    padding: 4px 8px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
 .modal-invite-to-hub .modal-content .modal-body .invite-design-structure {
@@ -3515,13 +3526,26 @@ font-weight: 600;
     text-transform: uppercase;
     width: 125px;
     background-color: #1d7ad0;
+    transition: all .3s ease-in;
 }
 
+.hubs-page-functionality-tabs li.fixed-hubs-li:hover{
+    background-color: #225897;
+}
+
+.hubs-page-functionality-tabs li.fixed-hubs-li:active{
+    background-color: #1C3856;
+}
 
 .hubs-page-functionality-tabs li.fixed-hubs-li a:hover{
  border-bottom: 1px solid #1d7ad0;
- 
+ background-color: transparent;
 }
+
+.hubs-page-functionality-tabs li.fixed-hubs-li a:focus{
+    background-color: transparent;
+}
+
 .hubs-page-functionality-tabs li.set-to-border{
 border-right: 1px solid #4a95d9;
 }
@@ -3583,6 +3607,25 @@ border-bottom: 2px solid #1d7ad0;
     padding: 2px 6px;
 }
 
+.banner-button{
+    background-color: #3279CC;
+    position: absolute;
+    right: 20px;
+    top: 20px
+}
+
+.banner-button:hover{
+    background-color: #225897;
+}
+
+.banner-button:active{
+    background-color: #1C3856
+}
+
+.wrapper-hubs-profile-page-banner .banner-button.admin{
+    display: none;
+}
+
 .wrapper-hubs-profile-page-banner h3{
     font-size: 2.15em;
     text-align: center;
@@ -3597,6 +3640,27 @@ border-bottom: 2px solid #1d7ad0;
     font-size: 0.55em;
     padding: 4px 12px;
     
+}
+
+.default-button {
+    display: inline-block;
+    background-color: #1e7ad1;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 9px 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all .3s linear;
+    margin-right: 10px;
+    line-height: 1.42857143;
+}
+.default-button:hover, .default-button:focus{
+    background-color: #0e579b;
+    color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -3766,7 +3830,7 @@ color: #88b6e1;
 }
 
 .wrapper-hubs-profile-page-banner-mobile .data{
-    bottom: -3px;
+    bottom: -30px;
     left: 50%;
     margin-right: -50%;
     position: absolute;
@@ -3782,12 +3846,13 @@ color: #88b6e1;
 .wrapper-hubs-profile-page-banner-mobile .data h3 span {
     vertical-align: text-top;
 }
-.wrapper-hubs-profile-page-banner-mobile .data h3 span a {
+.wrapper-hubs-profile-page-banner-mobile .data span a {
     background-color: #ee9f1d;
     border-radius: 9px;
     color: #fff;
-    font-size: 0.4em;
+    font-size: 0.9em;
     padding: 4px 12px;
+    margin-left: 10px;
 }
 
 .mobile-menu-hubs-page ul.dropdown-menu{
@@ -4046,8 +4111,9 @@ color: #4a575b;
 
 
 .wrapper-hubs-profile-page-banner-mobile .data h3 {
-    font-size: 1em;
-    margin-top: -9px;
+    font-size: 1.1em;
+    margin-top: 0;
+    text-align: left;
 }
 .wrapper-hubs-profile-page-banner-mobile .data h3 span {
     vertical-align: text-bottom;
