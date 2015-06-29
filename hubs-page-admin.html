@@ -75,7 +75,39 @@ $(".friends-send-messages div.see-profile i").click(function(){
        
 });
 
+$('#testing').click(function() {
+        //Hide the menus if visible
+        var clme = $('#toggleonclick').hasClass('usersidemenushow');
+        if(clme){
+            $('#toggleonclick').removeClass('usersidemenushow');
+        }
+    });
 
+$('#testing2').click(function() {
+        //Hide the menus if visible
+        var clme = $('#toggleonclick').hasClass('usersidemenushow');
+        if(clme){
+            $('#toggleonclick').removeClass('usersidemenushow');
+        }
+    });
+$('#testing0').click(function() {
+        //Hide the menus if visible
+        { 
+           var clme = $('#toggleonclick').hasClass('usersidemenushow');
+            if(clme){
+                  $("#desktop-toggel").click();
+            }
+        }
+    });
+$('#mobiletestingmenu').click(function() {
+        //Hide the menus if visible
+        { 
+           var clme = $('#toggleonclick').hasClass('usersidemenushow');
+            if(clme){
+                  $("#desktop-toggel").click();
+            }
+        }
+    });
 
 });  
      
@@ -295,7 +327,7 @@ HUBS
     </div>
   </nav>
   <!--/Navigation bottom-->
-  <aside class="default-toggle-hubs-page yaybar yay-gestures yay-light yay-shrink">
+  <aside class="default-toggle-hubs-page yaybar yay-gestures yay-light yay-shrink" id="toggleonclick">
 
     <div class="top">
       <div>
@@ -531,7 +563,7 @@ HUBS
   
    <!-- Hub page banner -->
    
-   <div class="wrapper-hubs-profile-page-banner hidden-xs">
+   <div class="wrapper-hubs-profile-page-banner hidden-xs" id="testing2">
 
        <a class="btn-floating btn-large banner-button admin"><i class="mdi-editor-mode-edit"></i></a>
 
@@ -589,7 +621,7 @@ HUBS
        
        
    </div>
-   <div class="wrapper-hubs-profile-page-banner-mobile visible-xs">
+   <div class="wrapper-hubs-profile-page-banner-mobile visible-xs" id="mobiletestingmenu">
 
        <a class="btn-floating banner-button dropdown-toggle" role="button" data-toggle="dropdown" href="#">
            <i class="mdi-hardware-keyboard-arrow-down"></i>
@@ -803,7 +835,7 @@ HUBS
     
      <section class="wrapper-hubs-page-body-content content-wrap ecommerce-customers wrapper-messages-moible-view">
 
-    <div class="row margin-adjustment-mobile-view">
+    <div class="row margin-adjustment-mobile-view" id="testing">
     
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-adjustment-mobile-view">
          
@@ -833,7 +865,7 @@ HUBS
              </li>
 
          </ul>
-                <div class="wrapper-hubs-data">
+                <div class="wrapper-hubs-data" id="testing0">
               
               <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

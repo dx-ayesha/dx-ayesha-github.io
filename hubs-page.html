@@ -59,8 +59,7 @@ $(".hubspage-members div.see-profile i").click(function(){
  $("#desktop-toggel").click(function(){
      $(".default-toggle-hubs-page.yaybar").toggleClass('yay-overlap-content');
     $(".default-toggle-hubs-page.yaybar").toggleClass('usersidemenushow');
-     
-
+    
 });
 
 $(".friends-send-messages div.see-profile i").click(function(){
@@ -71,7 +70,41 @@ $(".friends-send-messages div.see-profile i").click(function(){
 });
 
 
+$('#testing').click(function() {
+        //Hide the menus if visible
+        var clme = $('#toggleonclick').hasClass('usersidemenushow');
+        if(clme){
+            $('#toggleonclick').removeClass('usersidemenushow');
+        }
+    });
 
+$('#testing2').click(function() {
+        //Hide the menus if visible
+        var clme = $('#toggleonclick').hasClass('usersidemenushow');
+        if(clme){
+            $('#toggleonclick').removeClass('usersidemenushow');
+        }
+    });
+$('#testing0').click(function() {
+        //Hide the menus if visible
+        { 
+           var clme = $('#toggleonclick').hasClass('usersidemenushow');
+            if(clme){
+                  $("#desktop-toggel").click();
+            }
+         
+            //$('#toggleonclick').removeClass('usersidemenushow');
+        }
+    });
+$('#mobiletestingmenu').click(function() {
+        //Hide the menus if visible
+        { 
+           var clme = $('#toggleonclick').hasClass('usersidemenushow');
+            if(clme){
+                  $("#desktop-toggel").click();
+            }
+        }
+    });    
 });  
      
       </script>
@@ -290,7 +323,7 @@ HUBS
     </div>
   </nav>
   <!--/Navigation bottom-->
-  <aside class="default-toggle-hubs-page yaybar yay-gestures yay-light yay-shrink">
+  <aside class="default-toggle-hubs-page yaybar yay-gestures yay-light yay-shrink" id="toggleonclick">
 
     <div class="top">
       <div>
@@ -303,7 +336,7 @@ HUBS
     </div>
 
 
-    <div class="nano has-scrollbar">
+      <div class="nano has-scrollbar" id="hideformobile">
       <div style="right: -17px;" tabindex="0" class="nano-content">
         <ul class="aside-menu messages-left-side">
           <li class="aside-menu-item messages-inbox">
@@ -526,7 +559,7 @@ HUBS
   
    <!-- Hub page banner -->
    
-   <div class="wrapper-hubs-profile-page-banner hidden-xs">
+   <div class="wrapper-hubs-profile-page-banner hidden-xs" id="testing2">
 
        <a class="btn-floating btn-large banner-button admin"><i class="mdi-editor-mode-edit"></i></a>
 
@@ -573,7 +606,7 @@ HUBS
        
        
    </div>
-   <div class="wrapper-hubs-profile-page-banner-mobile visible-xs">
+   <div class="wrapper-hubs-profile-page-banner-mobile visible-xs" id="mobiletestingmenu">
 
        <a class="btn-floating banner-button dropdown-toggle" role="button" data-toggle="dropdown" href="#">
            <i class="mdi-hardware-keyboard-arrow-down"></i>
@@ -787,7 +820,7 @@ HUBS
     
      <section class="wrapper-hubs-page-body-content content-wrap ecommerce-customers wrapper-messages-moible-view">
 
-    <div class="row margin-adjustment-mobile-view">
+    <div class="row margin-adjustment-mobile-view" id="testing">
     
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-adjustment-mobile-view">
          
@@ -805,7 +838,7 @@ HUBS
              </li>
 
          </ul>
-                <div class="wrapper-hubs-data">
+          <div class="wrapper-hubs-data" id="testing0">
               
               <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -3554,3 +3587,11 @@ through which really helps a lot in positioning.</td>
 
 
   <div class="hiddendiv common"></div><div id="window-resizer-tooltip" class="window-resizer-color" style="display: block;"><a href="#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1440</span> x <span class="tooltipHeight" id="winHeight">860</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1440</span> x <span class="tooltipHeight" id="vpHeight">755</span></div></body></html>
+<style type="text/css">
+    .hidetestclass{
+        display: none !important;
+    }
+    .showtestclass{
+        display: block !important;
+    }
+</style>
