@@ -108,6 +108,19 @@ $('#mobiletestingmenu').click(function() {
             }
         }
     });
+    
+    
+    
+   $(".addedtofriends a").click(function(){
+         $(this).html("added to friends");
+     
+       
+});
+  $("#clickedhover").click(function(){
+         $("#clickedhover span").hide();
+     
+       
+});
 
 });  
      
@@ -565,23 +578,21 @@ HUBS
    
    <div class="wrapper-hubs-profile-page-banner hidden-xs" id="testing2">
 
-       <a class="btn-floating btn-large banner-button admin"><i class="mdi-editor-mode-edit"></i></a>
-
-       <a class="btn-floating btn-large banner-button dropdown-toggle" role="button" data-toggle="dropdown" href="#">
-           <i class="mdi-hardware-keyboard-arrow-down"></i>
-       <ul role="menu" class="dropdown-menu">
+  <div class="dropdown ">
+       <a aria-expanded="true" aria-haspopup="true" class="btn-floating btn-large banner-button dropdown-toggle" role="button" data-toggle="dropdown" id="banner-button-desktop" href="#">
+           <i class="mdi-editor-mode-edit"></i>
+        </a>
+     
+          <ul aria-labelledby="banner-button-desktop" role="menu" class="dropdown-menu">
             
-            <li class=""><a class="" href="#">open Profile</a></li>
-            <li><a data-toggle="modal" data-target="#hubsfollowers" href="#">add to friends</a></li>
-            <li><a data-toggle="modal" data-target="#" href="#">write a message</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#invitetohub">invite jane to hubs</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modaldesktophubs">brows jane's hubs</a></li>
-            <li><a data-toggle="modal" data-target="#modaldesktopfriends" href="#">brows jane's friends</a></li>
+             
+              <li><a href="#"><i class="fa fa-cloud-upload"></i>upload new photo</a></li>
+               <li><a href="#"><i class="fa fa-trash-o"></i>delete hub</a></li>
+            
           
           </ul>
-       
-       </a>
-
+       </div>
+     
 
        <h3> Awesome motorcycles hub  <span><a href="#"> public hub</a> </span></h3>  
       
@@ -623,9 +634,37 @@ HUBS
    </div>
    <div class="wrapper-hubs-profile-page-banner-mobile visible-xs" id="mobiletestingmenu">
 
-       <a class="btn-floating banner-button dropdown-toggle" role="button" data-toggle="dropdown" href="#">
-           <i class="mdi-hardware-keyboard-arrow-down"></i>
-       </a>
+     
+       
+         <div class="dropdown ">
+             
+            <a aria-expanded="true" aria-haspopup="true" class="btn-floating banner-button dropdown-toggle" role="button" data-toggle="dropdown"  id="banner-button-desktop"  href="#">
+           <i class="mdi-editor-mode-edit"></i>
+       </a>   
+             
+       
+     
+          <ul aria-labelledby="banner-button-desktop" role="menu" class="dropdown-menu">
+            
+             
+              <li><a href="#"><i class="fa fa-cloud-upload"></i>upload new photo</a></li>
+               <li><a href="#"><i class="fa fa-trash-o"></i>delete hub</a></li>
+            
+          
+          </ul>
+       </div>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
        
        <div class="data">
 
@@ -679,7 +718,7 @@ HUBS
                     <ul class="dropdown-menu" role="menu">
             
             <li class=""><a href="#" class="">open Profile</a></li>
-            <li><a href="#" data-target="#hubsfollowers" data-toggle="modal">add to friends</a></li>
+            <li class="addedtofriends"><a>add to friends</a></li>
             <li><a href="#" data-target="#" data-toggle="modal">write a message</a></li>
             <li><a data-target="#invitetohub" data-toggle="modal" href="#">invite jane to hubs</a></li>
             <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows jane's hubs</a></li>
@@ -707,7 +746,7 @@ HUBS
                     <ul class="dropdown-menu" role="menu">
             
             <li class=""><a href="#" class="">open Profile</a></li>
-            <li><a href="#" data-target="#hubsfollowers" data-toggle="modal">add to friends</a></li>
+            <li class="addedtofriends"><a>add to friends</a></li>
             <li><a href="#" data-target="#" data-toggle="modal">write a message</a></li>
             <li><a data-target="#invitetohub" data-toggle="modal" href="#">invite jane to hubs</a></li>
             <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows jane's hubs</a></li>
@@ -734,7 +773,7 @@ HUBS
                     <ul class="dropdown-menu" role="menu">
             
             <li class=""><a href="#" class="">open Profile</a></li>
-            <li><a href="#" data-target="#hubsfollowers" data-toggle="modal">add to friends</a></li>
+            <li class="addedtofriends"><a>add to friends</a></li>
             <li><a href="#" data-target="#" data-toggle="modal">write a message</a></li>
             <li><a data-target="#invitetohub" data-toggle="modal" href="#">invite jane to hubs</a></li>
             <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows jane's hubs</a></li>
@@ -762,7 +801,7 @@ HUBS
                     <ul class="dropdown-menu" role="menu">
             
             <li class=""><a href="#" class="">open Profile</a></li>
-            <li><a href="#" data-target="#hubsfollowers" data-toggle="modal">add to friends</a></li>
+            <li class="addedtofriends"><a>add to friends</a></li>
             <li><a href="#" data-target="#" data-toggle="modal">write a message</a></li>
             <li><a data-target="#invitetohub" data-toggle="modal" href="#">invite jane to hubs</a></li>
             <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows jane's hubs</a></li>
@@ -789,7 +828,7 @@ HUBS
                     <ul class="dropdown-menu" role="menu">
             
             <li class=""><a href="#" class="">open Profile</a></li>
-            <li><a href="#" data-target="#hubsfollowers" data-toggle="modal">add to friends</a></li>
+            <li class="addedtofriends"><a>add to friends</a></li>
             <li><a href="#" data-target="#" data-toggle="modal">write a message</a></li>
             <li><a data-target="#invitetohub" data-toggle="modal" href="#">invite jane to hubs</a></li>
             <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows jane's hubs</a></li>
@@ -816,7 +855,7 @@ HUBS
                     <ul class="dropdown-menu" role="menu">
             
             <li class=""><a href="#" class="">open Profile</a></li>
-            <li><a href="#" data-target="#hubsfollowers" data-toggle="modal">add to friends</a></li>
+            <li class="addedtofriends"><a>add to friends</a></li>
             <li><a href="#" data-target="#" data-toggle="modal">write a message</a></li>
             <li><a data-target="#invitetohub" data-toggle="modal" href="#">invite jane to hubs</a></li>
             <li><a data-target="#modaldesktophubs" data-toggle="modal" href="#">brows jane's hubs</a></li>
@@ -2608,7 +2647,7 @@ INVITE JOHN
                                                  <a href="#">UNDO</a>
                                              </div>
 
-                                             <div class="modal-invite-submit-button pull-left">
+                                             <div id="clickedhover" class="modal-invite-submit-button pull-left">
                                                  <a class="messages-invite-tooltip" href="#">INVITE<span><img class="tool-tip-right" src="images/tool-tip-right.png"> Select hubs to invite John to them</span></a>
                                              </div>
                                          </div>
